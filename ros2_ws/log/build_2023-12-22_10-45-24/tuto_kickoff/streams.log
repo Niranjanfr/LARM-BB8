@@ -1,0 +1,26 @@
+[0.071s] Invoking command in '/home/imtld.local/aristide.dossou-yovo/ros2_ws/build/tuto_kickoff': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --build /home/imtld.local/aristide.dossou-yovo/ros2_ws/build/tuto_kickoff -- -j12 -l12
+[0.104s] Invoked command in '/home/imtld.local/aristide.dossou-yovo/ros2_ws/build/tuto_kickoff' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --build /home/imtld.local/aristide.dossou-yovo/ros2_ws/build/tuto_kickoff -- -j12 -l12
+[0.149s] Invoking command in '/home/imtld.local/aristide.dossou-yovo/ros2_ws/build/tuto_kickoff': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --install /home/imtld.local/aristide.dossou-yovo/ros2_ws/build/tuto_kickoff
+[0.191s] -- Install configuration: ""
+[0.192s] -- Up-to-date: /home/imtld.local/aristide.dossou-yovo/ros2_ws/install/tuto_kickoff/share/tuto_kickoff//scripts
+[0.196s] -- Up-to-date: /home/imtld.local/aristide.dossou-yovo/ros2_ws/install/tuto_kickoff/share/tuto_kickoff//scripts/code_tuto_move.py
+[0.197s] -- Up-to-date: /home/imtld.local/aristide.dossou-yovo/ros2_ws/install/tuto_kickoff/share/tuto_kickoff//scripts/__init__.py
+[0.199s] -- Up-to-date: /home/imtld.local/aristide.dossou-yovo/ros2_ws/install/tuto_kickoff/share/tuto_kickoff//launch
+[0.202s] -- Up-to-date: /home/imtld.local/aristide.dossou-yovo/ros2_ws/install/tuto_kickoff/share/tuto_kickoff//launch/tutosim_launch.yaml
+[0.205s] -- Up-to-date: /home/imtld.local/aristide.dossou-yovo/ros2_ws/install/tuto_kickoff/lib/tuto_kickoff/code_tuto_move.py
+[0.207s] -- Up-to-date: /home/imtld.local/aristide.dossou-yovo/ros2_ws/install/tuto_kickoff/share/ament_index/resource_index/package_run_dependencies/tuto_kickoff
+[0.208s] -- Up-to-date: /home/imtld.local/aristide.dossou-yovo/ros2_ws/install/tuto_kickoff/share/ament_index/resource_index/parent_prefix_path/tuto_kickoff
+[0.210s] -- Up-to-date: /home/imtld.local/aristide.dossou-yovo/ros2_ws/install/tuto_kickoff/share/tuto_kickoff/environment/ament_prefix_path.sh
+[0.212s] -- Up-to-date: /home/imtld.local/aristide.dossou-yovo/ros2_ws/install/tuto_kickoff/share/tuto_kickoff/environment/ament_prefix_path.dsv
+[0.213s] -- Up-to-date: /home/imtld.local/aristide.dossou-yovo/ros2_ws/install/tuto_kickoff/share/tuto_kickoff/environment/path.sh
+[0.215s] -- Up-to-date: /home/imtld.local/aristide.dossou-yovo/ros2_ws/install/tuto_kickoff/share/tuto_kickoff/environment/path.dsv
+[0.216s] -- Up-to-date: /home/imtld.local/aristide.dossou-yovo/ros2_ws/install/tuto_kickoff/share/tuto_kickoff/local_setup.bash
+[0.218s] -- Up-to-date: /home/imtld.local/aristide.dossou-yovo/ros2_ws/install/tuto_kickoff/share/tuto_kickoff/local_setup.sh
+[0.220s] -- Up-to-date: /home/imtld.local/aristide.dossou-yovo/ros2_ws/install/tuto_kickoff/share/tuto_kickoff/local_setup.zsh
+[0.226s] -- Up-to-date: /home/imtld.local/aristide.dossou-yovo/ros2_ws/install/tuto_kickoff/share/tuto_kickoff/local_setup.dsv
+[0.228s] -- Installing: /home/imtld.local/aristide.dossou-yovo/ros2_ws/install/tuto_kickoff/share/tuto_kickoff/package.dsv
+[0.260s] -- Up-to-date: /home/imtld.local/aristide.dossou-yovo/ros2_ws/install/tuto_kickoff/share/ament_index/resource_index/packages/tuto_kickoff
+[0.262s] -- Up-to-date: /home/imtld.local/aristide.dossou-yovo/ros2_ws/install/tuto_kickoff/share/tuto_kickoff/cmake/tuto_kickoffConfig.cmake
+[0.264s] -- Up-to-date: /home/imtld.local/aristide.dossou-yovo/ros2_ws/install/tuto_kickoff/share/tuto_kickoff/cmake/tuto_kickoffConfig-version.cmake
+[0.265s] -- Up-to-date: /home/imtld.local/aristide.dossou-yovo/ros2_ws/install/tuto_kickoff/share/tuto_kickoff/package.xml
+[0.292s] Invoked command in '/home/imtld.local/aristide.dossou-yovo/ros2_ws/build/tuto_kickoff' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --install /home/imtld.local/aristide.dossou-yovo/ros2_ws/build/tuto_kickoff

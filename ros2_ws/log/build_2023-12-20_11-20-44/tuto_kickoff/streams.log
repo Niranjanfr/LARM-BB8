@@ -1,0 +1,49 @@
+[0.082s] Invoking command in '/home/imtld.local/aristide.dossou-yovo/ros2_ws/build/tuto_kickoff': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake /home/imtld.local/aristide.dossou-yovo/ros2_ws/src/tuto_kickoff -DCMAKE_INSTALL_PREFIX=/home/imtld.local/aristide.dossou-yovo/ros2_ws/install/tuto_kickoff
+[0.257s] -- The C compiler identification is GNU 11.4.0
+[0.498s] -- The CXX compiler identification is GNU 11.4.0
+[0.537s] -- Detecting C compiler ABI info
+[1.053s] -- Detecting C compiler ABI info - done
+[1.119s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.120s] -- Detecting C compile features
+[1.122s] -- Detecting C compile features - done
+[1.159s] -- Detecting CXX compiler ABI info
+[1.581s] -- Detecting CXX compiler ABI info - done
+[1.627s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.627s] -- Detecting CXX compile features
+[1.629s] -- Detecting CXX compile features - done
+[1.670s] -- Found ament_cmake: 2.0.3 (/opt/ros/iron/share/ament_cmake/cmake)
+[1.857s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[2.440s] -- Found ament_lint_auto: 0.14.2 (/opt/ros/iron/share/ament_lint_auto/cmake)
+[2.894s] -- Added test 'flake8' to check Python code syntax and style conventions
+[2.895s] -- Configured 'flake8' exclude dirs and/or files: 
+[2.908s] -- Added test 'lint_cmake' to check CMake code style
+[2.918s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[2.954s] -- Added test 'xmllint' to check XML markup files
+[3.044s] -- Configuring done
+[3.336s] -- Generating done
+[3.379s] -- Build files have been written to: /home/imtld.local/aristide.dossou-yovo/ros2_ws/build/tuto_kickoff
+[3.391s] Invoked command in '/home/imtld.local/aristide.dossou-yovo/ros2_ws/build/tuto_kickoff' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake /home/imtld.local/aristide.dossou-yovo/ros2_ws/src/tuto_kickoff -DCMAKE_INSTALL_PREFIX=/home/imtld.local/aristide.dossou-yovo/ros2_ws/install/tuto_kickoff
+[3.427s] Invoking command in '/home/imtld.local/aristide.dossou-yovo/ros2_ws/build/tuto_kickoff': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --build /home/imtld.local/aristide.dossou-yovo/ros2_ws/build/tuto_kickoff -- -j12 -l12
+[3.483s] Invoked command in '/home/imtld.local/aristide.dossou-yovo/ros2_ws/build/tuto_kickoff' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --build /home/imtld.local/aristide.dossou-yovo/ros2_ws/build/tuto_kickoff -- -j12 -l12
+[3.608s] Invoking command in '/home/imtld.local/aristide.dossou-yovo/ros2_ws/build/tuto_kickoff': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --install /home/imtld.local/aristide.dossou-yovo/ros2_ws/build/tuto_kickoff
+[3.631s] -- Install configuration: ""
+[3.632s] -- Installing: /home/imtld.local/aristide.dossou-yovo/ros2_ws/install/tuto_kickoff/share/tuto_kickoff//scripts
+[3.647s] -- Installing: /home/imtld.local/aristide.dossou-yovo/ros2_ws/install/tuto_kickoff/share/tuto_kickoff//scripts/code_tuto_move.py
+[3.659s] -- Installing: /home/imtld.local/aristide.dossou-yovo/ros2_ws/install/tuto_kickoff/share/tuto_kickoff//scripts/__init__.py
+[3.675s] -- Installing: /home/imtld.local/aristide.dossou-yovo/ros2_ws/install/tuto_kickoff/lib/tuto_kickoff/code_tuto_move.py
+[3.760s] -- Installing: /home/imtld.local/aristide.dossou-yovo/ros2_ws/install/tuto_kickoff/share/ament_index/resource_index/package_run_dependencies/tuto_kickoff
+[3.812s] -- Installing: /home/imtld.local/aristide.dossou-yovo/ros2_ws/install/tuto_kickoff/share/ament_index/resource_index/parent_prefix_path/tuto_kickoff
+[3.850s] -- Installing: /home/imtld.local/aristide.dossou-yovo/ros2_ws/install/tuto_kickoff/share/tuto_kickoff/environment/ament_prefix_path.sh
+[3.867s] -- Installing: /home/imtld.local/aristide.dossou-yovo/ros2_ws/install/tuto_kickoff/share/tuto_kickoff/environment/ament_prefix_path.dsv
+[3.889s] -- Installing: /home/imtld.local/aristide.dossou-yovo/ros2_ws/install/tuto_kickoff/share/tuto_kickoff/environment/path.sh
+[3.899s] -- Installing: /home/imtld.local/aristide.dossou-yovo/ros2_ws/install/tuto_kickoff/share/tuto_kickoff/environment/path.dsv
+[3.910s] -- Installing: /home/imtld.local/aristide.dossou-yovo/ros2_ws/install/tuto_kickoff/share/tuto_kickoff/local_setup.bash
+[3.929s] -- Installing: /home/imtld.local/aristide.dossou-yovo/ros2_ws/install/tuto_kickoff/share/tuto_kickoff/local_setup.sh
+[3.941s] -- Installing: /home/imtld.local/aristide.dossou-yovo/ros2_ws/install/tuto_kickoff/share/tuto_kickoff/local_setup.zsh
+[3.992s] -- Installing: /home/imtld.local/aristide.dossou-yovo/ros2_ws/install/tuto_kickoff/share/tuto_kickoff/local_setup.dsv
+[4.016s] -- Installing: /home/imtld.local/aristide.dossou-yovo/ros2_ws/install/tuto_kickoff/share/tuto_kickoff/package.dsv
+[4.062s] -- Installing: /home/imtld.local/aristide.dossou-yovo/ros2_ws/install/tuto_kickoff/share/ament_index/resource_index/packages/tuto_kickoff
+[4.090s] -- Installing: /home/imtld.local/aristide.dossou-yovo/ros2_ws/install/tuto_kickoff/share/tuto_kickoff/cmake/tuto_kickoffConfig.cmake
+[4.102s] -- Installing: /home/imtld.local/aristide.dossou-yovo/ros2_ws/install/tuto_kickoff/share/tuto_kickoff/cmake/tuto_kickoffConfig-version.cmake
+[4.122s] -- Installing: /home/imtld.local/aristide.dossou-yovo/ros2_ws/install/tuto_kickoff/share/tuto_kickoff/package.xml
+[4.194s] Invoked command in '/home/imtld.local/aristide.dossou-yovo/ros2_ws/build/tuto_kickoff' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --install /home/imtld.local/aristide.dossou-yovo/ros2_ws/build/tuto_kickoff
