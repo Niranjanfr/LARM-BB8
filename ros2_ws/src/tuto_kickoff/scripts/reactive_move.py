@@ -43,21 +43,25 @@ class MSubscriber(Node):
         y_ref = 0.0
         largeur_rectangle = 0.6
         longeur_rectangle = 0.9
-        obstacle_droite = False
-        obstacle_gauche = False
+        self.obstacle_droite = False
+        self.obstacle_gauche = False
+        self.continue_tourner_gauche = False
+        self.continue_tourner_droite = False
         for i in range (len(obstacles)):
             #obstacles droite
             if ( (x_ref <= obstacles[i].x <= x_ref + longeur_rectangle)
                 and  (y_ref <= obstacles[i].y <= y_ref + (largeur_rectangle/2.0)) 
             ):
-                obstacle_droite = True
+                self.obstacle_droite = True
+                self.continue_tourner_gauche = True
                 print("obstacle_droite")
                 break
             #obstacles gauche
             elif ( (x_ref <= obstacles[i].x <= x_ref + longeur_rectangle) 
-                  and  ((y_ref- (largeur_rectangle/2.0) <= obstacles[i].y < y_ref))
+                  and  ((y_ref - (largeur_rectangle/2.0) <= obstacles[i].y < y_ref))
             ):     
-               obstacle_gauche = True
+               self.obstacle_gauche = True
+               self.continue_tourner_droite = True
                print("obstacle_gauche")
                break
         
@@ -69,30 +73,96 @@ class MSubscriber(Node):
 
         #publication du message de vélocité
 
-        self.publishe(obstacle_gauche,obstacle_droite)
+        self.publishe(self.obstacle_gauche,self.obstacle_droite)
+
+    # def test_obstacle(self):
+
+    #     if self.continue_tourner_gauche:
+    #         velo = Twist()
+    #         velo.linear.x= 0.0   # meter per second
+    #         velo.angular.z= 1.7 # radian per second
+    #         self.velocityPub.publish(velo)
+    #         self.scan_callback()
+
+    #     elif self.continue_tourner_droite:
+    #         velo = Twist()
+    #         velo.linear.x= 0.0   # meter per second
+    #         velo.angular.z= -1.7 # radian per second
+    #         self.velocityPub.publish(velo)
+    #         self.scan_callback()
+    tourner_gauche = False
+    tourner_droite = False
 
     def publishe(self, obstacle_gauche, obstacle_droite):
-        if obstacle_gauche :
-            velo = Twist()
-            velo.angular.z= -1.0 # radian per second
-            self.velocityPub.publish(velo) 
+        
+        global tourner_droite
+        global tourner_gauche
 
-        elif obstacle_droite: 
+        if obstacle_gauche :
             velo = Twist()
             velo.angular.z= 1.0 # radian per second
             self.velocityPub.publish(velo)
+            tourner_droite= True
 
-        # elif obstacle_gauche and obstacle_droite:
-        #     velo = Twist()
-        #     velo.linear.x= 0.0   # meter per second
-        #     velo.angular.z= 1.7 # radian per second
-        #     self.velocityPub.publish(velo)
+            if tourner_droite and obstacle_droite:
+                velo = Twist()
+                velo.angular.z= 1.0 # radian per second
+                self.velocityPub.publish(velo)
+                tourner_droite = True
+
+            tourner_droite = False
+            
+            # if obstacle_droite == False and obstacle_gauche == False :
+            #     while self.obstacle_droite==False:
+            #         self.avancer_arc_cercle(0.5)
+            #         self.scan_callback()
+
+
+
+
+        elif obstacle_droite : 
+            velo = Twist()
+            velo.angular.z= -1.0 # radian per second
+            self.velocityPub.publish(velo)
+            tourner_gauche = True
+
+            if tourner_gauche and obstacle_gauche:
+                velo = Twist()
+                velo.angular.z= -1.0 # radian per second
+                self.velocityPub.publish(velo)
+                tourner_gauche = True
+
+            tourner_gauche = False
+
+
+            # if obstacle_droite == False and obstacle_gauche == False :
+            #     while self.obstacle_gauche==False:
+            #         self.avancer_arc_cercle(-0.5)
+            #         self.scan_callback()          
+            
+
+        elif obstacle_gauche and obstacle_droite:
+            velo = Twist()
+            velo.linear.x= 0.0   # meter per second
+            velo.angular.z= 1.7 # radian per second
+            self.velocityPub.publish(velo)
 
         else: 
-            velo = Twist()
-            velo.linear.x= 0.2   # meter per second
-            velo.angular.z= 0.0 # radian per second
-            self.velocityPub.publish(velo)
+            self.avancer()
+
+    def avancer(self):
+
+        velo = Twist()
+        velo.linear.x= 0.2   # meter per second
+        velo.angular.z= 0.0 # radian per second
+        self.velocityPub.publish(velo)
+    
+    # def avancer_arc_cercle(self,rotation):
+
+    #     velo = Twist()
+    #     velo.linear.x= 0.2   # meter per second
+    #     velo.angular.z= rotation # radian per second
+    #     self.velocityPub.publish(velo)
 
 
     
@@ -138,4 +208,3 @@ def main():
 
 if __name__ == '__main__' :
     main()
-
