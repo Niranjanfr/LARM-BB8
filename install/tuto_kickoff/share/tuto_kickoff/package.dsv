@@ -1,8 +1,0 @@
-source;share/tuto_kickoff/hook/cmake_prefix_path.ps1
-source;share/tuto_kickoff/hook/cmake_prefix_path.dsv
-source;share/tuto_kickoff/hook/cmake_prefix_path.sh
-source;share/tuto_kickoff/local_setup.bash
-source;share/tuto_kickoff/local_setup.dsv
-source;share/tuto_kickoff/local_setup.ps1
-source;share/tuto_kickoff/local_setup.sh
-source;share/tuto_kickoff/local_setup.zsh
