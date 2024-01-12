@@ -24,7 +24,7 @@ def souris(event, x, y, flags, param):
     lo[0]=color-10
     hi[0]=color+10
 
-color=47
+color=99
 
 
 
