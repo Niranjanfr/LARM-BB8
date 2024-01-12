@@ -1,5 +1,6 @@
 import cv2
 import numpy as np
+from cv_bridge import CvBridge
 
 def souris(event, x, y, flags, param):
     global lo, hi, color, hsv_px
@@ -29,8 +30,8 @@ color=44
 #lo=np.array([color-5, 100, 50])
 #hi=np.array([color+5, 255,255])
 
-lo=np.array([color-10, 100, 50])
-hi=np.array([color+10, 255,255])
+lo=np.array([color-20, 100, 50])
+hi=np.array([color+20, 255,255])
 
 color_info=(0, 0, 255)
 
@@ -41,6 +42,9 @@ hsv_px = [47,142,120]
 
 # Creating morphological kernel
 kernel = np.ones((3, 3), np.uint8)
+
+# bridge = CvBridge()
+# conversion = bridge.imgmsg_to_cv2(img_msg=cap,desired_encoding='passthrough')
 
 while True:
     ret, frame=cap.read()
