@@ -27,8 +27,8 @@ class Realsense(Node):
         self.config.enable_stream(rs.stream.color, 848, 480, rs.format.bgr8, 60)
         self.config.enable_stream(rs.stream.depth, 848, 480, rs.format.z16, 60)
 
-        self._publisher = self.image_publisher.create_publisher(Image,"image_raw",10)
-        self._publisher = self.depth_publisher.create_publisher(Image,"image_raw",10)
+        self.image_publisher = self.create_publisher(Image,"image_raw",10)
+        self.depth_publisher = self.create_publisher(Image,"image_raw",10)
 
 
         # Start streaming
@@ -90,6 +90,7 @@ class Realsense(Node):
         depth_colormap = cv2.applyColorMap(cv2.convertScaleAbs(self.depth_image, alpha=0.03), cv2.COLORMAP_JET)
 
         self.bridge=CvBridge()
+
 
         msg_image = self.bridge.cv2_to_imgmsg(self.color_image,"bgr8")
         msg_image.header.stamp = self.get_clock().now().to_msg()
