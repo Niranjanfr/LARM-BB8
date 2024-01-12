@@ -10,7 +10,7 @@ launch:
 
 - node:
     pkg: "tuto_kickoff"
-    exec: "code_tuto_move.py"
+    exec: "reactive_move.py"
     name: "mov_circle"
     
 - include:
