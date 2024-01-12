@@ -34,7 +34,7 @@ color_info=(0, 0, 255)
 cap=cv2.VideoCapture(0)
 cv2.namedWindow('Camera')
 cv2.setMouseCallback('Camera', souris)
-hsv_px = [0,0,0]
+hsv_px = [47,142,120]
 
 # Creating morphological kernel
 kernel = np.ones((3, 3), np.uint8)
@@ -52,7 +52,7 @@ while True:
     pixel_hsv = " ".join(str(values) for values in hsv_px)
     font = cv2.FONT_HERSHEY_SIMPLEX
     cv2.putText(frame, "px HSV: "+pixel_hsv, (10, 260),
-               font, 1, (46, 141, 116), 1, cv2.LINE_AA)
+               font, 1, (255, 255, 255), 1, cv2.LINE_AA)
 
 
 
@@ -66,6 +66,7 @@ while True:
     # mask=cv2.dilate(mask, None, iterations=4)
 
     elements=cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)[-2]
+    print(len(elements))
     if len(elements) > 0:
         c=max(elements, key=cv2.contourArea)
         ((x, y), rayon)=cv2.minEnclosingCircle(c)
