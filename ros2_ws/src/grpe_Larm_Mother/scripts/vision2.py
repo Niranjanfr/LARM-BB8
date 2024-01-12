@@ -26,8 +26,8 @@ def souris(event, x, y, flags, param):
 
 color=44
 
-lo=np.array([color-5, 100, 50])
-hi=np.array([color+5, 255,255])
+#lo=np.array([color-5, 100, 50])
+#hi=np.array([color+5, 255,255])
 
 lo=np.array([color-5, 100, 50])
 hi=np.array([color+5, 255,255])
