@@ -104,13 +104,13 @@ class Realsense(Node):
         # print(conversion)
 
 
-        color=49
+        color=65
 
         #lo=np.array([color-5, 100, 50])
         #hi=np.array([color+5, 255,255])
 
-        lo=np.array([color-10, 100, 50])
-        hi=np.array([color+10, 255,255])
+        lo=np.array([color-15, 100, 50])
+        hi=np.array([color+15, 255,255])
 
         color_info=(0, 0, 255)
 
