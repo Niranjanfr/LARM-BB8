@@ -26,8 +26,8 @@ def souris(event, x, y, flags, param):
 
 color=100
 
-lo=np.array([color-5, 100, 50])
-hi=np.array([color+5, 255,255])
+lo=np.array([46, 141, 116])
+hi=np.array([47, 142,120])
 
 color_info=(0, 0, 255)
 
@@ -59,11 +59,11 @@ while True:
     if cv2.waitKey(1)&0xFF==ord('q'):
         break
     # Flouttage de l'image
-    # image=cv2.blur(image, (7, 7))
+    image=cv2.blur(image, (7, 7))
     # Erosion d'un mask
-    # mask=cv2.erode(mask, None, iterations=4)
+    mask=cv2.erode(mask, None, iterations=4)
     # dilatation d'un mask
-    # mask=cv2.dilate(mask, None, iterations=4)
+    mask=cv2.dilate(mask, None, iterations=4)
 
     elements=cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)[-2]
     if len(elements) > 0:
