@@ -60,22 +60,22 @@ while True:
 
     if cv2.waitKey(1)&0xFF==ord('q'):
         break
-    # Flouttage de l'image
-    # image=cv2.blur(image, (7, 7))
-    # Erosion d'un mask
-    # mask=cv2.erode(mask, None, iterations=4)
-    # dilatation d'un mask
-    # mask=cv2.dilate(mask, None, iterations=4)
+# Flouttage de l'image
+image=cv2.blur(image, (7, 7))
+# Erosion d'un mask
+mask=cv2.erode(mask, None, iterations=4)
+# dilatation d'un mask
+mask=cv2.dilate(mask, None, iterations=4)
 
-    elements=cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)[-2]
-    if len(elements) > 0:
-        c=max(elements, key=cv2.contourArea)
-        ((x, y), rayon)=cv2.minEnclosingCircle(c)
-        if rayon>30:
-            cv2.circle(image2, (int(x), int(y)), int(rayon), color_info, 2)
-            cv2.circle(frame, (int(x), int(y)), 5, color_info, 10)
-            cv2.line(frame, (int(x), int(y)), (int(x)+150, int(y)), color_info, 2)
-            cv2.putText(frame, "Objet !!!", (int(x)+10, int(y) -10), cv2.FONT_HERSHEY_DUPLEX, 1, color_info, 1, cv2.LINE_AA)
-
+elements=cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)[-2]
+if len(elements) > 0:
+    c=max(elements, key=cv2.contourArea)
+    ((x, y), rayon)=cv2.minEnclosingCircle(c)
+    if rayon>30:
+        cv2.circle(image2, (int(x), int(y)), int(rayon), color_info, 2)
+        cv2.circle(frame, (int(x), int(y)), 5, color_info, 10)
+        cv2.line(frame, (int(x), int(y)), (int(x)+150, int(y)), color_info, 2)
+        cv2.putText(frame, "Objet !!!", (int(x)+10, int(y) -10), cv2.FONT_HERSHEY_DUPLEX, 1, color_info, 1, cv2.LINE_AA)
+        
 cap.release()
 cv2.destroyAllWindows()
