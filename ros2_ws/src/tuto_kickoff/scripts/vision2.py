@@ -52,11 +52,9 @@ while True:
     pixel_hsv = " ".join(str(values) for values in hsv_px)
     font = cv2.FONT_HERSHEY_SIMPLEX
     cv2.putText(frame, "px HSV: "+pixel_hsv, (10, 260),
-               font, 1, (255, 255, 255), 1, cv2.LINE_AA)
+               font, 1, (46, 141, 116), 1, cv2.LINE_AA)
 
-    cv2.imshow('Camera', frame)
-    cv2.imshow('image2', image2)
-    cv2.imshow('Mask', mask)
+
 
     if cv2.waitKey(1)&0xFF==ord('q'):
         break
@@ -76,6 +74,9 @@ while True:
             cv2.circle(frame, (int(x), int(y)), 5, color_info, 10)
             cv2.line(frame, (int(x), int(y)), (int(x)+150, int(y)), color_info, 2)
             cv2.putText(frame, "Objet !!!", (int(x)+10, int(y) -10), cv2.FONT_HERSHEY_DUPLEX, 1, color_info, 1, cv2.LINE_AA)
+    cv2.imshow('Camera', frame)
+    cv2.imshow('image2', image2)
+    cv2.imshow('Mask', mask)
 
 cap.release()
 cv2.destroyAllWindows()
