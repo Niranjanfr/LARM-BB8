@@ -24,7 +24,10 @@ def souris(event, x, y, flags, param):
     lo[0]=color-10
     hi[0]=color+10
 
-color=100
+color=44
+
+lo=np.array([color-5, 100, 50])
+hi=np.array([color+5, 255,255])
 
 lo=np.array([color-5, 100, 50])
 hi=np.array([color+5, 255,255])
@@ -33,7 +36,7 @@ color_info=(0, 0, 255)
 
 cap=cv2.VideoCapture(0)
 cv2.namedWindow('Camera')
-cv2.setMouseCallback('Camera', souris)
+#cv2.setMouseCallback('Camera', souris)
 hsv_px = [47,142,120]
 
 # Creating morphological kernel
