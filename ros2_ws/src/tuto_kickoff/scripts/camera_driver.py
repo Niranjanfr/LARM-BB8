@@ -19,9 +19,9 @@ class Realsense(Node):
         self.config = rs.config()
 
         # Get device product line for setting a supporting resolution
-        pipeline_wrapper = rs.pipeline_wrapper(self.self.pipeline)
+        pipeline_wrapper = rs.pipeline_wrapper(self.pipeline)
         pipeline_profile = self.config.resolve(pipeline_wrapper)
-        self.self.device = pipeline_profile.get_device()
+        self.device = pipeline_profile.get_device()
         self.device_product_line = str(self.device.get_info(rs.camera_info.product_line))
 
         self.config.enable_stream(rs.stream.color, 848, 480, rs.format.bgr8, 60)
