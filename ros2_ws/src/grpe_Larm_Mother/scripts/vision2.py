@@ -35,8 +35,8 @@ cv2.namedWindow('Camera')
 cv2.setMouseCallback('Camera', souris)
 hsv_px = [47,142,120]
 
-lo=np.array([37, 141, 116])
-hi=np.array([57, 141,116])
+lo=np.array([37, 130, 100])
+hi=np.array([57, 150,130])
 
 # Creating morphological kernel
 kernel = np.ones((3, 3), np.uint8)
