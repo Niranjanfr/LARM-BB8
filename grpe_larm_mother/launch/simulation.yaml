@@ -1,6 +1,4 @@
 launch:
-
-
     
 - node:
     pkg: "rviz2"
@@ -20,3 +18,5 @@ launch:
 - include:
      file: "$(find-pkg-share grpe_larm_mother)/scripts/challenge-1.launch.py"
 
+- executable: 
+   cmd: gnome-terminal --tab -e 'ros2 run teleop_twist_keyboard teleop_twist_keyboard'
