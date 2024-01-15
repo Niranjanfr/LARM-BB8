@@ -76,7 +76,7 @@ class MSubscriber(Node):
 
         if (self.VL == 0.0):
             if not obstacle_gauche and not obstacle_droite:
-                self.VL = 0.35
+                self.VL = 0.25
                 self.VA = 0.0
         else:
             if obstacle_droite :
