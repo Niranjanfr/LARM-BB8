@@ -45,7 +45,8 @@ source ./install/setup.bash
 ## Exécution
 
 **Robot :**
-
+ 
+Pour lancer le robot avec detection des obstacles, executer la commande suivante:
 ```
 ros2 run grpe_larm_mother reactive_move.py
 ```
