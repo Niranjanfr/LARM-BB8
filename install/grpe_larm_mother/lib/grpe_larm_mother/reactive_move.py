@@ -109,7 +109,7 @@ class MSubscriber(Node):
         # global tourner_droite
         # global tourner_gauche
         
-        R_VA=random.randrange(10, 17, 1)
+        R_VA=random.randrange(10, 14, 1)
 
         if (self.VL == 0.0):
             if not obstacle_gauche and not obstacle_droite:
@@ -118,12 +118,12 @@ class MSubscriber(Node):
         else:
             if obstacle_droite :
                 self.VL = 0.0
-                self.VA = R_VA/10
+                self.VA = -R_VA/10
                 # tourner_gauche = True
                 # tourner_droite = False
             elif obstacle_gauche:
                 self.VL = 0.0
-                self.VA = -R_VA/10
+                self.VA = R_VA/10
                 # tourner_droite = True
                 # tourner_gauche = False
 

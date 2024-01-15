@@ -83,7 +83,7 @@ class Realsense(Node):
         cv2.waitKey(1)
         pass
 
-    def publish_imgs(self):
+    def gestion_image(self):
 
         # Utilisation de colormap sur l'image depth de la Realsense (image convertie en 8-bit par pixel)
         depth_colormap = cv2.applyColorMap(cv2.convertScaleAbs(self.depth_image, alpha=0.03), cv2.COLORMAP_JET)
@@ -101,13 +101,9 @@ class Realsense(Node):
         msg_depth.header.frame_id = "depth"
         self.depth_publisher.publish(msg_depth)
         conversion = self.bridge.imgmsg_to_cv2(img_msg=msg_image,desired_encoding='passthrough')
-        # print(conversion)
 
 
         color=65
-
-        #lo=np.array([color-5, 100, 50])
-        #hi=np.array([color+5, 255,255])
 
         lo=np.array([color-15, 100, 50])
         hi=np.array([color+15, 255,255])
@@ -115,14 +111,10 @@ class Realsense(Node):
         color_info=(0, 0, 255)
 
         cv2.namedWindow('Camera')
-        #cv2.setMouseCallback('Camera', souris)
         hsv_px = [47,142,120]
 
-        # Creating morphological kernel
         kernel = np.ones((3, 3), np.uint8)
 
-        # while True:
-        # print(conversion)
         frame=conversion
         image=cv2.cvtColor(conversion, cv2.COLOR_BGR2HSV)
         mask=cv2.inRange(image, lo, hi)
@@ -137,10 +129,6 @@ class Realsense(Node):
         cv2.putText(frame, "px HSV: "+pixel_hsv, (10, 260),
                 font, 1, (255, 255, 255), 1, cv2.LINE_AA)
 
-
-
-        # if cv2.waitKey(1)&0xFF==ord('q'):
-            # break
         # Flouttage de l'image
         image=cv2.blur(image, (7, 7))
         # Erosion d'un mask
@@ -163,9 +151,6 @@ class Realsense(Node):
 
 
         cv2.waitKey(10)
-        # msg_image.release()
-        # cv2.destroyAllWindows()
-      
 
 
         pass
@@ -182,7 +167,7 @@ def main (args=None):
     rsNode= Realsense()
     while rsNode.isOk:
         rsNode.read_imgs()
-        rsNode.publish_imgs()
+        rsNode.gestion_image()
         rclpy.spin_once(rsNode, timeout_sec=0.001)
     # Stop streaming
     signal.signal(signal.SIGINT, rsNode.signalInteruption)
