@@ -43,9 +43,6 @@ hsv_px = [47,142,120]
 # Creating morphological kernel
 kernel = np.ones((3, 3), np.uint8)
 
-# bridge = CvBridge()
-# conversion = bridge.imgmsg_to_cv2(img_msg=cap,desired_encoding='passthrough')
-
 while True:
     ret, frame=cap.read()
     image=cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)

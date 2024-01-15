@@ -31,4 +31,7 @@ install(DIRECTORY
 )
 # Python scripts
 install( PROGRAMS scripts/reactive_move.py DESTINATION lib/${PROJECT_NAME})
+# Python scripts
+install( PROGRAMS scripts/camera_driver.py DESTINATION lib/${PROJECT_NAME})
+
 ament_package()
