@@ -75,5 +75,5 @@ ros2 launch grpe_larm_mother challenge1.yaml
 
 Pour lancer la simulation :
 ```
-ros2 launch grpe_larm_mother simulation.launch.py
+ros2 launch grpe_larm_mother simulation.py
 ```
