@@ -13,11 +13,16 @@ Ce répertoire contient :
 
 ## Installation
 
-On utilise ubuntu 20.04 et on suppose ros2-foxy déjà installé (https://docs.ros.org/en/foxy/Installation.html) avec le workspace `~/ros2_ws/` crée.
+On utilise ubuntu 20.04 et on suppose les bibliothèques suivantes installées : 
+ ```
+pip3 install numpy tensorflow opencv-python opencv-contrib-python scikit-learn scipy matplotlib psutil scikit-image
+```
+ avec le workspace `~/ros2_ws/` crée.
+
 
 **Etape 1 :**
 
-Clonez les packages suivants :
+Clonez le package suivant :
 
 ```
 cd ~/ros2_ws/
