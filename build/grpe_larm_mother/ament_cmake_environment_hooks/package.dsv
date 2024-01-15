@@ -1,0 +1,4 @@
+source;share/grpe_larm_mother/local_setup.bash
+source;share/grpe_larm_mother/local_setup.dsv
+source;share/grpe_larm_mother/local_setup.sh
+source;share/grpe_larm_mother/local_setup.zsh
