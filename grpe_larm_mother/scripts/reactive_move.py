@@ -76,7 +76,7 @@ class MSubscriber(Node):
 
         if (self.VL == 0.0):
             if not obstacle_gauche and not obstacle_droite:
-                self.VL = 0.45
+                self.VL = 0.35
                 self.VA = 0.0
         else:
             if obstacle_droite :
@@ -86,7 +86,7 @@ class MSubscriber(Node):
                 self.VL = 0.0
                 self.VA = R_VA/10
 
-                
+
         velo = Twist()
         velo.linear.x= self.VL   # meter per second
         velo.angular.z= self.VA # radian per second
