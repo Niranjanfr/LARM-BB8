@@ -1,0 +1,39 @@
+#!/usr/bin/python3
+import socket, netifaces, rclpy
+from rclpy.node import Node
+from std_msgs.msg import String
+
+def main():
+    parasit= Basic()
+    parasit.process()
+
+class Basic():
+    def pulse_callback(self):
+        hostname= socket.gethostname()
+        pulse_msg= String()
+        pulse_msg.data= f"{hostname}: " + " - ".join( getIpAddrs() )
+        self.pulse_publisher.publish( pulse_msg )
+
+    def process(self):
+        # Ros initialization
+        rclpy.init(domain_id= 100)
+        node = Node( f"parasit_{socket.gethostname()}" )
+        self.pulse_publisher= node.create_publisher( String, 'pulse', 10 )
+        self._timer = node.create_timer( 1, self.pulse_callback )
+        
+        # Infinite loop:
+        rclpy.spin(node)
+
+        # Clean stop:
+        node.destroy_node()
+        rclpy.shutdown()
+
+def getIpAddrs():
+    l= []
+    for iface in netifaces.interfaces() :
+        if netifaces.AF_INET in netifaces.ifaddresses(iface) :
+            l.append( netifaces.ifaddresses( iface )[netifaces.AF_INET][0]['addr'] )
+    return l
+
+if __name__ == '__main__':
+    main()

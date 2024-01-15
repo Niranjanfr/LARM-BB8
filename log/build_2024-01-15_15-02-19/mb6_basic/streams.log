@@ -1,0 +1,52 @@
+[0.207s] Invoking command in '/home/imtld.local/niranjan.kulkarni/git/build/mb6_basic': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake /home/imtld.local/niranjan.kulkarni/git/pkg-basic/mb6_basic -DCMAKE_INSTALL_PREFIX=/home/imtld.local/niranjan.kulkarni/git/install/mb6_basic
+[0.354s] -- The C compiler identification is GNU 11.4.0
+[0.514s] -- The CXX compiler identification is GNU 11.4.0
+[0.538s] -- Detecting C compiler ABI info
+[0.879s] -- Detecting C compiler ABI info - done
+[0.914s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.914s] -- Detecting C compile features
+[0.914s] -- Detecting C compile features - done
+[0.938s] -- Detecting CXX compiler ABI info
+[1.306s] -- Detecting CXX compiler ABI info - done
+[1.326s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.334s] -- Detecting CXX compile features
+[1.335s] -- Detecting CXX compile features - done
+[1.389s] -- Found ament_cmake: 2.0.3 (/opt/ros/iron/share/ament_cmake/cmake)
+[1.527s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[1.802s] -- Found ament_lint_auto: 0.14.2 (/opt/ros/iron/share/ament_lint_auto/cmake)
+[2.045s] -- Added test 'flake8' to check Python code syntax and style conventions
+[2.049s] -- Configured 'flake8' exclude dirs and/or files: 
+[2.056s] -- Added test 'lint_cmake' to check CMake code style
+[2.072s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[2.084s] -- Added test 'xmllint' to check XML markup files
+[2.141s] -- Configuring done
+[2.369s] -- Generating done
+[2.440s] -- Build files have been written to: /home/imtld.local/niranjan.kulkarni/git/build/mb6_basic
+[2.443s] Invoked command in '/home/imtld.local/niranjan.kulkarni/git/build/mb6_basic' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake /home/imtld.local/niranjan.kulkarni/git/pkg-basic/mb6_basic -DCMAKE_INSTALL_PREFIX=/home/imtld.local/niranjan.kulkarni/git/install/mb6_basic
+[2.462s] Invoking command in '/home/imtld.local/niranjan.kulkarni/git/build/mb6_basic': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --build /home/imtld.local/niranjan.kulkarni/git/build/mb6_basic -- -j12 -l12
+[2.504s] Invoked command in '/home/imtld.local/niranjan.kulkarni/git/build/mb6_basic' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --build /home/imtld.local/niranjan.kulkarni/git/build/mb6_basic -- -j12 -l12
+[2.530s] Invoking command in '/home/imtld.local/niranjan.kulkarni/git/build/mb6_basic': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --install /home/imtld.local/niranjan.kulkarni/git/build/mb6_basic
+[2.536s] -- Install configuration: ""
+[2.538s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/mb6_basic/share/mb6_basic//launch
+[2.553s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/mb6_basic/share/mb6_basic//launch/parasit_launch.yaml
+[2.580s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/mb6_basic/lib/mb6_basic/basic
+[2.595s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/mb6_basic/lib/mb6_basic/basic/__init__.py
+[2.632s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/mb6_basic/lib/mb6_basic/multiplexer
+[2.658s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/mb6_basic/lib/mb6_basic/parasit
+[2.679s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/mb6_basic/lib/mb6_basic/pulse_monitor
+[2.711s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/mb6_basic/share/ament_index/resource_index/package_run_dependencies/mb6_basic
+[2.754s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/mb6_basic/share/ament_index/resource_index/parent_prefix_path/mb6_basic
+[2.780s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/mb6_basic/share/mb6_basic/environment/ament_prefix_path.sh
+[2.802s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/mb6_basic/share/mb6_basic/environment/ament_prefix_path.dsv
+[2.819s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/mb6_basic/share/mb6_basic/environment/path.sh
+[2.845s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/mb6_basic/share/mb6_basic/environment/path.dsv
+[2.877s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/mb6_basic/share/mb6_basic/local_setup.bash
+[2.898s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/mb6_basic/share/mb6_basic/local_setup.sh
+[2.937s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/mb6_basic/share/mb6_basic/local_setup.zsh
+[2.966s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/mb6_basic/share/mb6_basic/local_setup.dsv
+[2.999s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/mb6_basic/share/mb6_basic/package.dsv
+[3.039s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/mb6_basic/share/ament_index/resource_index/packages/mb6_basic
+[3.060s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/mb6_basic/share/mb6_basic/cmake/mb6_basicConfig.cmake
+[3.088s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/mb6_basic/share/mb6_basic/cmake/mb6_basicConfig-version.cmake
+[3.126s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/mb6_basic/share/mb6_basic/package.xml
+[3.172s] Invoked command in '/home/imtld.local/niranjan.kulkarni/git/build/mb6_basic' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --install /home/imtld.local/niranjan.kulkarni/git/build/mb6_basic

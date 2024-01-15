@@ -12,7 +12,7 @@ launch:
     pkg: "grpe_larm_mother"
     exec: "reactive_move.py"
     name: "mov_obstacles"
-    
+
 - node:
     pkg: "grpe_larm_mother"
     exec: "camera_driver.py"
