@@ -54,7 +54,7 @@ ros2 run grpe_larm_mother reactive_move.py
 
 Le traitement pour détecter les bouteilles se fait via un filtre de couleur en HSV et calcul le rapport hauteur/largeur pour s'assurer que l'objet est bien une bouteille.
 
-Pour visualiser la caméra seulement, exécutez le noeud suivant :
+Pour visualiser la caméra seulement, exécuter le noeud suivant :
 ```
 ros2 run grpe_larm_mother camera_driver.py
 ```
