@@ -1,0 +1,63 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.0.3 (/opt/ros/iron/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+-- Found ament_lint_auto: 0.14.2 (/opt/ros/iron/share/ament_lint_auto/cmake)
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: 
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Configured 'flake8' exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/imtld.local/niranjan.kulkarni/git/build/grpe_larm_mother
+-- Install configuration: ""
+-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother//launch
+-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother//launch/minimal_launch.yaml
+-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother//launch/challenge1.yaml
+-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother//launch/simulation.yaml
+-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother//scripts
+-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother//scripts/__init__.py
+-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother//scripts/__pycache__
+-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother//scripts/__pycache__/__init__.cpython-310.pyc
+-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother//scripts/__pycache__/classifier.cpython-310.pyc
+-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother//scripts/__pycache__/classifierCircle.cpython-310.pyc
+-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother//scripts/__pycache__/test_class.cpython-310-pytest-6.2.5.pyc
+-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother//scripts/simulation.py
+-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother//scripts/camera_driver.py
+-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother//scripts/reactive_move.py
+-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother//scripts/challenge-1.launch.py
+-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother//scripts/multiplexer
+-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/lib/grpe_larm_mother/reactive_move.py
+-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/lib/grpe_larm_mother/camera_driver.py
+-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/lib/grpe_larm_mother/challenge-1.launch.py
+-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/ament_index/resource_index/package_run_dependencies/grpe_larm_mother
+-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/ament_index/resource_index/parent_prefix_path/grpe_larm_mother
+-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/environment/ament_prefix_path.sh
+-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/environment/ament_prefix_path.dsv
+-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/environment/path.sh
+-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/environment/path.dsv
+-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/local_setup.bash
+-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/local_setup.sh
+-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/local_setup.zsh
+-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/local_setup.dsv
+-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/package.dsv
+-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/ament_index/resource_index/packages/grpe_larm_mother
+-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/cmake/grpe_larm_motherConfig.cmake
+-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/cmake/grpe_larm_motherConfig-version.cmake
+-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/package.xml

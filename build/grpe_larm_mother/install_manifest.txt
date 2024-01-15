@@ -10,6 +10,7 @@
 /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother//scripts/camera_driver.py
 /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother//scripts/reactive_move.py
 /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother//scripts/challenge-1.launch.py
+/home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother//scripts/multiplexer
 /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/lib/grpe_larm_mother/reactive_move.py
 /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/lib/grpe_larm_mother/camera_driver.py
 /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/lib/grpe_larm_mother/challenge-1.launch.py

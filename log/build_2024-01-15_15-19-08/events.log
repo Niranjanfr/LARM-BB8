@@ -1,0 +1,127 @@
+[0.000000] (-) TimerEvent: {}
+[0.000374] (grpe_larm_mother) JobQueued: {'identifier': 'grpe_larm_mother', 'dependencies': OrderedDict()}
+[0.000400] (grpe_larm_mother) JobStarted: {'identifier': 'grpe_larm_mother'}
+[0.070304] (grpe_larm_mother) JobProgress: {'identifier': 'grpe_larm_mother', 'progress': 'cmake'}
+[0.082694] (grpe_larm_mother) Command: {'cmd': ['/usr/bin/cmake', '/home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother', '-DCMAKE_INSTALL_PREFIX=/home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother'], 'cwd': '/home/imtld.local/niranjan.kulkarni/git/build/grpe_larm_mother', 'env': OrderedDict([('ROS_WORSPACE', '/home/imtld.local/niranjan.kulkarni/ros_ws'), ('USER', 'niranjan.kulkarni'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/iron/opt/rviz_ogre_vendor/lib:/opt/ros/iron/lib/x86_64-linux-gnu:/opt/ros/iron/lib'), ('HOME', '/home/imtld.local/niranjan.kulkarni'), ('OLDPWD', '/home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '2399'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/876417573/bus,guid=4985e290d0dc091e554f6fb765a4dfe1'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/imtld.local/niranjan.kulkarni/git/install:/home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/install:/home/imtld.local/niranjan.kulkarni/ros_ws/install'), ('ROS_DISTRO', 'iron'), ('LOGNAME', 'niranjan.kulkarni'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'niranjan.kulkarni'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('PATH', '/home/imtld.local/niranjan.kulkarni/bin:/opt/ros/iron/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/DEVELTER-U-10:@/tmp/.ICE-unix/2399,unix/DEVELTER-U-10:/tmp/.ICE-unix/2399'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/d4c4d9a8_0e6f_4131_8495_638591042543'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/876417573'), ('ZEITGEIST_DATA_PATH', '/home/imtld.local/niranjan.kulkarni/.local/share/zeitgeist'), ('DISPLAY', ':0'), ('LANG', 'fr_FR.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/876417573/.mutter-Xwaylandauth.HAPNH2'), ('GNOME_TERMINAL_SERVICE', ':1.254'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/876417573/keyring/ssh'), ('ROS_DOMAIN_ID', '107'), ('AMENT_PREFIX_PATH', '/home/imtld.local/niranjan.kulkarni/git/install/mb6_basic:/home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/install/grpe_larm_mother:/home/imtld.local/niranjan.kulkarni/git/install/tbot_sim:/home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother:/home/imtld.local/niranjan.kulkarni/ros_ws/install/tbot_sim:/opt/ros/iron'), ('SHELL', '/bin/bash'), ('KRB5CCNAME', 'FILE:/tmp/krb5cc_876417573_MSWOBM'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('ROS_AUTOMATIC_DISCOVERY_RANGE', 'SUBNET'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/imtld.local/niranjan.kulkarni/git/build/grpe_larm_mother'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/876417573/bus,guid=4985e290d0dc091e554f6fb765a4dfe1'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/iron/lib/python3.10/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/imtld.local/niranjan.kulkarni/git/install/mb6_basic:/home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/install/grpe_larm_mother:/home/imtld.local/niranjan.kulkarni/git/install/tbot_sim:/home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother:/home/imtld.local/niranjan.kulkarni/ros_ws/install/tbot_sim:/opt/ros/iron')]), 'shell': False}
+[0.101729] (-) TimerEvent: {}
+[0.201921] (-) TimerEvent: {}
+[0.302361] (-) TimerEvent: {}
+[0.402756] (-) TimerEvent: {}
+[0.470689] (grpe_larm_mother) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.502996] (-) TimerEvent: {}
+[0.603302] (-) TimerEvent: {}
+[0.650052] (grpe_larm_mother) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.693676] (grpe_larm_mother) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.703361] (-) TimerEvent: {}
+[0.803817] (-) TimerEvent: {}
+[0.904904] (-) TimerEvent: {}
+[1.005243] (-) TimerEvent: {}
+[1.105490] (-) TimerEvent: {}
+[1.205892] (-) TimerEvent: {}
+[1.223970] (grpe_larm_mother) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.287892] (grpe_larm_mother) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.288200] (grpe_larm_mother) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.297422] (grpe_larm_mother) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.306098] (-) TimerEvent: {}
+[1.334088] (grpe_larm_mother) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.406197] (-) TimerEvent: {}
+[1.506591] (-) TimerEvent: {}
+[1.606835] (-) TimerEvent: {}
+[1.663918] (grpe_larm_mother) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.690363] (grpe_larm_mother) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.690584] (grpe_larm_mother) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.700016] (grpe_larm_mother) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.708512] (-) TimerEvent: {}
+[1.744019] (grpe_larm_mother) StdoutLine: {'line': b'-- Found ament_cmake: 2.0.3 (/opt/ros/iron/share/ament_cmake/cmake)\n'}
+[1.808599] (-) TimerEvent: {}
+[1.888937] (grpe_larm_mother) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter \n'}
+[1.908661] (-) TimerEvent: {}
+[2.008985] (-) TimerEvent: {}
+[2.109271] (-) TimerEvent: {}
+[2.209619] (-) TimerEvent: {}
+[2.247720] (grpe_larm_mother) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.14.2 (/opt/ros/iron/share/ament_lint_auto/cmake)\n'}
+[2.309799] (-) TimerEvent: {}
+[2.410015] (-) TimerEvent: {}
+[2.510328] (-) TimerEvent: {}
+[2.610589] (-) TimerEvent: {}
+[2.710842] (-) TimerEvent: {}
+[2.737410] (grpe_larm_mother) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[2.737723] (grpe_larm_mother) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[2.739458] (grpe_larm_mother) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[2.762683] (grpe_larm_mother) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[2.765127] (grpe_larm_mother) StdoutLine: {'line': b"-- Configured 'flake8' exclude dirs and/or files: \n"}
+[2.810930] (-) TimerEvent: {}
+[2.822656] (grpe_larm_mother) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[2.911211] (-) TimerEvent: {}
+[3.061366] (grpe_larm_mother) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[3.078276] (-) TimerEvent: {}
+[3.178457] (-) TimerEvent: {}
+[3.225960] (grpe_larm_mother) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[3.248844] (grpe_larm_mother) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[3.299198] (-) TimerEvent: {}
+[3.299343] (grpe_larm_mother) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[3.380405] (grpe_larm_mother) StdoutLine: {'line': b'-- Configuring done\n'}
+[3.399358] (-) TimerEvent: {}
+[3.499741] (-) TimerEvent: {}
+[3.599970] (-) TimerEvent: {}
+[3.700201] (-) TimerEvent: {}
+[3.790443] (grpe_larm_mother) StdoutLine: {'line': b'-- Generating done\n'}
+[3.800434] (-) TimerEvent: {}
+[3.899588] (grpe_larm_mother) StdoutLine: {'line': b'-- Build files have been written to: /home/imtld.local/niranjan.kulkarni/git/build/grpe_larm_mother\n'}
+[3.900493] (-) TimerEvent: {}
+[3.902504] (grpe_larm_mother) CommandEnded: {'returncode': 0}
+[3.903285] (grpe_larm_mother) JobProgress: {'identifier': 'grpe_larm_mother', 'progress': 'build'}
+[3.904230] (grpe_larm_mother) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/imtld.local/niranjan.kulkarni/git/build/grpe_larm_mother', '--', '-j12', '-l12'], 'cwd': '/home/imtld.local/niranjan.kulkarni/git/build/grpe_larm_mother', 'env': OrderedDict([('ROS_WORSPACE', '/home/imtld.local/niranjan.kulkarni/ros_ws'), ('USER', 'niranjan.kulkarni'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/iron/opt/rviz_ogre_vendor/lib:/opt/ros/iron/lib/x86_64-linux-gnu:/opt/ros/iron/lib'), ('HOME', '/home/imtld.local/niranjan.kulkarni'), ('OLDPWD', '/home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '2399'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/876417573/bus,guid=4985e290d0dc091e554f6fb765a4dfe1'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/imtld.local/niranjan.kulkarni/git/install:/home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/install:/home/imtld.local/niranjan.kulkarni/ros_ws/install'), ('ROS_DISTRO', 'iron'), ('LOGNAME', 'niranjan.kulkarni'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'niranjan.kulkarni'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('PATH', '/home/imtld.local/niranjan.kulkarni/bin:/opt/ros/iron/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/DEVELTER-U-10:@/tmp/.ICE-unix/2399,unix/DEVELTER-U-10:/tmp/.ICE-unix/2399'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/d4c4d9a8_0e6f_4131_8495_638591042543'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/876417573'), ('ZEITGEIST_DATA_PATH', '/home/imtld.local/niranjan.kulkarni/.local/share/zeitgeist'), ('DISPLAY', ':0'), ('LANG', 'fr_FR.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/876417573/.mutter-Xwaylandauth.HAPNH2'), ('GNOME_TERMINAL_SERVICE', ':1.254'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/876417573/keyring/ssh'), ('ROS_DOMAIN_ID', '107'), ('AMENT_PREFIX_PATH', '/home/imtld.local/niranjan.kulkarni/git/install/mb6_basic:/home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/install/grpe_larm_mother:/home/imtld.local/niranjan.kulkarni/git/install/tbot_sim:/home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother:/home/imtld.local/niranjan.kulkarni/ros_ws/install/tbot_sim:/opt/ros/iron'), ('SHELL', '/bin/bash'), ('KRB5CCNAME', 'FILE:/tmp/krb5cc_876417573_MSWOBM'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('ROS_AUTOMATIC_DISCOVERY_RANGE', 'SUBNET'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/imtld.local/niranjan.kulkarni/git/build/grpe_larm_mother'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/876417573/bus,guid=4985e290d0dc091e554f6fb765a4dfe1'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/iron/lib/python3.10/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/imtld.local/niranjan.kulkarni/git/install/mb6_basic:/home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/install/grpe_larm_mother:/home/imtld.local/niranjan.kulkarni/git/install/tbot_sim:/home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother:/home/imtld.local/niranjan.kulkarni/ros_ws/install/tbot_sim:/opt/ros/iron')]), 'shell': False}
+[3.972277] (grpe_larm_mother) CommandEnded: {'returncode': 0}
+[3.990276] (grpe_larm_mother) JobProgress: {'identifier': 'grpe_larm_mother', 'progress': 'install'}
+[3.998723] (grpe_larm_mother) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/imtld.local/niranjan.kulkarni/git/build/grpe_larm_mother'], 'cwd': '/home/imtld.local/niranjan.kulkarni/git/build/grpe_larm_mother', 'env': OrderedDict([('ROS_WORSPACE', '/home/imtld.local/niranjan.kulkarni/ros_ws'), ('USER', 'niranjan.kulkarni'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/iron/opt/rviz_ogre_vendor/lib:/opt/ros/iron/lib/x86_64-linux-gnu:/opt/ros/iron/lib'), ('HOME', '/home/imtld.local/niranjan.kulkarni'), ('OLDPWD', '/home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '2399'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/876417573/bus,guid=4985e290d0dc091e554f6fb765a4dfe1'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/imtld.local/niranjan.kulkarni/git/install:/home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/install:/home/imtld.local/niranjan.kulkarni/ros_ws/install'), ('ROS_DISTRO', 'iron'), ('LOGNAME', 'niranjan.kulkarni'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'niranjan.kulkarni'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('PATH', '/home/imtld.local/niranjan.kulkarni/bin:/opt/ros/iron/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/DEVELTER-U-10:@/tmp/.ICE-unix/2399,unix/DEVELTER-U-10:/tmp/.ICE-unix/2399'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/d4c4d9a8_0e6f_4131_8495_638591042543'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/876417573'), ('ZEITGEIST_DATA_PATH', '/home/imtld.local/niranjan.kulkarni/.local/share/zeitgeist'), ('DISPLAY', ':0'), ('LANG', 'fr_FR.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/876417573/.mutter-Xwaylandauth.HAPNH2'), ('GNOME_TERMINAL_SERVICE', ':1.254'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/876417573/keyring/ssh'), ('ROS_DOMAIN_ID', '107'), ('AMENT_PREFIX_PATH', '/home/imtld.local/niranjan.kulkarni/git/install/mb6_basic:/home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/install/grpe_larm_mother:/home/imtld.local/niranjan.kulkarni/git/install/tbot_sim:/home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother:/home/imtld.local/niranjan.kulkarni/ros_ws/install/tbot_sim:/opt/ros/iron'), ('SHELL', '/bin/bash'), ('KRB5CCNAME', 'FILE:/tmp/krb5cc_876417573_MSWOBM'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('ROS_AUTOMATIC_DISCOVERY_RANGE', 'SUBNET'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/imtld.local/niranjan.kulkarni/git/build/grpe_larm_mother'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/876417573/bus,guid=4985e290d0dc091e554f6fb765a4dfe1'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/iron/lib/python3.10/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/imtld.local/niranjan.kulkarni/git/install/mb6_basic:/home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/install/grpe_larm_mother:/home/imtld.local/niranjan.kulkarni/git/install/tbot_sim:/home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother:/home/imtld.local/niranjan.kulkarni/ros_ws/install/tbot_sim:/opt/ros/iron')]), 'shell': False}
+[4.000559] (-) TimerEvent: {}
+[4.006177] (grpe_larm_mother) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[4.006255] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother//launch\n'}
+[4.018246] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother//launch/minimal_launch.yaml\n'}
+[4.051980] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother//launch/challenge1.yaml\n'}
+[4.083701] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother//launch/simulation.yaml\n'}
+[4.100572] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother//scripts\n'}
+[4.100714] (-) TimerEvent: {}
+[4.109341] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother//scripts/__init__.py\n'}
+[4.139257] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother//scripts/__pycache__\n'}
+[4.147344] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother//scripts/__pycache__/__init__.cpython-310.pyc\n'}
+[4.196253] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother//scripts/__pycache__/classifier.cpython-310.pyc\n'}
+[4.200830] (-) TimerEvent: {}
+[4.218735] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother//scripts/__pycache__/classifierCircle.cpython-310.pyc\n'}
+[4.230219] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother//scripts/__pycache__/test_class.cpython-310-pytest-6.2.5.pyc\n'}
+[4.254431] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother//scripts/simulation.py\n'}
+[4.283363] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother//scripts/camera_driver.py\n'}
+[4.300922] (-) TimerEvent: {}
+[4.304158] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother//scripts/reactive_move.py\n'}
+[4.338556] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother//scripts/challenge-1.launch.py\n'}
+[4.356657] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother//scripts/multiplexer\n'}
+[4.386161] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/lib/grpe_larm_mother/reactive_move.py\n'}
+[4.401085] (-) TimerEvent: {}
+[4.424286] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/lib/grpe_larm_mother/camera_driver.py\n'}
+[4.467580] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/lib/grpe_larm_mother/challenge-1.launch.py\n'}
+[4.498848] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/ament_index/resource_index/package_run_dependencies/grpe_larm_mother\n'}
+[4.501119] (-) TimerEvent: {}
+[4.548933] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/ament_index/resource_index/parent_prefix_path/grpe_larm_mother\n'}
+[4.570950] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/environment/ament_prefix_path.sh\n'}
+[4.593217] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/environment/ament_prefix_path.dsv\n'}
+[4.601312] (-) TimerEvent: {}
+[4.622068] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/environment/path.sh\n'}
+[4.637389] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/environment/path.dsv\n'}
+[4.653052] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/local_setup.bash\n'}
+[4.689164] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/local_setup.sh\n'}
+[4.701451] (-) TimerEvent: {}
+[4.711745] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/local_setup.zsh\n'}
+[4.744669] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/local_setup.dsv\n'}
+[4.773668] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/package.dsv\n'}
+[4.801630] (-) TimerEvent: {}
+[4.804683] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/ament_index/resource_index/packages/grpe_larm_mother\n'}
+[4.832641] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/cmake/grpe_larm_motherConfig.cmake\n'}
+[4.859069] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/cmake/grpe_larm_motherConfig-version.cmake\n'}
+[4.886293] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/package.xml\n'}
+[4.901719] (-) TimerEvent: {}
+[4.929408] (grpe_larm_mother) CommandEnded: {'returncode': 0}
+[5.001787] (-) TimerEvent: {}
+[5.101978] (-) TimerEvent: {}
+[5.111654] (grpe_larm_mother) JobEnded: {'identifier': 'grpe_larm_mother', 'rc': 0}
+[5.116661] (-) EventReactorShutdown: {}

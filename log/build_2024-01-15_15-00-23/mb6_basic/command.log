@@ -1,4 +1,0 @@
-Invoking command in '/home/imtld.local/niranjan.kulkarni/git/build/mb6_basic': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --build /home/imtld.local/niranjan.kulkarni/git/build/mb6_basic -- -j12 -l12
-Invoked command in '/home/imtld.local/niranjan.kulkarni/git/build/mb6_basic' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --build /home/imtld.local/niranjan.kulkarni/git/build/mb6_basic -- -j12 -l12
-Invoking command in '/home/imtld.local/niranjan.kulkarni/git/build/mb6_basic': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --install /home/imtld.local/niranjan.kulkarni/git/build/mb6_basic
-Invoked command in '/home/imtld.local/niranjan.kulkarni/git/build/mb6_basic' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --install /home/imtld.local/niranjan.kulkarni/git/build/mb6_basic

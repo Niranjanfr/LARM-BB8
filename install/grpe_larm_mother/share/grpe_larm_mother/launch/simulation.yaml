@@ -1,7 +1,6 @@
 launch:
 
-#- executable: 
- #   cmd: gnome-terminal --tab -e 'ros2 run teleop_twist_keyboard teleop_twist_keyboard'
+
     
 - node:
     pkg: "rviz2"
@@ -14,10 +13,9 @@ launch:
     name: "mov_obstacles"
 
 - node:
-    pkg: "mb6_basic"
+    pkg: "grpe_larm_mother"
     exec: "multiplexer"
     name: "multiplexer"
-    
     
 - include:
      file: "$(find-pkg-share grpe_larm_mother)/scripts/challenge-1.launch.py"
