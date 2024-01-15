@@ -18,5 +18,3 @@ launch:
     exec: "camera_driver.py"
     name: "detectin_bouteilles"
     
-# - include:
-#      file: "$(find-pkg-share kickoff)/launch/challenge-1.launch.py"
