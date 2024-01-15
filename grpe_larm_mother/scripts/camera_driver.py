@@ -6,6 +6,7 @@ from cv_bridge import CvBridge
 from rclpy.node import Node
 from std_msgs.msg import Header
 from sensor_msgs.msg import Image
+from std_msgs.msg import String
 
 # Realsense Node:
 class Realsense(Node):
@@ -29,6 +30,8 @@ class Realsense(Node):
 
         self.image_publisher = self.create_publisher(Image,"image_raw",10)
         self.depth_publisher = self.create_publisher(Image,"image_raw",10)
+
+        self.trouver = self.create_publisher(String, 'Objet_trouve', 10)
 
 
         # Start streaming
@@ -136,6 +139,8 @@ class Realsense(Node):
         # dilatation d'un mask
         mask=cv2.dilate(mask, None, iterations=4)
 
+        msg = String()
+        msg.data = ' Bouteille trouvée '
         elements=cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)[-2]
         if len(elements) > 0:
             c=max(elements, key=cv2.contourArea)
@@ -145,9 +150,10 @@ class Realsense(Node):
                 cv2.circle(frame, (int(x), int(y)), 5, color_info, 10)
                 cv2.line(frame, (int(x), int(y)), (int(x)+150, int(y)), color_info, 2)
                 cv2.putText(frame, "Objet !!!", (int(x)+10, int(y) -10), cv2.FONT_HERSHEY_DUPLEX, 1, color_info, 1, cv2.LINE_AA)
+                self.trouver.publish(msg)
         cv2.imshow('Camera', frame)
-        cv2.imshow('image2', image2)
-        cv2.imshow('Mask', mask)
+        # cv2.imshow('image2', image2) # si nécessaire décommanter les lignes
+        # cv2.imshow('Mask', mask)
 
 
         cv2.waitKey(10)
