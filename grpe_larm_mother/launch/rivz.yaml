@@ -1,6 +1,5 @@
 launch:
 
-    
 - node:
     pkg: "rviz2"
     exec: "rviz2"

@@ -1,6 +1,12 @@
 launch:
 
 - node:
+    pkg: "rviz2"
+    exec: "rviz2"
+    name: "rviz2"
+    args: "-d $(find-pkg-share grpe_larm_mother)/launch/rviz.rviz"
+
+- node:
     pkg: "grpe_larm_mother"
     exec: "reactive_move.py"
     name: "mov_obstacles"
