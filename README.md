@@ -46,6 +46,9 @@ source ./install/setup.bash
 
 **Robot :**
 
+```
+ros2 run grpe_larm_mother reactive_move.py
+```
 
 **Vision :**
 
