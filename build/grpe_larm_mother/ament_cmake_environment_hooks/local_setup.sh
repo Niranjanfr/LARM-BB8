@@ -2,7 +2,7 @@
 
 # since this file is sourced use either the provided AMENT_CURRENT_PREFIX
 # or fall back to the destination set at configure time
-: ${AMENT_CURRENT_PREFIX:="/home/bot/mb6-space/larm-bb8/install/grpe_larm_mother"}
+: ${AMENT_CURRENT_PREFIX:="/home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother"}
 if [ ! -d "$AMENT_CURRENT_PREFIX" ]; then
   if [ -z "$COLCON_CURRENT_PREFIX" ]; then
     echo "The compile time prefix path '$AMENT_CURRENT_PREFIX' doesn't " \

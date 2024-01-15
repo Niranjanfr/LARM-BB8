@@ -1,0 +1,66 @@
+[0.050s] Invoking command in '/home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/build/grpe_larm_mother': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake /home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother -DCMAKE_INSTALL_PREFIX=/home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/install/grpe_larm_mother
+[0.224s] -- The C compiler identification is GNU 11.4.0
+[0.339s] -- The CXX compiler identification is GNU 11.4.0
+[0.367s] -- Detecting C compiler ABI info
+[0.643s] -- Detecting C compiler ABI info - done
+[0.675s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.682s] -- Detecting C compile features
+[0.682s] -- Detecting C compile features - done
+[0.709s] -- Detecting CXX compiler ABI info
+[1.011s] -- Detecting CXX compiler ABI info - done
+[1.073s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.082s] -- Detecting CXX compile features
+[1.084s] -- Detecting CXX compile features - done
+[1.123s] -- Found ament_cmake: 2.0.3 (/opt/ros/iron/share/ament_cmake/cmake)
+[1.282s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[1.681s] -- Found ament_lint_auto: 0.14.2 (/opt/ros/iron/share/ament_lint_auto/cmake)
+[2.066s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.068s] -- Configured cppcheck include dirs: 
+[2.069s] -- Configured cppcheck exclude dirs and/or files: 
+[2.091s] -- Added test 'flake8' to check Python code syntax and style conventions
+[2.094s] -- Configured 'flake8' exclude dirs and/or files: 
+[2.129s] -- Added test 'lint_cmake' to check CMake code style
+[2.153s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[2.274s] -- Added test 'uncrustify' to check C / C++ code style
+[2.276s] -- Configured uncrustify additional arguments: 
+[2.305s] -- Added test 'xmllint' to check XML markup files
+[2.397s] -- Configuring done
+[2.663s] -- Generating done
+[2.723s] -- Build files have been written to: /home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/build/grpe_larm_mother
+[2.726s] Invoked command in '/home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/build/grpe_larm_mother' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake /home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother -DCMAKE_INSTALL_PREFIX=/home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/install/grpe_larm_mother
+[2.734s] Invoking command in '/home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/build/grpe_larm_mother': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --build /home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/build/grpe_larm_mother -- -j12 -l12
+[2.777s] Invoked command in '/home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/build/grpe_larm_mother' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --build /home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/build/grpe_larm_mother -- -j12 -l12
+[2.802s] Invoking command in '/home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/build/grpe_larm_mother': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --install /home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/build/grpe_larm_mother
+[2.809s] -- Install configuration: ""
+[2.812s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/install/grpe_larm_mother/share/grpe_larm_mother//launch
+[2.829s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/install/grpe_larm_mother/share/grpe_larm_mother//launch/minimal_launch.yaml
+[2.863s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/install/grpe_larm_mother/share/grpe_larm_mother//launch/challenge1.yaml
+[2.889s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/install/grpe_larm_mother/share/grpe_larm_mother//scripts
+[2.898s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/install/grpe_larm_mother/share/grpe_larm_mother//scripts/__init__.py
+[2.944s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/install/grpe_larm_mother/share/grpe_larm_mother//scripts/__pycache__
+[2.966s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/install/grpe_larm_mother/share/grpe_larm_mother//scripts/__pycache__/__init__.cpython-310.pyc
+[3.016s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/install/grpe_larm_mother/share/grpe_larm_mother//scripts/__pycache__/classifier.cpython-310.pyc
+[3.037s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/install/grpe_larm_mother/share/grpe_larm_mother//scripts/__pycache__/classifierCircle.cpython-310.pyc
+[3.059s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/install/grpe_larm_mother/share/grpe_larm_mother//scripts/__pycache__/test_class.cpython-310-pytest-6.2.5.pyc
+[3.082s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/install/grpe_larm_mother/share/grpe_larm_mother//scripts/simulation.py
+[3.122s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/install/grpe_larm_mother/share/grpe_larm_mother//scripts/camera_driver.py
+[3.153s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/install/grpe_larm_mother/share/grpe_larm_mother//scripts/reactive_move.py
+[3.188s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/install/grpe_larm_mother/lib/grpe_larm_mother/reactive_move.py
+[3.205s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/install/grpe_larm_mother/lib/grpe_larm_mother/camera_driver.py
+[3.238s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/install/grpe_larm_mother/lib/grpe_larm_mother/simulation.py
+[3.272s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/install/grpe_larm_mother/share/ament_index/resource_index/package_run_dependencies/grpe_larm_mother
+[3.302s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/install/grpe_larm_mother/share/ament_index/resource_index/parent_prefix_path/grpe_larm_mother
+[3.335s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/install/grpe_larm_mother/share/grpe_larm_mother/environment/ament_prefix_path.sh
+[3.356s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/install/grpe_larm_mother/share/grpe_larm_mother/environment/ament_prefix_path.dsv
+[3.378s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/install/grpe_larm_mother/share/grpe_larm_mother/environment/path.sh
+[3.400s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/install/grpe_larm_mother/share/grpe_larm_mother/environment/path.dsv
+[3.437s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/install/grpe_larm_mother/share/grpe_larm_mother/local_setup.bash
+[3.463s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/install/grpe_larm_mother/share/grpe_larm_mother/local_setup.sh
+[3.484s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/install/grpe_larm_mother/share/grpe_larm_mother/local_setup.zsh
+[3.507s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/install/grpe_larm_mother/share/grpe_larm_mother/local_setup.dsv
+[3.551s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/install/grpe_larm_mother/share/grpe_larm_mother/package.dsv
+[3.588s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/install/grpe_larm_mother/share/ament_index/resource_index/packages/grpe_larm_mother
+[3.626s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/install/grpe_larm_mother/share/grpe_larm_mother/cmake/grpe_larm_motherConfig.cmake
+[3.653s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/install/grpe_larm_mother/share/grpe_larm_mother/cmake/grpe_larm_motherConfig-version.cmake
+[3.687s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/install/grpe_larm_mother/share/grpe_larm_mother/package.xml
+[3.719s] Invoked command in '/home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/build/grpe_larm_mother' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --install /home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/build/grpe_larm_mother

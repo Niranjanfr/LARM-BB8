@@ -1,0 +1,194 @@
+[0.322s] Invoking command in '/home/imtld.local/niranjan.kulkarni/git/build/tbot_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake /home/imtld.local/niranjan.kulkarni/git/tbot_sim -DCMAKE_INSTALL_PREFIX=/home/imtld.local/niranjan.kulkarni/git/install/tbot_sim
+[0.787s] -- The C compiler identification is GNU 11.4.0
+[1.212s] -- The CXX compiler identification is GNU 11.4.0
+[1.275s] -- Detecting C compiler ABI info
+[2.131s] -- Detecting C compiler ABI info - done
+[2.173s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.173s] -- Detecting C compile features
+[2.173s] -- Detecting C compile features - done
+[2.241s] -- Detecting CXX compiler ABI info
+[3.073s] -- Detecting CXX compiler ABI info - done
+[3.115s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[3.115s] -- Detecting CXX compile features
+[3.115s] -- Detecting CXX compile features - done
+[3.182s] -- Found ament_cmake: 2.0.3 (/opt/ros/iron/share/ament_cmake/cmake)
+[4.137s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[5.050s] -- Found ament_lint_auto: 0.14.2 (/opt/ros/iron/share/ament_lint_auto/cmake)
+[6.014s] -- Configuring done
+[6.473s] -- Generating done
+[6.630s] -- Build files have been written to: /home/imtld.local/niranjan.kulkarni/git/build/tbot_sim
+[6.658s] Invoked command in '/home/imtld.local/niranjan.kulkarni/git/build/tbot_sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake /home/imtld.local/niranjan.kulkarni/git/tbot_sim -DCMAKE_INSTALL_PREFIX=/home/imtld.local/niranjan.kulkarni/git/install/tbot_sim
+[6.701s] Invoking command in '/home/imtld.local/niranjan.kulkarni/git/build/tbot_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --build /home/imtld.local/niranjan.kulkarni/git/build/tbot_sim -- -j12 -l12
+[6.891s] Invoked command in '/home/imtld.local/niranjan.kulkarni/git/build/tbot_sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --build /home/imtld.local/niranjan.kulkarni/git/build/tbot_sim -- -j12 -l12
+[7.074s] Invoking command in '/home/imtld.local/niranjan.kulkarni/git/build/tbot_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --install /home/imtld.local/niranjan.kulkarni/git/build/tbot_sim
+[7.106s] -- Install configuration: ""
+[7.126s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/launch
+[7.145s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/launch/challenge-1.launch.py
+[7.181s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/launch/challenge-2.launch.py
+[7.237s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/launch/challenge-3.launch.py
+[7.277s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/launch/code_tuto_move.py
+[7.310s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/launch/__pycache__
+[7.325s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/launch/__pycache__/challenge-1.launch.cpython-310.pyc
+[7.375s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/launch/tutosim_launch.yaml
+[7.395s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/launch/includes
+[7.418s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/launch/includes/challenge.launch.py
+[7.481s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/launch/includes/gazebo.launch.py
+[7.506s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/launch/includes/spawn_create.launch.py
+[7.535s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/launch/includes/spawn_entity.launch.py
+[7.559s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/launch/includes/spawn_kobuki.launch.py
+[7.596s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/launch/includes/spawn_tbot.launch.py
+[7.686s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models
+[7.711s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/tbot
+[7.744s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/tbot/model.config
+[7.780s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/tbot/model.sdf
+[7.832s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/tbot/materials
+[7.853s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/tbot/materials/textures
+[7.875s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/tbot/materials/textures/1f_stack.jpg
+[7.908s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/tbot/materials/textures/2f_stack.jpg
+[7.947s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/tbot/materials/textures/3f_stack.jpg
+[7.990s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/tbot/meshes
+[8.013s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/tbot/meshes/plate_bottom.dae
+[8.124s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/tbot/meshes/plate_middle.dae
+[8.126s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/tbot/meshes/plate_top.dae
+[8.178s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/willowgarage
+[8.201s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/willowgarage/model-1_2.sdf
+[8.239s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/willowgarage/model-1_3.sdf
+[8.265s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/willowgarage/model-1_4.sdf
+[8.300s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/willowgarage/model.config
+[8.324s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/willowgarage/model.sdf
+[8.360s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/willowgarage/materials
+[8.374s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/willowgarage/materials/textures
+[8.392s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/willowgarage/materials/textures/Carpet_Berber_Pattern_Gray_.png
+[8.447s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/willowgarage/materials/textures/Stone_Brushed_Khaki_.png
+[8.490s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/willowgarage/materials/textures/Wood_Bamboo_Medium_.png
+[8.537s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/willowgarage/materials/textures/Wood_Cherry_Original_.png
+[8.609s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/willowgarage/materials/textures/__Wood_Bamboo_Medium_1.png
+[8.652s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/willowgarage/materials/textures/__auto_12.png
+[8.765s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/willowgarage/materials/textures/__auto_2.png
+[8.817s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/willowgarage/meshes
+[8.851s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/willowgarage/meshes/willowgarage_collision.dae
+[9.050s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/willowgarage/meshes/willowgarage_visual.dae
+[9.442s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kobuki_model
+[9.488s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kobuki_model/model.config
+[9.510s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kobuki_model/model.sdf
+[9.533s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kobuki_model/meshes
+[9.555s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kobuki_model/meshes/hokuyo.dae
+[9.613s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kobuki_model/meshes/main_body.dae
+[9.792s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kobuki_model/meshes/wheel.dae
+[9.932s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kobuki_model/meshes/images
+[10.008s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kobuki_model/meshes/images/main_body.jpg
+[10.113s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kobuki_model/meshes/images/wheel.jpg
+[10.190s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/SYV_office_chairs
+[10.200s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/SYV_office_chairs/model.config
+[10.276s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/SYV_office_chairs/model.sdf
+[10.322s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/SYV_office_chairs/meshes
+[10.345s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/SYV_office_chairs/meshes/chair.dae
+[11.038s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/SYV_office_desks
+[11.064s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/SYV_office_desks/model.config
+[11.143s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/SYV_office_desks/model.sdf
+[11.184s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/SYV_office_desks/meshes
+[11.200s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/SYV_office_desks/meshes/woodfurn.dae
+[11.377s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/turtlebot
+[11.420s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/turtlebot/model-1_2.sdf
+[11.454s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/turtlebot/model-1_3.sdf
+[11.490s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/turtlebot/model-1_4.sdf
+[11.532s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/turtlebot/model.config
+[11.598s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/turtlebot/model.sdf
+[11.689s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/turtlebot/materials
+[11.712s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/turtlebot/materials/textures
+[11.717s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/turtlebot/materials/textures/68-02421-8000-RA_Turtlebot_F-F_Standoff_color.png
+[11.794s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/turtlebot/materials/textures/68-04552-1000-RA_Turtlebot_M-F_Standoff_color.png
+[11.885s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/turtlebot/materials/textures/68-04552-2000-RA_Turtlebot_M-F_Standoff_color.png
+[11.951s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/turtlebot/materials/textures/create_body.png
+[11.977s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/turtlebot/materials/textures/plate_0_logo.png
+[12.034s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/turtlebot/materials/textures/plate_1_logo.png
+[12.097s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/turtlebot/materials/textures/plate_2_logo.png
+[12.157s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/turtlebot/meshes
+[12.199s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/turtlebot/meshes/68-02403-125_Spacer.dae
+[12.262s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/turtlebot/meshes/68-02421-8000-RA_Turtlebot_F-F_Standoff.dae
+[12.432s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/turtlebot/meshes/68-04552-1000-RA_Turtlebot_M-F_Standoff.dae
+[12.546s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/turtlebot/meshes/68-04552-2000-RA_Turtlebot_M-F_Standoff.dae
+[12.664s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/turtlebot/meshes/68-04556-RA_Kinect_Standoff_Assy.dae
+[12.774s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/turtlebot/meshes/create_body.dae
+[13.051s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/turtlebot/meshes/plate_0_logo.dae
+[13.098s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/turtlebot/meshes/plate_1_logo.dae
+[13.125s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/turtlebot/meshes/plate_2_logo.dae
+[13.161s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kobuki
+[13.170s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kobuki/model.config
+[13.220s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kobuki/model.sdf
+[13.250s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kobuki/materials
+[13.268s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kobuki/materials/textures
+[13.281s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kobuki/materials/textures/main_body.jpg
+[13.463s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kobuki/materials/textures/wheel.jpg
+[13.513s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kobuki/meshes
+[13.533s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kobuki/meshes/main_body.dae
+[13.700s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kobuki/meshes/wheel.dae
+[13.798s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/SYV_office_walls
+[13.814s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/SYV_office_walls/model.config
+[13.829s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/SYV_office_walls/model.sdf
+[13.861s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/SYV_office_walls/meshes
+[13.872s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/SYV_office_walls/meshes/walls.dae
+[14.015s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/nuka_cola
+[14.032s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/nuka_cola/model.config
+[14.059s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/nuka_cola/model.sdf
+[14.087s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/nuka_cola/materials
+[14.105s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/nuka_cola/materials/textures
+[14.123s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/nuka_cola/materials/textures/nuka_cola.png
+[14.301s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/nuka_cola/meshes
+[14.321s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/nuka_cola/meshes/can.dae
+[14.516s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/hokuyo
+[14.554s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/hokuyo/model-1_2.sdf
+[14.606s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/hokuyo/model-1_3.sdf
+[14.709s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/hokuyo/model-1_4.sdf
+[14.744s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/hokuyo/model.config
+[14.777s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/hokuyo/model.sdf
+[14.802s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/hokuyo/meshes
+[14.821s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/hokuyo/meshes/hokuyo.dae
+[14.884s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/hokuyo/meshes/hokuyo_convex.stl
+[14.925s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/create
+[14.943s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/create/model-1_3.sdf
+[14.966s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/create/model-1_4.sdf
+[14.989s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/create/model.config
+[15.014s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/create/model.sdf
+[15.040s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/create/model-1_2.sdf
+[15.060s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/create/materials
+[15.075s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/create/materials/textures
+[15.086s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/create/materials/textures/create_body.png
+[15.119s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/create/meshes
+[15.127s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/create/meshes/create_body.dae
+[15.432s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kinect
+[15.446s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kinect/model-1_2.sdf
+[15.467s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kinect/model-1_3.sdf
+[15.490s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kinect/model-1_4.sdf
+[15.583s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kinect/model.config
+[15.606s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kinect/model.sdf
+[15.637s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kinect/materials
+[15.652s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kinect/materials/textures
+[15.673s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kinect/materials/textures/kinect.png
+[15.697s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kinect/meshes
+[15.716s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kinect/meshes/kinect.dae
+[15.927s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/urdf
+[15.935s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/urdf/create.urdf
+[15.975s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/urdf/kobuki_standalone.urdf
+[16.007s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/urdf/tbot.urdf
+[16.072s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/worlds
+[16.088s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/worlds/challenge-1.world
+[16.110s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/worlds/challenge-2.world
+[16.134s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/worlds/challenge-3.world
+[16.165s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/worlds/empty.world
+[16.199s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/ament_index/resource_index/package_run_dependencies/tbot_sim
+[16.238s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/ament_index/resource_index/parent_prefix_path/tbot_sim
+[16.282s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/environment/ament_prefix_path.sh
+[16.306s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/environment/ament_prefix_path.dsv
+[16.361s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/environment/path.sh
+[16.388s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/environment/path.dsv
+[16.424s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/local_setup.bash
+[16.462s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/local_setup.sh
+[16.487s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/local_setup.zsh
+[16.505s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/local_setup.dsv
+[16.529s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/package.dsv
+[16.561s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/ament_index/resource_index/packages/tbot_sim
+[16.582s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/cmake/tbot_simConfig.cmake
+[16.659s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/cmake/tbot_simConfig-version.cmake
+[16.700s] -- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/package.xml
+[16.742s] Invoked command in '/home/imtld.local/niranjan.kulkarni/git/build/tbot_sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --install /home/imtld.local/niranjan.kulkarni/git/build/tbot_sim

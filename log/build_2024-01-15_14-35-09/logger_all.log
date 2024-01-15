@@ -1,0 +1,193 @@
+[1.501s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[1.501s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7fd2df1ebfd0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7fd2dfa656f0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7fd2dfa656f0>>)
+[1.695s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.696s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.709s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.719s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.732s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.746s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.750s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/imtld.local/niranjan.kulkarni/git'
+[1.754s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.755s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.759s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.760s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.761s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.766s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.768s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.774s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.781s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.867s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[1.868s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[1.883s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[1.885s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[1.892s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[1.905s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[1.921s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[1.938s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[1.951s] Level 1:colcon.colcon_core.package_identification:_identify(grpe_larm_mother) by extensions ['ignore', 'ignore_ament_install']
+[1.956s] Level 1:colcon.colcon_core.package_identification:_identify(grpe_larm_mother) by extension 'ignore'
+[1.969s] Level 1:colcon.colcon_core.package_identification:_identify(grpe_larm_mother) by extension 'ignore_ament_install'
+[1.983s] Level 1:colcon.colcon_core.package_identification:_identify(grpe_larm_mother) by extensions ['colcon_pkg']
+[1.994s] Level 1:colcon.colcon_core.package_identification:_identify(grpe_larm_mother) by extension 'colcon_pkg'
+[1.998s] Level 1:colcon.colcon_core.package_identification:_identify(grpe_larm_mother) by extensions ['colcon_meta']
+[2.007s] Level 1:colcon.colcon_core.package_identification:_identify(grpe_larm_mother) by extension 'colcon_meta'
+[2.014s] Level 1:colcon.colcon_core.package_identification:_identify(grpe_larm_mother) by extensions ['ros']
+[2.017s] Level 1:colcon.colcon_core.package_identification:_identify(grpe_larm_mother) by extension 'ros'
+[2.039s] DEBUG:colcon.colcon_core.package_identification:Package 'grpe_larm_mother' with type 'ros.ament_cmake' and name 'grpe_larm_mother'
+[2.041s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[2.043s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[2.048s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[2.054s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[2.055s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[2.064s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[2.070s] Level 1:colcon.colcon_core.package_identification:_identify(tbot_sim) by extensions ['ignore', 'ignore_ament_install']
+[2.073s] Level 1:colcon.colcon_core.package_identification:_identify(tbot_sim) by extension 'ignore'
+[2.080s] Level 1:colcon.colcon_core.package_identification:_identify(tbot_sim) by extension 'ignore_ament_install'
+[2.087s] Level 1:colcon.colcon_core.package_identification:_identify(tbot_sim) by extensions ['colcon_pkg']
+[2.097s] Level 1:colcon.colcon_core.package_identification:_identify(tbot_sim) by extension 'colcon_pkg'
+[2.099s] Level 1:colcon.colcon_core.package_identification:_identify(tbot_sim) by extensions ['colcon_meta']
+[2.106s] Level 1:colcon.colcon_core.package_identification:_identify(tbot_sim) by extension 'colcon_meta'
+[2.110s] Level 1:colcon.colcon_core.package_identification:_identify(tbot_sim) by extensions ['ros']
+[2.118s] Level 1:colcon.colcon_core.package_identification:_identify(tbot_sim) by extension 'ros'
+[2.127s] DEBUG:colcon.colcon_core.package_identification:Package 'tbot_sim' with type 'ros.ament_cmake' and name 'tbot_sim'
+[2.128s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[2.133s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[2.137s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[2.145s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[2.153s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[2.313s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[2.314s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[2.761s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/imtld.local/niranjan.kulkarni/ros_ws/install
+[2.768s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 340 installed packages in /opt/ros/iron
+[2.797s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[3.025s] Level 5:colcon.colcon_core.verb:set package 'grpe_larm_mother' build argument 'cmake_args' from command line to 'None'
+[3.026s] Level 5:colcon.colcon_core.verb:set package 'grpe_larm_mother' build argument 'cmake_target' from command line to 'None'
+[3.045s] Level 5:colcon.colcon_core.verb:set package 'grpe_larm_mother' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[3.057s] Level 5:colcon.colcon_core.verb:set package 'grpe_larm_mother' build argument 'cmake_clean_cache' from command line to 'False'
+[3.075s] Level 5:colcon.colcon_core.verb:set package 'grpe_larm_mother' build argument 'cmake_clean_first' from command line to 'False'
+[3.085s] Level 5:colcon.colcon_core.verb:set package 'grpe_larm_mother' build argument 'cmake_force_configure' from command line to 'False'
+[3.092s] Level 5:colcon.colcon_core.verb:set package 'grpe_larm_mother' build argument 'ament_cmake_args' from command line to 'None'
+[3.103s] Level 5:colcon.colcon_core.verb:set package 'grpe_larm_mother' build argument 'catkin_cmake_args' from command line to 'None'
+[3.116s] Level 5:colcon.colcon_core.verb:set package 'grpe_larm_mother' build argument 'catkin_skip_building_tests' from command line to 'False'
+[3.120s] DEBUG:colcon.colcon_core.verb:Building package 'grpe_larm_mother' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/imtld.local/niranjan.kulkarni/git/build/grpe_larm_mother', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother', 'merge_install': False, 'path': '/home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother', 'symlink_install': False, 'test_result_base': None}
+[3.137s] Level 5:colcon.colcon_core.verb:set package 'tbot_sim' build argument 'cmake_args' from command line to 'None'
+[3.139s] Level 5:colcon.colcon_core.verb:set package 'tbot_sim' build argument 'cmake_target' from command line to 'None'
+[3.142s] Level 5:colcon.colcon_core.verb:set package 'tbot_sim' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[3.145s] Level 5:colcon.colcon_core.verb:set package 'tbot_sim' build argument 'cmake_clean_cache' from command line to 'False'
+[3.148s] Level 5:colcon.colcon_core.verb:set package 'tbot_sim' build argument 'cmake_clean_first' from command line to 'False'
+[3.155s] Level 5:colcon.colcon_core.verb:set package 'tbot_sim' build argument 'cmake_force_configure' from command line to 'False'
+[3.158s] Level 5:colcon.colcon_core.verb:set package 'tbot_sim' build argument 'ament_cmake_args' from command line to 'None'
+[3.162s] Level 5:colcon.colcon_core.verb:set package 'tbot_sim' build argument 'catkin_cmake_args' from command line to 'None'
+[3.165s] Level 5:colcon.colcon_core.verb:set package 'tbot_sim' build argument 'catkin_skip_building_tests' from command line to 'False'
+[3.177s] DEBUG:colcon.colcon_core.verb:Building package 'tbot_sim' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/imtld.local/niranjan.kulkarni/git/build/tbot_sim', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/imtld.local/niranjan.kulkarni/git/install/tbot_sim', 'merge_install': False, 'path': '/home/imtld.local/niranjan.kulkarni/git/tbot_sim', 'symlink_install': False, 'test_result_base': None}
+[3.182s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[3.196s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[3.200s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother' with build type 'ament_cmake'
+[3.203s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother'
+[3.222s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[3.224s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.226s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.324s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/imtld.local/niranjan.kulkarni/git/tbot_sim' with build type 'ament_cmake'
+[3.327s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/imtld.local/niranjan.kulkarni/git/tbot_sim'
+[3.345s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.345s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.541s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/imtld.local/niranjan.kulkarni/git/build/grpe_larm_mother': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake /home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother -DCMAKE_INSTALL_PREFIX=/home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother
+[3.651s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/imtld.local/niranjan.kulkarni/git/build/tbot_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake /home/imtld.local/niranjan.kulkarni/git/tbot_sim -DCMAKE_INSTALL_PREFIX=/home/imtld.local/niranjan.kulkarni/git/install/tbot_sim
+[10.023s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/imtld.local/niranjan.kulkarni/git/build/tbot_sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake /home/imtld.local/niranjan.kulkarni/git/tbot_sim -DCMAKE_INSTALL_PREFIX=/home/imtld.local/niranjan.kulkarni/git/install/tbot_sim
+[10.029s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/imtld.local/niranjan.kulkarni/git/build/tbot_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --build /home/imtld.local/niranjan.kulkarni/git/build/tbot_sim -- -j12 -l12
+[10.219s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/imtld.local/niranjan.kulkarni/git/build/tbot_sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --build /home/imtld.local/niranjan.kulkarni/git/build/tbot_sim -- -j12 -l12
+[10.403s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/imtld.local/niranjan.kulkarni/git/build/tbot_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --install /home/imtld.local/niranjan.kulkarni/git/build/tbot_sim
+[11.370s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/imtld.local/niranjan.kulkarni/git/build/grpe_larm_mother' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake /home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother -DCMAKE_INSTALL_PREFIX=/home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother
+[11.451s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/imtld.local/niranjan.kulkarni/git/build/grpe_larm_mother': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --build /home/imtld.local/niranjan.kulkarni/git/build/grpe_larm_mother -- -j12 -l12
+[11.648s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/imtld.local/niranjan.kulkarni/git/build/grpe_larm_mother' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --build /home/imtld.local/niranjan.kulkarni/git/build/grpe_larm_mother -- -j12 -l12
+[11.811s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/imtld.local/niranjan.kulkarni/git/build/grpe_larm_mother': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --install /home/imtld.local/niranjan.kulkarni/git/build/grpe_larm_mother
+[14.823s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(grpe_larm_mother)
+[14.842s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/imtld.local/niranjan.kulkarni/git/build/grpe_larm_mother' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --install /home/imtld.local/niranjan.kulkarni/git/build/grpe_larm_mother
+[14.850s] Level 1:colcon.colcon_core.environment:checking '/home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother' for CMake module files
+[14.868s] Level 1:colcon.colcon_core.environment:checking '/home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother' for CMake config files
+[14.881s] Level 1:colcon.colcon_core.shell:create_environment_hook('grpe_larm_mother', 'cmake_prefix_path')
+[14.891s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/hook/cmake_prefix_path.ps1'
+[14.954s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/hook/cmake_prefix_path.dsv'
+[14.990s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/hook/cmake_prefix_path.sh'
+[15.018s] Level 1:colcon.colcon_core.environment:checking '/home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/lib'
+[15.020s] Level 1:colcon.colcon_core.environment:checking '/home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/bin'
+[15.021s] Level 1:colcon.colcon_core.environment:checking '/home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/lib/pkgconfig/grpe_larm_mother.pc'
+[15.022s] Level 1:colcon.colcon_core.environment:checking '/home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/lib/python3.10/site-packages'
+[15.022s] Level 1:colcon.colcon_core.environment:checking '/home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/bin'
+[15.033s] INFO:colcon.colcon_core.shell:Creating package script '/home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/package.ps1'
+[15.059s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/package.dsv'
+[15.099s] INFO:colcon.colcon_core.shell:Creating package script '/home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/package.sh'
+[15.129s] INFO:colcon.colcon_core.shell:Creating package script '/home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/package.bash'
+[15.156s] INFO:colcon.colcon_core.shell:Creating package script '/home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/package.zsh'
+[15.195s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/colcon-core/packages/grpe_larm_mother)
+[15.348s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(grpe_larm_mother)
+[15.352s] Level 1:colcon.colcon_core.environment:checking '/home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother' for CMake module files
+[15.368s] Level 1:colcon.colcon_core.environment:checking '/home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother' for CMake config files
+[15.377s] Level 1:colcon.colcon_core.shell:create_environment_hook('grpe_larm_mother', 'cmake_prefix_path')
+[15.386s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/hook/cmake_prefix_path.ps1'
+[15.418s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/hook/cmake_prefix_path.dsv'
+[15.433s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/hook/cmake_prefix_path.sh'
+[15.460s] Level 1:colcon.colcon_core.environment:checking '/home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/lib'
+[15.462s] Level 1:colcon.colcon_core.environment:checking '/home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/bin'
+[15.477s] Level 1:colcon.colcon_core.environment:checking '/home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/lib/pkgconfig/grpe_larm_mother.pc'
+[15.496s] Level 1:colcon.colcon_core.environment:checking '/home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/lib/python3.10/site-packages'
+[15.499s] Level 1:colcon.colcon_core.environment:checking '/home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/bin'
+[15.504s] INFO:colcon.colcon_core.shell:Creating package script '/home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/package.ps1'
+[15.529s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/package.dsv'
+[15.563s] INFO:colcon.colcon_core.shell:Creating package script '/home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/package.sh'
+[15.583s] INFO:colcon.colcon_core.shell:Creating package script '/home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/package.bash'
+[15.600s] INFO:colcon.colcon_core.shell:Creating package script '/home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/package.zsh'
+[15.677s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/colcon-core/packages/grpe_larm_mother)
+[20.058s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(tbot_sim)
+[20.073s] Level 1:colcon.colcon_core.environment:checking '/home/imtld.local/niranjan.kulkarni/git/install/tbot_sim' for CMake module files
+[20.075s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/imtld.local/niranjan.kulkarni/git/build/tbot_sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --install /home/imtld.local/niranjan.kulkarni/git/build/tbot_sim
+[20.091s] Level 1:colcon.colcon_core.environment:checking '/home/imtld.local/niranjan.kulkarni/git/install/tbot_sim' for CMake config files
+[20.188s] Level 1:colcon.colcon_core.shell:create_environment_hook('tbot_sim', 'cmake_prefix_path')
+[20.191s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/hook/cmake_prefix_path.ps1'
+[20.207s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/hook/cmake_prefix_path.dsv'
+[20.213s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/hook/cmake_prefix_path.sh'
+[20.225s] Level 1:colcon.colcon_core.environment:checking '/home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/bin'
+[20.228s] Level 1:colcon.colcon_core.environment:checking '/home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/lib/pkgconfig/tbot_sim.pc'
+[20.231s] Level 1:colcon.colcon_core.environment:checking '/home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/lib/python3.10/site-packages'
+[20.234s] Level 1:colcon.colcon_core.environment:checking '/home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/bin'
+[20.237s] INFO:colcon.colcon_core.shell:Creating package script '/home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/package.ps1'
+[20.248s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/package.dsv'
+[20.257s] INFO:colcon.colcon_core.shell:Creating package script '/home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/package.sh'
+[20.268s] INFO:colcon.colcon_core.shell:Creating package script '/home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/package.bash'
+[20.278s] INFO:colcon.colcon_core.shell:Creating package script '/home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/package.zsh'
+[20.285s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/colcon-core/packages/tbot_sim)
+[20.382s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(tbot_sim)
+[20.390s] Level 1:colcon.colcon_core.environment:checking '/home/imtld.local/niranjan.kulkarni/git/install/tbot_sim' for CMake module files
+[20.393s] Level 1:colcon.colcon_core.environment:checking '/home/imtld.local/niranjan.kulkarni/git/install/tbot_sim' for CMake config files
+[20.436s] Level 1:colcon.colcon_core.shell:create_environment_hook('tbot_sim', 'cmake_prefix_path')
+[20.440s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/hook/cmake_prefix_path.ps1'
+[20.451s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/hook/cmake_prefix_path.dsv'
+[20.459s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/hook/cmake_prefix_path.sh'
+[20.480s] Level 1:colcon.colcon_core.environment:checking '/home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/bin'
+[20.481s] Level 1:colcon.colcon_core.environment:checking '/home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/lib/pkgconfig/tbot_sim.pc'
+[20.496s] Level 1:colcon.colcon_core.environment:checking '/home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/lib/python3.10/site-packages'
+[20.498s] Level 1:colcon.colcon_core.environment:checking '/home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/bin'
+[20.504s] INFO:colcon.colcon_core.shell:Creating package script '/home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/package.ps1'
+[20.513s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/package.dsv'
+[20.527s] INFO:colcon.colcon_core.shell:Creating package script '/home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/package.sh'
+[20.536s] INFO:colcon.colcon_core.shell:Creating package script '/home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/package.bash'
+[20.560s] INFO:colcon.colcon_core.shell:Creating package script '/home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/package.zsh'
+[20.594s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/colcon-core/packages/tbot_sim)
+[20.599s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[20.603s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[20.605s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[20.609s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[20.670s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[20.670s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[20.670s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[20.732s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[20.739s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/imtld.local/niranjan.kulkarni/git/install/local_setup.ps1'
+[20.757s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/imtld.local/niranjan.kulkarni/git/install/_local_setup_util_ps1.py'
+[20.768s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/imtld.local/niranjan.kulkarni/git/install/setup.ps1'
+[20.788s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/imtld.local/niranjan.kulkarni/git/install/local_setup.sh'
+[20.795s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/imtld.local/niranjan.kulkarni/git/install/_local_setup_util_sh.py'
+[20.822s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/imtld.local/niranjan.kulkarni/git/install/setup.sh'
+[20.839s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/imtld.local/niranjan.kulkarni/git/install/local_setup.bash'
+[20.849s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/imtld.local/niranjan.kulkarni/git/install/setup.bash'
+[20.869s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/imtld.local/niranjan.kulkarni/git/install/local_setup.zsh'
+[20.894s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/imtld.local/niranjan.kulkarni/git/install/setup.zsh'

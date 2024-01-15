@@ -1,0 +1,12 @@
+launch:
+
+#- executable: 
+ #   cmd: gnome-terminal --tab -e 'ros2 run teleop_twist_keyboard teleop_twist_keyboard'
+    
+- node:
+    pkg: "rviz2"
+    exec: "rviz2"
+    name: "rviz2"
+    
+- include:
+     file: "$(find-pkg-share tbot_sim)/launch/challenge-1.launch.py"

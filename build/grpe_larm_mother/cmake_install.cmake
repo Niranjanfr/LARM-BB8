@@ -1,8 +1,8 @@
-# Install script for directory: /home/bot/mb6-space/larm-bb8/grpe_larm_mother
+# Install script for directory: /home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/bot/mb6-space/larm-bb8/install/grpe_larm_mother")
+  set(CMAKE_INSTALL_PREFIX "/home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -44,25 +44,29 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/grpe_larm_mother/" TYPE DIRECTORY FILES
-    "/home/bot/mb6-space/larm-bb8/grpe_larm_mother/launch"
-    "/home/bot/mb6-space/larm-bb8/grpe_larm_mother/scripts"
+    "/home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/launch"
+    "/home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/scripts"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/grpe_larm_mother" TYPE PROGRAM FILES "/home/bot/mb6-space/larm-bb8/grpe_larm_mother/scripts/reactive_move.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/grpe_larm_mother" TYPE PROGRAM FILES "/home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/scripts/reactive_move.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/grpe_larm_mother" TYPE PROGRAM FILES "/home/bot/mb6-space/larm-bb8/grpe_larm_mother/scripts/camera_driver.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/grpe_larm_mother" TYPE PROGRAM FILES "/home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/scripts/camera_driver.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/bot/mb6-space/larm-bb8/build/grpe_larm_mother/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/grpe_larm_mother")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/grpe_larm_mother" TYPE PROGRAM FILES "/home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/scripts/challenge-1.launch.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/bot/mb6-space/larm-bb8/build/grpe_larm_mother/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/grpe_larm_mother")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/imtld.local/niranjan.kulkarni/git/build/grpe_larm_mother/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/grpe_larm_mother")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/imtld.local/niranjan.kulkarni/git/build/grpe_larm_mother/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/grpe_larm_mother")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -70,7 +74,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/grpe_larm_mother/environment" TYPE FILE FILES "/home/bot/mb6-space/larm-bb8/build/grpe_larm_mother/ament_cmake_environment_hooks/ament_prefix_path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/grpe_larm_mother/environment" TYPE FILE FILES "/home/imtld.local/niranjan.kulkarni/git/build/grpe_larm_mother/ament_cmake_environment_hooks/ament_prefix_path.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -78,42 +82,42 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/grpe_larm_mother/environment" TYPE FILE FILES "/home/bot/mb6-space/larm-bb8/build/grpe_larm_mother/ament_cmake_environment_hooks/path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/grpe_larm_mother/environment" TYPE FILE FILES "/home/imtld.local/niranjan.kulkarni/git/build/grpe_larm_mother/ament_cmake_environment_hooks/path.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/grpe_larm_mother" TYPE FILE FILES "/home/bot/mb6-space/larm-bb8/build/grpe_larm_mother/ament_cmake_environment_hooks/local_setup.bash")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/grpe_larm_mother" TYPE FILE FILES "/home/imtld.local/niranjan.kulkarni/git/build/grpe_larm_mother/ament_cmake_environment_hooks/local_setup.bash")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/grpe_larm_mother" TYPE FILE FILES "/home/bot/mb6-space/larm-bb8/build/grpe_larm_mother/ament_cmake_environment_hooks/local_setup.sh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/grpe_larm_mother" TYPE FILE FILES "/home/imtld.local/niranjan.kulkarni/git/build/grpe_larm_mother/ament_cmake_environment_hooks/local_setup.sh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/grpe_larm_mother" TYPE FILE FILES "/home/bot/mb6-space/larm-bb8/build/grpe_larm_mother/ament_cmake_environment_hooks/local_setup.zsh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/grpe_larm_mother" TYPE FILE FILES "/home/imtld.local/niranjan.kulkarni/git/build/grpe_larm_mother/ament_cmake_environment_hooks/local_setup.zsh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/grpe_larm_mother" TYPE FILE FILES "/home/bot/mb6-space/larm-bb8/build/grpe_larm_mother/ament_cmake_environment_hooks/local_setup.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/grpe_larm_mother" TYPE FILE FILES "/home/imtld.local/niranjan.kulkarni/git/build/grpe_larm_mother/ament_cmake_environment_hooks/local_setup.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/grpe_larm_mother" TYPE FILE FILES "/home/bot/mb6-space/larm-bb8/build/grpe_larm_mother/ament_cmake_environment_hooks/package.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/grpe_larm_mother" TYPE FILE FILES "/home/imtld.local/niranjan.kulkarni/git/build/grpe_larm_mother/ament_cmake_environment_hooks/package.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/bot/mb6-space/larm-bb8/build/grpe_larm_mother/ament_cmake_index/share/ament_index/resource_index/packages/grpe_larm_mother")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/imtld.local/niranjan.kulkarni/git/build/grpe_larm_mother/ament_cmake_index/share/ament_index/resource_index/packages/grpe_larm_mother")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/grpe_larm_mother/cmake" TYPE FILE FILES
-    "/home/bot/mb6-space/larm-bb8/build/grpe_larm_mother/ament_cmake_core/grpe_larm_motherConfig.cmake"
-    "/home/bot/mb6-space/larm-bb8/build/grpe_larm_mother/ament_cmake_core/grpe_larm_motherConfig-version.cmake"
+    "/home/imtld.local/niranjan.kulkarni/git/build/grpe_larm_mother/ament_cmake_core/grpe_larm_motherConfig.cmake"
+    "/home/imtld.local/niranjan.kulkarni/git/build/grpe_larm_mother/ament_cmake_core/grpe_larm_motherConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/grpe_larm_mother" TYPE FILE FILES "/home/bot/mb6-space/larm-bb8/grpe_larm_mother/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/grpe_larm_mother" TYPE FILE FILES "/home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother/package.xml")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -124,5 +128,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/bot/mb6-space/larm-bb8/build/grpe_larm_mother/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/imtld.local/niranjan.kulkarni/git/build/grpe_larm_mother/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

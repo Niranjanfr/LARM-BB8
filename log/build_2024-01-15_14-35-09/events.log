@@ -1,0 +1,444 @@
+[0.000000] (-) TimerEvent: {}
+[0.002429] (grpe_larm_mother) JobQueued: {'identifier': 'grpe_larm_mother', 'dependencies': OrderedDict()}
+[0.002602] (tbot_sim) JobQueued: {'identifier': 'tbot_sim', 'dependencies': OrderedDict()}
+[0.002628] (grpe_larm_mother) JobStarted: {'identifier': 'grpe_larm_mother'}
+[0.094514] (-) TimerEvent: {}
+[0.127110] (tbot_sim) JobStarted: {'identifier': 'tbot_sim'}
+[0.194641] (-) TimerEvent: {}
+[0.255683] (grpe_larm_mother) JobProgress: {'identifier': 'grpe_larm_mother', 'progress': 'cmake'}
+[0.284598] (grpe_larm_mother) Command: {'cmd': ['/usr/bin/cmake', '/home/imtld.local/niranjan.kulkarni/git/grpe_larm_mother', '-DCMAKE_INSTALL_PREFIX=/home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother'], 'cwd': '/home/imtld.local/niranjan.kulkarni/git/build/grpe_larm_mother', 'env': OrderedDict([('ROS_WORSPACE', '/home/imtld.local/niranjan.kulkarni/ros_ws'), ('USER', 'niranjan.kulkarni'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/iron/opt/rviz_ogre_vendor/lib:/opt/ros/iron/lib/x86_64-linux-gnu:/opt/ros/iron/lib'), ('HOME', '/home/imtld.local/niranjan.kulkarni'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '23949'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/876417573/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/imtld.local/niranjan.kulkarni/ros_ws/install'), ('ROS_DISTRO', 'iron'), ('LOGNAME', 'niranjan.kulkarni'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'niranjan.kulkarni'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('PATH', '/home/imtld.local/niranjan.kulkarni/bin:/opt/ros/iron/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/DEVELTER-U-10:@/tmp/.ICE-unix/2399,unix/DEVELTER-U-10:/tmp/.ICE-unix/2399'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/88d6bc81_c91c_40fb_85f1_d0a77e7a5b67'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/876417573'), ('ZEITGEIST_DATA_PATH', '/home/imtld.local/niranjan.kulkarni/.local/share/zeitgeist'), ('DISPLAY', ':0'), ('LANG', 'fr_FR.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/876417573/.mutter-Xwaylandauth.HAPNH2'), ('GNOME_TERMINAL_SERVICE', ':1.254'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/876417573/keyring/ssh'), ('ROS_DOMAIN_ID', '107'), ('AMENT_PREFIX_PATH', '/home/imtld.local/niranjan.kulkarni/ros_ws/install/tbot_sim:/opt/ros/iron'), ('SHELL', '/bin/bash'), ('KRB5CCNAME', 'FILE:/tmp/krb5cc_876417573_MSWOBM'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('ROS_AUTOMATIC_DISCOVERY_RANGE', 'SUBNET'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/imtld.local/niranjan.kulkarni/git/build/grpe_larm_mother'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/iron/lib/python3.10/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/imtld.local/niranjan.kulkarni/ros_ws/install/tbot_sim:/opt/ros/iron')]), 'shell': False}
+[0.343212] (-) TimerEvent: {}
+[0.343853] (tbot_sim) JobProgress: {'identifier': 'tbot_sim', 'progress': 'cmake'}
+[0.363687] (tbot_sim) Command: {'cmd': ['/usr/bin/cmake', '/home/imtld.local/niranjan.kulkarni/git/tbot_sim', '-DCMAKE_INSTALL_PREFIX=/home/imtld.local/niranjan.kulkarni/git/install/tbot_sim'], 'cwd': '/home/imtld.local/niranjan.kulkarni/git/build/tbot_sim', 'env': OrderedDict([('ROS_WORSPACE', '/home/imtld.local/niranjan.kulkarni/ros_ws'), ('USER', 'niranjan.kulkarni'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/iron/opt/rviz_ogre_vendor/lib:/opt/ros/iron/lib/x86_64-linux-gnu:/opt/ros/iron/lib'), ('HOME', '/home/imtld.local/niranjan.kulkarni'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '23949'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/876417573/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/imtld.local/niranjan.kulkarni/ros_ws/install'), ('ROS_DISTRO', 'iron'), ('LOGNAME', 'niranjan.kulkarni'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'niranjan.kulkarni'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('PATH', '/home/imtld.local/niranjan.kulkarni/bin:/opt/ros/iron/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/DEVELTER-U-10:@/tmp/.ICE-unix/2399,unix/DEVELTER-U-10:/tmp/.ICE-unix/2399'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/88d6bc81_c91c_40fb_85f1_d0a77e7a5b67'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/876417573'), ('ZEITGEIST_DATA_PATH', '/home/imtld.local/niranjan.kulkarni/.local/share/zeitgeist'), ('DISPLAY', ':0'), ('LANG', 'fr_FR.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/876417573/.mutter-Xwaylandauth.HAPNH2'), ('GNOME_TERMINAL_SERVICE', ':1.254'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/876417573/keyring/ssh'), ('ROS_DOMAIN_ID', '107'), ('AMENT_PREFIX_PATH', '/home/imtld.local/niranjan.kulkarni/ros_ws/install/tbot_sim:/opt/ros/iron'), ('SHELL', '/bin/bash'), ('KRB5CCNAME', 'FILE:/tmp/krb5cc_876417573_MSWOBM'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('ROS_AUTOMATIC_DISCOVERY_RANGE', 'SUBNET'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/imtld.local/niranjan.kulkarni/git/build/tbot_sim'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/iron/lib/python3.10/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/imtld.local/niranjan.kulkarni/ros_ws/install/tbot_sim:/opt/ros/iron')]), 'shell': False}
+[0.452638] (-) TimerEvent: {}
+[0.552995] (-) TimerEvent: {}
+[0.654171] (-) TimerEvent: {}
+[0.758164] (-) TimerEvent: {}
+[0.860330] (-) TimerEvent: {}
+[0.915971] (tbot_sim) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.927352] (grpe_larm_mother) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.961099] (-) TimerEvent: {}
+[1.062730] (-) TimerEvent: {}
+[1.164386] (-) TimerEvent: {}
+[1.266578] (-) TimerEvent: {}
+[1.340301] (tbot_sim) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[1.344330] (grpe_larm_mother) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[1.367262] (-) TimerEvent: {}
+[1.398096] (grpe_larm_mother) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.403585] (tbot_sim) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.467856] (-) TimerEvent: {}
+[1.571421] (-) TimerEvent: {}
+[1.673564] (-) TimerEvent: {}
+[1.776098] (-) TimerEvent: {}
+[1.877882] (-) TimerEvent: {}
+[1.980054] (-) TimerEvent: {}
+[2.081897] (-) TimerEvent: {}
+[2.184386] (-) TimerEvent: {}
+[2.259293] (tbot_sim) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[2.260857] (grpe_larm_mother) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[2.284739] (-) TimerEvent: {}
+[2.302442] (tbot_sim) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[2.302734] (tbot_sim) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[2.303019] (tbot_sim) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[2.339979] (grpe_larm_mother) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[2.344599] (grpe_larm_mother) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[2.348854] (grpe_larm_mother) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[2.370870] (tbot_sim) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[2.385046] (-) TimerEvent: {}
+[2.392475] (grpe_larm_mother) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[2.485587] (-) TimerEvent: {}
+[2.587667] (-) TimerEvent: {}
+[2.688690] (-) TimerEvent: {}
+[2.789982] (-) TimerEvent: {}
+[2.890670] (-) TimerEvent: {}
+[2.992059] (-) TimerEvent: {}
+[3.093359] (-) TimerEvent: {}
+[3.193791] (-) TimerEvent: {}
+[3.196625] (tbot_sim) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[3.206516] (grpe_larm_mother) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[3.243969] (tbot_sim) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[3.244425] (tbot_sim) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[3.244716] (tbot_sim) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[3.264980] (grpe_larm_mother) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[3.265280] (grpe_larm_mother) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[3.265583] (grpe_larm_mother) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[3.294372] (-) TimerEvent: {}
+[3.307934] (tbot_sim) StdoutLine: {'line': b'-- Found ament_cmake: 2.0.3 (/opt/ros/iron/share/ament_cmake/cmake)\n'}
+[3.315870] (grpe_larm_mother) StdoutLine: {'line': b'-- Found ament_cmake: 2.0.3 (/opt/ros/iron/share/ament_cmake/cmake)\n'}
+[3.395252] (-) TimerEvent: {}
+[3.497928] (-) TimerEvent: {}
+[3.601432] (-) TimerEvent: {}
+[3.703965] (-) TimerEvent: {}
+[3.807198] (-) TimerEvent: {}
+[3.910801] (-) TimerEvent: {}
+[4.013125] (-) TimerEvent: {}
+[4.115502] (-) TimerEvent: {}
+[4.216665] (-) TimerEvent: {}
+[4.265383] (tbot_sim) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter \n'}
+[4.276366] (grpe_larm_mother) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter \n'}
+[4.316811] (-) TimerEvent: {}
+[4.417748] (-) TimerEvent: {}
+[4.521777] (-) TimerEvent: {}
+[4.624474] (-) TimerEvent: {}
+[4.725732] (-) TimerEvent: {}
+[4.827374] (-) TimerEvent: {}
+[4.929540] (-) TimerEvent: {}
+[5.032086] (-) TimerEvent: {}
+[5.133830] (-) TimerEvent: {}
+[5.178309] (tbot_sim) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.14.2 (/opt/ros/iron/share/ament_lint_auto/cmake)\n'}
+[5.182288] (grpe_larm_mother) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.14.2 (/opt/ros/iron/share/ament_lint_auto/cmake)\n'}
+[5.233826] (-) TimerEvent: {}
+[5.334924] (-) TimerEvent: {}
+[5.437516] (-) TimerEvent: {}
+[5.540414] (-) TimerEvent: {}
+[5.642695] (-) TimerEvent: {}
+[5.744447] (-) TimerEvent: {}
+[5.845654] (-) TimerEvent: {}
+[5.948772] (-) TimerEvent: {}
+[6.051390] (-) TimerEvent: {}
+[6.141928] (tbot_sim) StdoutLine: {'line': b'-- Configuring done\n'}
+[6.151540] (-) TimerEvent: {}
+[6.256003] (-) TimerEvent: {}
+[6.357664] (-) TimerEvent: {}
+[6.460886] (-) TimerEvent: {}
+[6.522800] (grpe_larm_mother) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[6.524199] (grpe_larm_mother) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[6.526033] (grpe_larm_mother) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[6.561391] (-) TimerEvent: {}
+[6.576449] (grpe_larm_mother) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[6.578325] (grpe_larm_mother) StdoutLine: {'line': b"-- Configured 'flake8' exclude dirs and/or files: \n"}
+[6.601453] (tbot_sim) StdoutLine: {'line': b'-- Generating done\n'}
+[6.662083] (-) TimerEvent: {}
+[6.671097] (grpe_larm_mother) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[6.738718] (grpe_larm_mother) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[6.758676] (tbot_sim) StdoutLine: {'line': b'-- Build files have been written to: /home/imtld.local/niranjan.kulkarni/git/build/tbot_sim\n'}
+[6.762320] (-) TimerEvent: {}
+[6.787894] (tbot_sim) CommandEnded: {'returncode': 0}
+[6.827360] (tbot_sim) JobProgress: {'identifier': 'tbot_sim', 'progress': 'build'}
+[6.828071] (tbot_sim) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/imtld.local/niranjan.kulkarni/git/build/tbot_sim', '--', '-j12', '-l12'], 'cwd': '/home/imtld.local/niranjan.kulkarni/git/build/tbot_sim', 'env': OrderedDict([('ROS_WORSPACE', '/home/imtld.local/niranjan.kulkarni/ros_ws'), ('USER', 'niranjan.kulkarni'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/iron/opt/rviz_ogre_vendor/lib:/opt/ros/iron/lib/x86_64-linux-gnu:/opt/ros/iron/lib'), ('HOME', '/home/imtld.local/niranjan.kulkarni'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '23949'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/876417573/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/imtld.local/niranjan.kulkarni/ros_ws/install'), ('ROS_DISTRO', 'iron'), ('LOGNAME', 'niranjan.kulkarni'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'niranjan.kulkarni'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('PATH', '/home/imtld.local/niranjan.kulkarni/bin:/opt/ros/iron/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/DEVELTER-U-10:@/tmp/.ICE-unix/2399,unix/DEVELTER-U-10:/tmp/.ICE-unix/2399'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/88d6bc81_c91c_40fb_85f1_d0a77e7a5b67'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/876417573'), ('ZEITGEIST_DATA_PATH', '/home/imtld.local/niranjan.kulkarni/.local/share/zeitgeist'), ('DISPLAY', ':0'), ('LANG', 'fr_FR.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/876417573/.mutter-Xwaylandauth.HAPNH2'), ('GNOME_TERMINAL_SERVICE', ':1.254'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/876417573/keyring/ssh'), ('ROS_DOMAIN_ID', '107'), ('AMENT_PREFIX_PATH', '/home/imtld.local/niranjan.kulkarni/ros_ws/install/tbot_sim:/opt/ros/iron'), ('SHELL', '/bin/bash'), ('KRB5CCNAME', 'FILE:/tmp/krb5cc_876417573_MSWOBM'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('ROS_AUTOMATIC_DISCOVERY_RANGE', 'SUBNET'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/imtld.local/niranjan.kulkarni/git/build/tbot_sim'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/iron/lib/python3.10/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/imtld.local/niranjan.kulkarni/ros_ws/install/tbot_sim:/opt/ros/iron')]), 'shell': False}
+[6.863273] (-) TimerEvent: {}
+[6.966495] (-) TimerEvent: {}
+[7.020180] (tbot_sim) CommandEnded: {'returncode': 0}
+[7.066930] (-) TimerEvent: {}
+[7.109344] (grpe_larm_mother) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[7.111504] (grpe_larm_mother) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[7.152919] (tbot_sim) JobProgress: {'identifier': 'tbot_sim', 'progress': 'install'}
+[7.165778] (grpe_larm_mother) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[7.170176] (-) TimerEvent: {}
+[7.190086] (tbot_sim) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/imtld.local/niranjan.kulkarni/git/build/tbot_sim'], 'cwd': '/home/imtld.local/niranjan.kulkarni/git/build/tbot_sim', 'env': OrderedDict([('ROS_WORSPACE', '/home/imtld.local/niranjan.kulkarni/ros_ws'), ('USER', 'niranjan.kulkarni'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/iron/opt/rviz_ogre_vendor/lib:/opt/ros/iron/lib/x86_64-linux-gnu:/opt/ros/iron/lib'), ('HOME', '/home/imtld.local/niranjan.kulkarni'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '23949'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/876417573/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/imtld.local/niranjan.kulkarni/ros_ws/install'), ('ROS_DISTRO', 'iron'), ('LOGNAME', 'niranjan.kulkarni'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'niranjan.kulkarni'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('PATH', '/home/imtld.local/niranjan.kulkarni/bin:/opt/ros/iron/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/DEVELTER-U-10:@/tmp/.ICE-unix/2399,unix/DEVELTER-U-10:/tmp/.ICE-unix/2399'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/88d6bc81_c91c_40fb_85f1_d0a77e7a5b67'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/876417573'), ('ZEITGEIST_DATA_PATH', '/home/imtld.local/niranjan.kulkarni/.local/share/zeitgeist'), ('DISPLAY', ':0'), ('LANG', 'fr_FR.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/876417573/.mutter-Xwaylandauth.HAPNH2'), ('GNOME_TERMINAL_SERVICE', ':1.254'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/876417573/keyring/ssh'), ('ROS_DOMAIN_ID', '107'), ('AMENT_PREFIX_PATH', '/home/imtld.local/niranjan.kulkarni/ros_ws/install/tbot_sim:/opt/ros/iron'), ('SHELL', '/bin/bash'), ('KRB5CCNAME', 'FILE:/tmp/krb5cc_876417573_MSWOBM'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('ROS_AUTOMATIC_DISCOVERY_RANGE', 'SUBNET'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/imtld.local/niranjan.kulkarni/git/build/tbot_sim'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/iron/lib/python3.10/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/imtld.local/niranjan.kulkarni/ros_ws/install/tbot_sim:/opt/ros/iron')]), 'shell': False}
+[7.235802] (tbot_sim) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[7.236185] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/launch\n'}
+[7.270945] (-) TimerEvent: {}
+[7.272191] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/launch/challenge-1.launch.py\n'}
+[7.309927] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/launch/challenge-2.launch.py\n'}
+[7.318378] (grpe_larm_mother) StdoutLine: {'line': b'-- Configuring done\n'}
+[7.366402] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/launch/challenge-3.launch.py\n'}
+[7.371405] (-) TimerEvent: {}
+[7.405965] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/launch/code_tuto_move.py\n'}
+[7.437995] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/launch/__pycache__\n'}
+[7.452289] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/launch/__pycache__/challenge-1.launch.cpython-310.pyc\n'}
+[7.471711] (-) TimerEvent: {}
+[7.490402] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/launch/tutosim_launch.yaml\n'}
+[7.523623] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/launch/includes\n'}
+[7.537623] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/launch/includes/challenge.launch.py\n'}
+[7.572451] (-) TimerEvent: {}
+[7.601498] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/launch/includes/gazebo.launch.py\n'}
+[7.633638] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/launch/includes/spawn_create.launch.py\n'}
+[7.662753] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/launch/includes/spawn_entity.launch.py\n'}
+[7.672982] (-) TimerEvent: {}
+[7.686736] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/launch/includes/spawn_kobuki.launch.py\n'}
+[7.724779] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/launch/includes/spawn_tbot.launch.py\n'}
+[7.773482] (-) TimerEvent: {}
+[7.814853] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models\n'}
+[7.839423] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/tbot\n'}
+[7.851621] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/tbot/model.config\n'}
+[7.875067] (-) TimerEvent: {}
+[7.908090] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/tbot/model.sdf\n'}
+[7.960404] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/tbot/materials\n'}
+[7.975789] (-) TimerEvent: {}
+[7.981421] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/tbot/materials/textures\n'}
+[7.983903] (grpe_larm_mother) StdoutLine: {'line': b'-- Generating done\n'}
+[7.996470] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/tbot/materials/textures/1f_stack.jpg\n'}
+[8.037563] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/tbot/materials/textures/2f_stack.jpg\n'}
+[8.076334] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/tbot/materials/textures/3f_stack.jpg\n'}
+[8.077185] (-) TimerEvent: {}
+[8.119070] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/tbot/meshes\n'}
+[8.140346] (grpe_larm_mother) StdoutLine: {'line': b'-- Build files have been written to: /home/imtld.local/niranjan.kulkarni/git/build/grpe_larm_mother\n'}
+[8.141438] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/tbot/meshes/plate_bottom.dae\n'}
+[8.168658] (grpe_larm_mother) CommandEnded: {'returncode': 0}
+[8.172062] (grpe_larm_mother) JobProgress: {'identifier': 'grpe_larm_mother', 'progress': 'build'}
+[8.237197] (-) TimerEvent: {}
+[8.237634] (grpe_larm_mother) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/imtld.local/niranjan.kulkarni/git/build/grpe_larm_mother', '--', '-j12', '-l12'], 'cwd': '/home/imtld.local/niranjan.kulkarni/git/build/grpe_larm_mother', 'env': OrderedDict([('ROS_WORSPACE', '/home/imtld.local/niranjan.kulkarni/ros_ws'), ('USER', 'niranjan.kulkarni'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/iron/opt/rviz_ogre_vendor/lib:/opt/ros/iron/lib/x86_64-linux-gnu:/opt/ros/iron/lib'), ('HOME', '/home/imtld.local/niranjan.kulkarni'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '23949'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/876417573/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/imtld.local/niranjan.kulkarni/ros_ws/install'), ('ROS_DISTRO', 'iron'), ('LOGNAME', 'niranjan.kulkarni'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'niranjan.kulkarni'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('PATH', '/home/imtld.local/niranjan.kulkarni/bin:/opt/ros/iron/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/DEVELTER-U-10:@/tmp/.ICE-unix/2399,unix/DEVELTER-U-10:/tmp/.ICE-unix/2399'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/88d6bc81_c91c_40fb_85f1_d0a77e7a5b67'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/876417573'), ('ZEITGEIST_DATA_PATH', '/home/imtld.local/niranjan.kulkarni/.local/share/zeitgeist'), ('DISPLAY', ':0'), ('LANG', 'fr_FR.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/876417573/.mutter-Xwaylandauth.HAPNH2'), ('GNOME_TERMINAL_SERVICE', ':1.254'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/876417573/keyring/ssh'), ('ROS_DOMAIN_ID', '107'), ('AMENT_PREFIX_PATH', '/home/imtld.local/niranjan.kulkarni/ros_ws/install/tbot_sim:/opt/ros/iron'), ('SHELL', '/bin/bash'), ('KRB5CCNAME', 'FILE:/tmp/krb5cc_876417573_MSWOBM'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('ROS_AUTOMATIC_DISCOVERY_RANGE', 'SUBNET'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/imtld.local/niranjan.kulkarni/git/build/grpe_larm_mother'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/iron/lib/python3.10/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/imtld.local/niranjan.kulkarni/ros_ws/install/tbot_sim:/opt/ros/iron')]), 'shell': False}
+[8.253579] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/tbot/meshes/plate_middle.dae\n'}
+[8.255765] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/tbot/meshes/plate_top.dae\n'}
+[8.307336] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/willowgarage\n'}
+[8.323390] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/willowgarage/model-1_2.sdf\n'}
+[8.338037] (-) TimerEvent: {}
+[8.367180] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/willowgarage/model-1_3.sdf\n'}
+[8.393234] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/willowgarage/model-1_4.sdf\n'}
+[8.428367] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/willowgarage/model.config\n'}
+[8.438293] (-) TimerEvent: {}
+[8.448711] (grpe_larm_mother) CommandEnded: {'returncode': 0}
+[8.450344] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/willowgarage/model.sdf\n'}
+[8.486368] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/willowgarage/materials\n'}
+[8.502370] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/willowgarage/materials/textures\n'}
+[8.518157] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/willowgarage/materials/textures/Carpet_Berber_Pattern_Gray_.png\n'}
+[8.538756] (-) TimerEvent: {}
+[8.575801] (grpe_larm_mother) JobProgress: {'identifier': 'grpe_larm_mother', 'progress': 'install'}
+[8.576233] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/willowgarage/materials/textures/Stone_Brushed_Khaki_.png\n'}
+[8.578402] (grpe_larm_mother) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/imtld.local/niranjan.kulkarni/git/build/grpe_larm_mother'], 'cwd': '/home/imtld.local/niranjan.kulkarni/git/build/grpe_larm_mother', 'env': OrderedDict([('ROS_WORSPACE', '/home/imtld.local/niranjan.kulkarni/ros_ws'), ('USER', 'niranjan.kulkarni'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/iron/opt/rviz_ogre_vendor/lib:/opt/ros/iron/lib/x86_64-linux-gnu:/opt/ros/iron/lib'), ('HOME', '/home/imtld.local/niranjan.kulkarni'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '23949'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/876417573/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/imtld.local/niranjan.kulkarni/ros_ws/install'), ('ROS_DISTRO', 'iron'), ('LOGNAME', 'niranjan.kulkarni'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'niranjan.kulkarni'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('PATH', '/home/imtld.local/niranjan.kulkarni/bin:/opt/ros/iron/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/DEVELTER-U-10:@/tmp/.ICE-unix/2399,unix/DEVELTER-U-10:/tmp/.ICE-unix/2399'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/88d6bc81_c91c_40fb_85f1_d0a77e7a5b67'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/876417573'), ('ZEITGEIST_DATA_PATH', '/home/imtld.local/niranjan.kulkarni/.local/share/zeitgeist'), ('DISPLAY', ':0'), ('LANG', 'fr_FR.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/876417573/.mutter-Xwaylandauth.HAPNH2'), ('GNOME_TERMINAL_SERVICE', ':1.254'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/876417573/keyring/ssh'), ('ROS_DOMAIN_ID', '107'), ('AMENT_PREFIX_PATH', '/home/imtld.local/niranjan.kulkarni/ros_ws/install/tbot_sim:/opt/ros/iron'), ('SHELL', '/bin/bash'), ('KRB5CCNAME', 'FILE:/tmp/krb5cc_876417573_MSWOBM'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('ROS_AUTOMATIC_DISCOVERY_RANGE', 'SUBNET'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/imtld.local/niranjan.kulkarni/git/build/grpe_larm_mother'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/iron/lib/python3.10/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/imtld.local/niranjan.kulkarni/ros_ws/install/tbot_sim:/opt/ros/iron')]), 'shell': False}
+[8.618176] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/willowgarage/materials/textures/Wood_Bamboo_Medium_.png\n'}
+[8.639795] (-) TimerEvent: {}
+[8.649009] (grpe_larm_mother) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[8.651219] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother//launch\n'}
+[8.666413] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/willowgarage/materials/textures/Wood_Cherry_Original_.png\n'}
+[8.671324] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother//launch/minimal_launch.yaml\n'}
+[8.732165] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/willowgarage/materials/textures/__Wood_Bamboo_Medium_1.png\n'}
+[8.739939] (-) TimerEvent: {}
+[8.749235] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother//launch/challenge1.yaml\n'}
+[8.782045] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/willowgarage/materials/textures/__auto_12.png\n'}
+[8.821406] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother//scripts\n'}
+[8.850107] (-) TimerEvent: {}
+[8.866310] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother//scripts/__init__.py\n'}
+[8.893701] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/willowgarage/materials/textures/__auto_2.png\n'}
+[8.925730] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother//scripts/__pycache__\n'}
+[8.945818] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/willowgarage/meshes\n'}
+[8.948290] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother//scripts/__pycache__/__init__.cpython-310.pyc\n'}
+[8.960525] (-) TimerEvent: {}
+[8.965029] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/willowgarage/meshes/willowgarage_collision.dae\n'}
+[9.060643] (-) TimerEvent: {}
+[9.083262] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother//scripts/__pycache__/classifier.cpython-310.pyc\n'}
+[9.161225] (-) TimerEvent: {}
+[9.178723] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/willowgarage/meshes/willowgarage_visual.dae\n'}
+[9.186267] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother//scripts/__pycache__/classifierCircle.cpython-310.pyc\n'}
+[9.261904] (-) TimerEvent: {}
+[9.298225] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother//scripts/__pycache__/test_class.cpython-310-pytest-6.2.5.pyc\n'}
+[9.361894] (-) TimerEvent: {}
+[9.462746] (-) TimerEvent: {}
+[9.549707] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother//scripts/simulation.py\n'}
+[9.563334] (-) TimerEvent: {}
+[9.570951] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kobuki_model\n'}
+[9.589391] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kobuki_model/model.config\n'}
+[9.619934] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother//scripts/camera_driver.py\n'}
+[9.636075] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kobuki_model/model.sdf\n'}
+[9.641370] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother//scripts/reactive_move.py\n'}
+[9.662985] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kobuki_model/meshes\n'}
+[9.671080] (-) TimerEvent: {}
+[9.684174] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kobuki_model/meshes/hokuyo.dae\n'}
+[9.688812] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/lib/grpe_larm_mother/reactive_move.py\n'}
+[9.738189] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/lib/grpe_larm_mother/camera_driver.py\n'}
+[9.739098] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kobuki_model/meshes/main_body.dae\n'}
+[9.771116] (-) TimerEvent: {}
+[9.803944] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/lib/grpe_larm_mother/simulation.py\n'}
+[9.871465] (-) TimerEvent: {}
+[9.921646] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kobuki_model/meshes/wheel.dae\n'}
+[9.972106] (-) TimerEvent: {}
+[10.000110] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/ament_index/resource_index/package_run_dependencies/grpe_larm_mother\n'}
+[10.059801] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kobuki_model/meshes/images\n'}
+[10.072250] (-) TimerEvent: {}
+[10.085647] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kobuki_model/meshes/images/main_body.jpg\n'}
+[10.172813] (-) TimerEvent: {}
+[10.219362] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/ament_index/resource_index/parent_prefix_path/grpe_larm_mother\n'}
+[10.242472] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kobuki_model/meshes/images/wheel.jpg\n'}
+[10.273476] (-) TimerEvent: {}
+[10.299117] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/environment/ament_prefix_path.sh\n'}
+[10.316309] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/SYV_office_chairs\n'}
+[10.328885] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/SYV_office_chairs/model.config\n'}
+[10.332187] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/environment/ament_prefix_path.dsv\n'}
+[10.373733] (-) TimerEvent: {}
+[10.404907] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/SYV_office_chairs/model.sdf\n'}
+[10.408355] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/environment/path.sh\n'}
+[10.442373] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/environment/path.dsv\n'}
+[10.450658] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/SYV_office_chairs/meshes\n'}
+[10.474097] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/SYV_office_chairs/meshes/chair.dae\n'}
+[10.475604] (-) TimerEvent: {}
+[10.480941] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/local_setup.bash\n'}
+[10.576141] (-) TimerEvent: {}
+[10.601230] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/local_setup.sh\n'}
+[10.676653] (-) TimerEvent: {}
+[10.780244] (-) TimerEvent: {}
+[10.790303] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/local_setup.zsh\n'}
+[10.880330] (-) TimerEvent: {}
+[10.998364] (-) TimerEvent: {}
+[11.100171] (-) TimerEvent: {}
+[11.150657] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/local_setup.dsv\n'}
+[11.166745] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/SYV_office_desks\n'}
+[11.193211] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/SYV_office_desks/model.config\n'}
+[11.200737] (-) TimerEvent: {}
+[11.250048] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/package.dsv\n'}
+[11.271178] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/SYV_office_desks/model.sdf\n'}
+[11.300866] (-) TimerEvent: {}
+[11.311445] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/ament_index/resource_index/packages/grpe_larm_mother\n'}
+[11.313035] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/SYV_office_desks/meshes\n'}
+[11.326675] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/SYV_office_desks/meshes/woodfurn.dae\n'}
+[11.401438] (-) TimerEvent: {}
+[11.439398] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/cmake/grpe_larm_motherConfig.cmake\n'}
+[11.501960] (-) TimerEvent: {}
+[11.505907] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/turtlebot\n'}
+[11.513918] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/cmake/grpe_larm_motherConfig-version.cmake\n'}
+[11.529214] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/turtlebot/model-1_2.sdf\n'}
+[11.552392] (grpe_larm_mother) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/grpe_larm_mother/share/grpe_larm_mother/package.xml\n'}
+[11.571380] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/turtlebot/model-1_3.sdf\n'}
+[11.602286] (-) TimerEvent: {}
+[11.619428] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/turtlebot/model-1_4.sdf\n'}
+[11.624868] (grpe_larm_mother) CommandEnded: {'returncode': 0}
+[11.660479] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/turtlebot/model.config\n'}
+[11.703411] (-) TimerEvent: {}
+[11.716317] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/turtlebot/model.sdf\n'}
+[11.803545] (-) TimerEvent: {}
+[11.818432] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/turtlebot/materials\n'}
+[11.837598] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/turtlebot/materials/textures\n'}
+[11.846308] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/turtlebot/materials/textures/68-02421-8000-RA_Turtlebot_F-F_Standoff_color.png\n'}
+[11.903862] (-) TimerEvent: {}
+[11.923306] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/turtlebot/materials/textures/68-04552-1000-RA_Turtlebot_M-F_Standoff_color.png\n'}
+[12.004457] (-) TimerEvent: {}
+[12.012787] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/turtlebot/materials/textures/68-04552-2000-RA_Turtlebot_M-F_Standoff_color.png\n'}
+[12.080173] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/turtlebot/materials/textures/create_body.png\n'}
+[12.104649] (-) TimerEvent: {}
+[12.106022] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/turtlebot/materials/textures/plate_0_logo.png\n'}
+[12.162616] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/turtlebot/materials/textures/plate_1_logo.png\n'}
+[12.205368] (-) TimerEvent: {}
+[12.223802] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/turtlebot/materials/textures/plate_2_logo.png\n'}
+[12.285483] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/turtlebot/meshes\n'}
+[12.305796] (-) TimerEvent: {}
+[12.327287] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/turtlebot/meshes/68-02403-125_Spacer.dae\n'}
+[12.390605] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/turtlebot/meshes/68-02421-8000-RA_Turtlebot_F-F_Standoff.dae\n'}
+[12.407073] (-) TimerEvent: {}
+[12.509204] (-) TimerEvent: {}
+[12.529234] (grpe_larm_mother) JobEnded: {'identifier': 'grpe_larm_mother', 'rc': 0}
+[12.561131] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/turtlebot/meshes/68-04552-1000-RA_Turtlebot_M-F_Standoff.dae\n'}
+[12.609723] (-) TimerEvent: {}
+[12.675291] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/turtlebot/meshes/68-04552-2000-RA_Turtlebot_M-F_Standoff.dae\n'}
+[12.709869] (-) TimerEvent: {}
+[12.792536] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/turtlebot/meshes/68-04556-RA_Kinect_Standoff_Assy.dae\n'}
+[12.810517] (-) TimerEvent: {}
+[12.902039] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/turtlebot/meshes/create_body.dae\n'}
+[12.910952] (-) TimerEvent: {}
+[13.012708] (-) TimerEvent: {}
+[13.115333] (-) TimerEvent: {}
+[13.178545] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/turtlebot/meshes/plate_0_logo.dae\n'}
+[13.215813] (-) TimerEvent: {}
+[13.226766] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/turtlebot/meshes/plate_1_logo.dae\n'}
+[13.254603] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/turtlebot/meshes/plate_2_logo.dae\n'}
+[13.289646] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kobuki\n'}
+[13.299686] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kobuki/model.config\n'}
+[13.316129] (-) TimerEvent: {}
+[13.348763] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kobuki/model.sdf\n'}
+[13.379518] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kobuki/materials\n'}
+[13.397106] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kobuki/materials/textures\n'}
+[13.409678] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kobuki/materials/textures/main_body.jpg\n'}
+[13.416974] (-) TimerEvent: {}
+[13.519384] (-) TimerEvent: {}
+[13.591642] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kobuki/materials/textures/wheel.jpg\n'}
+[13.619377] (-) TimerEvent: {}
+[13.642399] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kobuki/meshes\n'}
+[13.661737] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kobuki/meshes/main_body.dae\n'}
+[13.719897] (-) TimerEvent: {}
+[13.821905] (-) TimerEvent: {}
+[13.828772] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kobuki/meshes/wheel.dae\n'}
+[13.922502] (-) TimerEvent: {}
+[13.926125] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/SYV_office_walls\n'}
+[13.942469] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/SYV_office_walls/model.config\n'}
+[13.957965] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/SYV_office_walls/model.sdf\n'}
+[13.988885] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/SYV_office_walls/meshes\n'}
+[14.000556] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/SYV_office_walls/meshes/walls.dae\n'}
+[14.022504] (-) TimerEvent: {}
+[14.123018] (-) TimerEvent: {}
+[14.143951] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/nuka_cola\n'}
+[14.160420] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/nuka_cola/model.config\n'}
+[14.187878] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/nuka_cola/model.sdf\n'}
+[14.216364] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/nuka_cola/materials\n'}
+[14.223594] (-) TimerEvent: {}
+[14.231880] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/nuka_cola/materials/textures\n'}
+[14.251499] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/nuka_cola/materials/textures/nuka_cola.png\n'}
+[14.323989] (-) TimerEvent: {}
+[14.425509] (-) TimerEvent: {}
+[14.430738] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/nuka_cola/meshes\n'}
+[14.450147] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/nuka_cola/meshes/can.dae\n'}
+[14.526561] (-) TimerEvent: {}
+[14.630709] (-) TimerEvent: {}
+[14.645057] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/hokuyo\n'}
+[14.670234] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/hokuyo/model-1_2.sdf\n'}
+[14.731370] (-) TimerEvent: {}
+[14.735708] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/hokuyo/model-1_3.sdf\n'}
+[14.831949] (-) TimerEvent: {}
+[14.837129] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/hokuyo/model-1_4.sdf\n'}
+[14.871130] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/hokuyo/model.config\n'}
+[14.905088] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/hokuyo/model.sdf\n'}
+[14.931299] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/hokuyo/meshes\n'}
+[14.931948] (-) TimerEvent: {}
+[14.950260] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/hokuyo/meshes/hokuyo.dae\n'}
+[15.012954] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/hokuyo/meshes/hokuyo_convex.stl\n'}
+[15.032560] (-) TimerEvent: {}
+[15.054894] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/create\n'}
+[15.071800] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/create/model-1_3.sdf\n'}
+[15.094415] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/create/model-1_4.sdf\n'}
+[15.117793] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/create/model.config\n'}
+[15.133035] (-) TimerEvent: {}
+[15.135549] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/create/model.sdf\n'}
+[15.169413] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/create/model-1_2.sdf\n'}
+[15.189477] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/create/materials\n'}
+[15.203793] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/create/materials/textures\n'}
+[15.214677] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/create/materials/textures/create_body.png\n'}
+[15.233039] (-) TimerEvent: {}
+[15.248077] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/create/meshes\n'}
+[15.256124] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/create/meshes/create_body.dae\n'}
+[15.333598] (-) TimerEvent: {}
+[15.435806] (-) TimerEvent: {}
+[15.538118] (-) TimerEvent: {}
+[15.560427] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kinect\n'}
+[15.576120] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kinect/model-1_2.sdf\n'}
+[15.596845] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kinect/model-1_3.sdf\n'}
+[15.619865] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kinect/model-1_4.sdf\n'}
+[15.638435] (-) TimerEvent: {}
+[15.711617] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kinect/model.config\n'}
+[15.734684] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kinect/model.sdf\n'}
+[15.738791] (-) TimerEvent: {}
+[15.766504] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kinect/materials\n'}
+[15.780951] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kinect/materials/textures\n'}
+[15.802036] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kinect/materials/textures/kinect.png\n'}
+[15.825773] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kinect/meshes\n'}
+[15.839592] (-) TimerEvent: {}
+[15.842760] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/models/kinect/meshes/kinect.dae\n'}
+[15.940001] (-) TimerEvent: {}
+[16.041365] (-) TimerEvent: {}
+[16.054456] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/urdf\n'}
+[16.064716] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/urdf/create.urdf\n'}
+[16.103772] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/urdf/kobuki_standalone.urdf\n'}
+[16.136520] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/urdf/tbot.urdf\n'}
+[16.142018] (-) TimerEvent: {}
+[16.201195] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/worlds\n'}
+[16.217362] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/worlds/challenge-1.world\n'}
+[16.239289] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/worlds/challenge-2.world\n'}
+[16.241931] (-) TimerEvent: {}
+[16.263055] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/worlds/challenge-3.world\n'}
+[16.291472] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/worlds/empty.world\n'}
+[16.327976] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/ament_index/resource_index/package_run_dependencies/tbot_sim\n'}
+[16.342346] (-) TimerEvent: {}
+[16.367970] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/ament_index/resource_index/parent_prefix_path/tbot_sim\n'}
+[16.411919] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/environment/ament_prefix_path.sh\n'}
+[16.435565] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/environment/ament_prefix_path.dsv\n'}
+[16.443256] (-) TimerEvent: {}
+[16.490055] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/environment/path.sh\n'}
+[16.517774] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/environment/path.dsv\n'}
+[16.543757] (-) TimerEvent: {}
+[16.553219] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/local_setup.bash\n'}
+[16.590537] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/local_setup.sh\n'}
+[16.614270] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/local_setup.zsh\n'}
+[16.632954] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/local_setup.dsv\n'}
+[16.644089] (-) TimerEvent: {}
+[16.657124] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/package.dsv\n'}
+[16.690843] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/ament_index/resource_index/packages/tbot_sim\n'}
+[16.711722] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/cmake/tbot_simConfig.cmake\n'}
+[16.744643] (-) TimerEvent: {}
+[16.786797] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/cmake/tbot_simConfig-version.cmake\n'}
+[16.828869] (tbot_sim) StdoutLine: {'line': b'-- Installing: /home/imtld.local/niranjan.kulkarni/git/install/tbot_sim/share/tbot_sim/package.xml\n'}
+[16.845025] (-) TimerEvent: {}
+[16.859674] (tbot_sim) CommandEnded: {'returncode': 0}
+[16.945119] (-) TimerEvent: {}
+[17.046644] (-) TimerEvent: {}
+[17.148632] (-) TimerEvent: {}
+[17.249489] (-) TimerEvent: {}
+[17.352252] (-) TimerEvent: {}
+[17.401884] (tbot_sim) JobEnded: {'identifier': 'tbot_sim', 'rc': 0}
+[17.420773] (-) EventReactorShutdown: {}

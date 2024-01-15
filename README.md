@@ -9,6 +9,7 @@ Ce répertoire contient :
 1 package :
 
 1. grpe_larm_mother        (les fichiers launch du challenge 1)
+2. tbot_sim                (pour lancer la simulation)
 
 
 ## Installation
@@ -76,5 +77,5 @@ ros2 launch grpe_larm_mother challenge1.yaml
 
 Pour lancer la simulation :
 ```
-ros2 launch grpe_larm_mother simulation.py
+ros2 launch tbot_sim tutosim_launch.yaml
 ```

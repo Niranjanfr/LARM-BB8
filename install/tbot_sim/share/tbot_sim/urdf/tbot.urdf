@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="tbot" xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller" xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface" xmlns:sensor="http://playerstage.sourceforge.net/gazebo/xmlschema/#sensor" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <material name="dark">
+    <color rgba="0.3 0.3 0.3 1.0"/>
+  </material>
+
+  <link name="base_footprint"/>
+
+  <joint name="base_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.062"/>
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+  </joint>
+
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://tbot_sim/models/kobuki/meshes/main_body.dae"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0.0 0 0.0"/>
+    </visual>
+    <collision name="base">
+      <geometry>
+        <cylinder length="0.10938" radius="0.178"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0.0 0 0.05949"/>
+    </collision>
+    <inertial>
+      <origin xyz="0.01 0 0"/>
+      <mass value="2.4"/>
+      <inertia ixx="0.019995" ixy="0.0" ixz="0.0" iyy="0.019995" iyz="0.0" izz="0.03675"/>
+    </inertial>
+  </link>
+
+  <!-- left wheel -->
+  <joint name="left_wheel_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="left_wheel"/>
+    <origin xyz="0 0.115 -0.028" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="0" upper="0" effort="0" velocity="0"/>
+  </joint>
+
+  <link name="left_wheel">
+    <inertial>
+      <mass value="0.010000"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.001000" ixy="0" ixz="0" iyy="0.001000" iyz="0" izz="0.001000"/>
+    </inertial>
+    <collision name="collision">
+      <origin xyz="0 0 0" rpy="0     1.5707 1.5707"/>
+      <geometry>
+        <cylinder radius="0.033000" length="0.023000"/>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <origin xyz="0 0 0" rpy="0     1.5707 1.5707"/>
+      <geometry>
+        <mesh filename="package://tbot_sim/models/kobuki/meshes/wheel.dae"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <!-- right wheel -->
+  <joint name="right_wheel_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="right_wheel"/>
+    <origin xyz="0 -0.115 -0.028" rpy="0 0 0"/>
+    <axis rpy="0 0 0"  xyz="0 1 0"/>
+    <limit lower="0" upper="0" effort="0" velocity="0"/>
+  </joint>
+
+  <link name="right_wheel">
+    <inertial>
+      <mass value="0.010000"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.001000" ixy="0" ixz="0" iyy="0.001000" iyz="0" izz="0.001000"/>
+    </inertial>
+    <collision name="collision">
+      <origin xyz="0 0 0" rpy="0     1.5707 1.5707"/>
+      <geometry>
+        <cylinder radius="0.033000" length="0.023000"/>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <origin xyz="0 0 0" rpy="0     1.5707 1.5707"/>
+      <geometry>
+        <mesh filename="package://tbot_sim/models/kobuki/meshes/wheel.dae"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <joint name="caster_front_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="caster_front_link"/>
+    <origin rpy="-1.57079632679 0 0" xyz="0.115 0.0 0.007"/>
+  </joint>
+  <link name="caster_front_link">
+    <collision>
+      <geometry>
+        <cylinder length="0.0176" radius="0.017"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <mass value="0.01"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+    </inertial>
+  </link>
+  <joint name="caster_back_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="caster_back_link"/>
+    <origin rpy="-1.57079632679 0 0" xyz="-0.135 0.0 0.009"/>
+  </joint>
+  <link name="caster_back_link">
+    <collision>
+      <geometry>
+        <cylinder length="0.0176" radius="0.017"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <mass value="0.01"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+    </inertial>
+  </link>
+
+  <!-- IMU -->
+  <joint name="gyro_joint" type="fixed">
+    <axis xyz="0 1 0"/>
+    <origin rpy="0 0 0" xyz="0.056 0.062 0.0202"/>
+    <parent link="base_link"/>
+    <child link="imu_link"/>
+  </joint>
+
+  <link name="imu_link">
+    <inertial>
+      <mass value="0.001"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.000001" iyz="0" izz="0.0001"/>
+    </inertial>
+  </link>
+
+  <!-- Cliff -->
+  <joint name="cliff_sensor_left_joint" type="fixed">
+    <origin rpy="0 1.57079632679 0" xyz="0.08734 0.13601 0.0214"/>
+    <parent link="base_link"/>
+    <child link="cliff_sensor_left_link"/>
+  </joint>
+  <link name="cliff_sensor_left_link">
+    <inertial>
+      <mass value="0.0001"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001"/>
+    </inertial>
+  </link>
+  <joint name="cliff_sensor_right_joint" type="fixed">
+    <origin rpy="0 1.57079632679 0" xyz="0.085 -0.13601 0.0214"/>
+    <parent link="base_link"/>
+    <child link="cliff_sensor_right_link"/>
+  </joint>
+  <link name="cliff_sensor_right_link">
+    <inertial>
+      <mass value="0.0001"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001"/>
+    </inertial>
+  </link>
+  <joint name="cliff_sensor_front_joint" type="fixed">
+    <origin rpy="0 1.57079632679 0" xyz="0.156 0.00 0.0214"/>
+    <parent link="base_link"/>
+    <child link="cliff_sensor_front_link"/>
+  </joint>
+  <link name="cliff_sensor_front_link">
+    <inertial>
+      <mass value="0.0001"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001"/>
+    </inertial>
+  </link>
+  
+  <!-- Laser -->
+  <joint name="laser_joint" type="fixed">
+      <parent link="base_link"/>
+      <child link="laser_link"/>
+      <origin rpy="0 0 0" xyz="0.115 0.00 0.07"/>
+  </joint>
+
+  <link name="laser_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://tbot_sim/models/hokuyo/meshes/hokuyo.dae"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0.01 0 0.0"/>
+    </visual>
+    <collision name="collision-laser">
+      <geometry>
+        <cylinder length="0.10938" radius="0.178"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0.0 0 0.05949"/>
+    </collision>
+    <inertial>
+      <mass value="0.1"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001"/>
+    </inertial>
+  </link>
+
+  <!-- kinect -->
+  <joint name="kinect_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="camera_link"/>
+    <origin xyz="-0.05 0 0.3" rpy="0 0 0"/>
+    <axis xyz="0 0 0"/>
+    <limit lower="0" upper="0" effort="0" velocity="0"/>
+  </joint>
+
+  <link name="camera_link">
+    <inertial>
+      <mass value="0.1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <collision name="kinect_collision">
+      <origin xyz="0.03   0   0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.073000 0.276000 0.072000"/>
+      </geometry>
+    </collision>
+    <visual name="kinect_visual">
+      <origin xyz="0.03  0   0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://tbot_sim/models/kinect/meshes/kinect.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <collision name="standoff_0_kinect_collision">
+    <pose>-0.025 -0.077 0.186 0 0 0</pose>
+    <geometry>
+      <cylinder length="0.18" radius="0.06"/>
+    </geometry>
+  </collision>
+  <visual name="standoff_0_kinect_visual">
+    <pose>-0.025 -0.077 0.186 0 0 0</pose>
+    <geometry>
+      <cylinder>
+        <radius>0.006</radius>
+        <length>0.18</length>
+      </cylinder>
+    </geometry>
+    <material name="dark"/>
+  </visual>
+
+  <collision name="standoff_1_kinect_collision">
+    <pose>-0.025 0.077 0.186 0 0 0</pose>
+    <geometry>
+      <cylinder length="0.18" radius="0.06"/>
+    </geometry>
+  </collision>
+  <visual name="standoff_1_kinect_visual">
+    <pose>-0.025 0.077 0.186 0 0 0</pose>
+    <geometry>
+      <cylinder length="0.18" radius="0.06"/>
+    </geometry>
+    <material name="dark"/>
+  </visual>
+
+  <!-- <gazebo>
+    <plugin name="camera_plugin" filename="libgazebo_ros_camera.so">
+        <alwaysOn>true</alwaysOn>
+        <updateRate>30.0</updateRate>
+        <cameraName>camera</cameraName>
+        <imageTopicName>image_raw</imageTopicName>
+        <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+        <frameName>camera_link</frameName>
+        <hackBaseline>0.07</hackBaseline>
+        <distortionK1>0.0</distortionK1>
+        <distortionK2>0.0</distortionK2>
+        <distortionK3>0.0</distortionK3>
+        <distortionT1>0.0</distortionT1>
+        <distortionT2>0.0</distortionT2>
+    </plugin>
+
+    <plugin name="imu_plugin" filename="libgazebo_ros_imu_sensor.so">
+        <alwaysOn>true</alwaysOn>       
+        <bodyName>imu_link</bodyName>
+        <topicName>imu</topicName>
+        <serviceName>imu_service</serviceName>
+        <gaussianNoise>0.0</gaussianNoise>
+        <updateRate>10.0</updateRate> 
+    </plugin>
+
+    <plugin name="kobuki_diff_drive" filename="libgazebo_ros_diff_drive.so">
+        <update_rate>30</update_rate>
+        <left_joint>wheel_left_joint</left_joint>
+        <right_joint>wheel_right_joint</right_joint>
+        <wheel_separation>.230</wheel_separation>
+        <wheel_diameter>0.070</wheel_diameter>
+        <torque>1.0</torque>
+        <velocity_command_timeout>0.6</velocity_command_timeout>
+        <command_topic>cmd_vel</command_topic>
+        <publish_odom>true</publish_odom>
+        <publish_odom_tf>true</publish_odom_tf>
+        <publish_wheel_tf>false</publish_wheel_tf>
+        <odometry_topic>odom</odometry_topic>
+        <odometry_frame>odom</odometry_frame>
+        <robot_base_frame>base_link</robot_base_frame>
+    </plugin>
+  </gazebo> -->
+
+</robot>
+
