@@ -1,10 +1,7 @@
 launch:
 
-- node:
-    pkg: "rviz2"
-    exec: "rviz2"
-    name: "rviz2"
-    args: "-d $(find-pkg-share grpe_larm_mother)/launch/rviz.rviz"
+- include:
+     file: "$(find-pkg-share grpe_larm_mother)/launch/minimal_launch.yaml"
 
 - node:
     pkg: "grpe_larm_mother"

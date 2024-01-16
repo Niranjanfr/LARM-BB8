@@ -19,6 +19,10 @@ class Realsense(Node):
         self.pipeline = rs.pipeline()
         self.config = rs.config()
 
+        frames = self.pipeline.wait_for_frames()
+        # frames.poll_frames()
+        self.depth_frame = frames.get_depth_frame()
+
         # Get device product line for setting a supporting resolution
         pipeline_wrapper = rs.pipeline_wrapper(self.pipeline)
         pipeline_profile = self.config.resolve(pipeline_wrapper)
@@ -90,6 +94,7 @@ class Realsense(Node):
 
         # Utilisation de colormap sur l'image depth de la Realsense (image convertie en 8-bit par pixel)
         depth_colormap = cv2.applyColorMap(cv2.convertScaleAbs(self.depth_image, alpha=0.03), cv2.COLORMAP_JET)
+        depth_image = np.asanyarray(self.depth_frame.get_data())
 
         self.bridge=CvBridge()
 
