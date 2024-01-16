@@ -26,7 +26,7 @@ class DepthCalculator (Node):
         rayon=10
 
 
-    def read_imgs(self,x,y,frames):
+    def read_img_depth(self,x,y,frames):
         #Aligning color frame to depth frame
         aligned_frames =  self.align.process(frames)
         depth_frame = aligned_frames.get_depth_frame()
@@ -77,7 +77,6 @@ class DepthCalculator (Node):
         cv2.imshow('RealSense', images)
         cv2.waitKey(1)
 # rclpy.init()
-rsNode_2 = DepthCalculator()
 # Realsense Node:
 class Realsense(Node):
     def __init__(self, fps= 60):
@@ -221,7 +220,7 @@ class Realsense(Node):
             c=max(elements, key=cv2.contourArea)
             ((x, y), rayon)=cv2.minEnclosingCircle(c)
             if rayon>30:
-                distance = rsNode_2.read_imgs(round(x), round(y), frame)
+                distance = self.read_imgs(round(x), round(y), frame)
                 cv2.circle(image2, (int(x), int(y)), int(rayon), color_info, 2)
                 cv2.circle(frame, (int(x), int(y)), 5, color_info, 10)
                 cv2.line(frame, (int(x), int(y)), (int(x)+150, int(y)), color_info, 2)
@@ -247,6 +246,8 @@ class Realsense(Node):
 def main (args=None):
     rclpy.init(args=args)
     rsNode= Realsense()
+    rsNode_2 = DepthCalculator()
+
     while rsNode.isOk:
         rsNode.read_imgs()
         rsNode.gestion_image()
