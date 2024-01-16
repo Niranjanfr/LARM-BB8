@@ -159,12 +159,13 @@ class Realsense(Node):
                 cv2.line(frame, (int(x), int(y)), (int(x)+150, int(y)), color_info, 2)
                 cv2.putText(frame, "Objet !!!", (int(x)+10, int(y) -10), cv2.FONT_HERSHEY_DUPLEX, 1, color_info, 1, cv2.LINE_AA)
                 self.trouver.publish(msg)
+                interest_point_depth = (depth_image[y][x] + depth_image[y + 1][x] + depth_image[y - 1][x] + depth_image[y][x + 1] + depth_image[y][x - 1] 
+                + depth_image[y + 1][x + 1] + depth_image[y + 1][x - 1] + depth_image[y - 1][x + 1] + depth_image[y - 1][x - 1])/9
+                self.depth_object.publish(interest_point_depth)
         cv2.imshow('Camera', frame)
         # cv2.imshow('image2', image2) # si nécessaire décommanter les lignes
         # cv2.imshow('Mask', mask)
-        interest_point_depth = (depth_image[y][x] + depth_image[y + 1][x] + depth_image[y - 1][x] + depth_image[y][x + 1] + depth_image[y][x - 1] 
-        + depth_image[y + 1][x + 1] + depth_image[y + 1][x - 1] + depth_image[y - 1][x + 1] + depth_image[y - 1][x - 1])/9
-        self.depth_object.publish(interest_point_depth)
+
 
 
         cv2.waitKey(10)
