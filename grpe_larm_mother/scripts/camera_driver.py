@@ -36,6 +36,7 @@ class Realsense(Node):
         self.depth_publisher = self.create_publisher(Image,"image_raw",10)
 
         self.trouver = self.create_publisher(String, 'Objet_trouve', 10)
+        self.depth_object = self.create_publisher(float, 'distance_object', 10)
 
 
         # Start streaming
@@ -161,8 +162,9 @@ class Realsense(Node):
         cv2.imshow('Camera', frame)
         # cv2.imshow('image2', image2) # si nécessaire décommanter les lignes
         # cv2.imshow('Mask', mask)
-        interest_point_center = (depth_image[y][x] + depth_image[y + 1][x] + depth_image[y - 1][x] + depth_image[y][x + 1] + depth_image[y][x - 1] 
+        interest_point_depth = (depth_image[y][x] + depth_image[y + 1][x] + depth_image[y - 1][x] + depth_image[y][x + 1] + depth_image[y][x - 1] 
         + depth_image[y + 1][x + 1] + depth_image[y + 1][x - 1] + depth_image[y - 1][x + 1] + depth_image[y - 1][x - 1])/9
+        self.depth_object.publish(interest_point_depth)
 
 
         cv2.waitKey(10)
