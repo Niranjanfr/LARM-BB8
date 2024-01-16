@@ -7,6 +7,7 @@ from rclpy.node import Node
 from std_msgs.msg import Header
 from sensor_msgs.msg import Image
 from std_msgs.msg import String
+import math
 
 # Realsense Node:
 class Realsense(Node):
@@ -18,16 +19,10 @@ class Realsense(Node):
         # Configure depth and color streams
         self.pipeline = rs.pipeline()
         self.config = rs.config()
-        self.colorizer = rs.colorizer()
 
         frames = self.pipeline.wait_for_frames()
         # frames.poll_frames()
         self.depth_frame = frames.get_depth_frame()
-
-        aligned_frames =  align.process(frames)
-        depth_frame = aligned_frames.get_depth_frame()
-        aligned_color_frame = aligned_frames.get_color_frame()
-
 
         # Get device product line for setting a supporting resolution
         pipeline_wrapper = rs.pipeline_wrapper(self.pipeline)
@@ -47,9 +42,6 @@ class Realsense(Node):
 
         # Start streaming
         self.pipeline.start(self.config)
-
-        align_to = rs.stream.depth
-        self.align = rs.align(align_to)
 
     def read_imgs(self):
 
@@ -78,10 +70,13 @@ class Realsense(Node):
         color_frame = frames.first(rs.stream.color)
         depth_frame = frames.first(rs.stream.depth)
         
+        aligned_frames =  rs.align.process(color_frame)
+        depth_frame = aligned_frames.get_depth_frame()
+        self.aligned_color_frame = aligned_frames.get_color_frame()
         
         # Convert images to numpy arrays
         self.depth_image = np.asanyarray(depth_frame.get_data())
-        self.color_image = np.asanyarray(color_frame.get_data())
+        self.color_image = np.asanyarray(self.aligned_color_frame.get_data())
 
         # Apply colormap on depth image (image must be converted to 8-bit per pixel first)
         depth_colormap = cv2.applyColorMap(cv2.convertScaleAbs(self.depth_image, alpha=0.03), cv2.COLORMAP_JET)
@@ -104,9 +99,20 @@ class Realsense(Node):
 
         # Utilisation de colormap sur l'image depth de la Realsense (image convertie en 8-bit par pixel)
         depth_colormap = cv2.applyColorMap(cv2.convertScaleAbs(self.depth_image, alpha=0.03), cv2.COLORMAP_JET)
-        depth_image = np.asanyarray(self.depth_frame.get_data())
 
-        
+        # Get the intrinsic parameters
+        color_intrin = self.aligned_color_frame.profile.as_video_stream_profile().intrinsics
+
+        # color_image = np.asanyarray(self.aligned_color_frame.get_data())
+
+        depth_colormap_dim = depth_colormap.shape
+        color_colormap_dim = self.color_image.shape
+
+        #Use pixel value of  depth-aligned color image to get 3D axes
+        x, y = int(color_colormap_dim[1]/2), int(color_colormap_dim[0]/2)
+        depth = self.depth_frame.get_distance(x, y)
+        dx ,dy, dz = rs.rs2_deproject_pixel_to_point(color_intrin, [x,y], depth)
+        distance = math.sqrt(((dx)**2) + ((dy)**2) + ((dz)**2))
 
         self.bridge=CvBridge()
 
@@ -125,8 +131,8 @@ class Realsense(Node):
 
         color=65
 
-        lo=np.array([color-15, 100, 50])
-        hi=np.array([color+15, 255,255])
+        lo=np.array([color-10, 100, 50])
+        hi=np.array([color+10, 255,255])
 
         color_info=(0, 0, 255)
 
@@ -168,9 +174,11 @@ class Realsense(Node):
                 cv2.line(frame, (int(x), int(y)), (int(x)+150, int(y)), color_info, 2)
                 cv2.putText(frame, "Objet !!!", (int(x)+10, int(y) -10), cv2.FONT_HERSHEY_DUPLEX, 1, color_info, 1, cv2.LINE_AA)
                 self.trouver.publish(msg)
-                interest_point_depth = (depth_image[y][x] + depth_image[y + 1][x] + depth_image[y - 1][x] + depth_image[y][x + 1] + depth_image[y][x - 1] 
-                + depth_image[y + 1][x + 1] + depth_image[y + 1][x - 1] + depth_image[y - 1][x + 1] + depth_image[y - 1][x - 1])/9
-                self.depth_object.publish(interest_point_depth)
+                # interest_point_depth = (depth_image[y][x] + depth_image[y + 1][x] + depth_image[y - 1][x] + depth_image[y][x + 1] + depth_image[y][x - 1] 
+                # + depth_image[y + 1][x + 1] + depth_image[y + 1][x - 1] + depth_image[y - 1][x + 1] + depth_image[y - 1][x - 1])/9
+
+                self.depth_object.publish(distance)
+
         cv2.imshow('Camera', frame)
         # cv2.imshow('image2', image2) # si nécessaire décommanter les lignes
         # cv2.imshow('Mask', mask)
