@@ -35,5 +35,7 @@ install( PROGRAMS scripts/reactive_move.py DESTINATION lib/${PROJECT_NAME})
 install( PROGRAMS scripts/camera_driver.py DESTINATION lib/${PROJECT_NAME})
 # Python scripts
 install( PROGRAMS scripts/challenge-1.launch.py DESTINATION lib/${PROJECT_NAME})
+# Python scripts
+install( PROGRAMS scripts/depth_calc.py DESTINATION lib/${PROJECT_NAME})
 
 ament_package()
