@@ -96,6 +96,8 @@ class Realsense(Node):
         depth_colormap = cv2.applyColorMap(cv2.convertScaleAbs(self.depth_image, alpha=0.03), cv2.COLORMAP_JET)
         depth_image = np.asanyarray(self.depth_frame.get_data())
 
+        
+
         self.bridge=CvBridge()
 
 
@@ -159,6 +161,8 @@ class Realsense(Node):
         cv2.imshow('Camera', frame)
         # cv2.imshow('image2', image2) # si nécessaire décommanter les lignes
         # cv2.imshow('Mask', mask)
+        interest_point_center = (depth_image[y][x] + depth_image[y + 1][x] + depth_image[y - 1][x] + depth_image[y][x + 1] + depth_image[y][x - 1] 
+        + depth_image[y + 1][x + 1] + depth_image[y + 1][x - 1] + depth_image[y - 1][x + 1] + depth_image[y - 1][x - 1])/9
 
 
         cv2.waitKey(10)
