@@ -18,10 +18,16 @@ class Realsense(Node):
         # Configure depth and color streams
         self.pipeline = rs.pipeline()
         self.config = rs.config()
+        self.colorizer = rs.colorizer()
 
         frames = self.pipeline.wait_for_frames()
         # frames.poll_frames()
         self.depth_frame = frames.get_depth_frame()
+
+        aligned_frames =  align.process(frames)
+        depth_frame = aligned_frames.get_depth_frame()
+        aligned_color_frame = aligned_frames.get_color_frame()
+
 
         # Get device product line for setting a supporting resolution
         pipeline_wrapper = rs.pipeline_wrapper(self.pipeline)
@@ -41,6 +47,9 @@ class Realsense(Node):
 
         # Start streaming
         self.pipeline.start(self.config)
+
+        align_to = rs.stream.depth
+        self.align = rs.align(align_to)
 
     def read_imgs(self):
 
