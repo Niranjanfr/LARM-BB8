@@ -14,7 +14,7 @@ import math
 colorizer = rs.colorizer()
 class DepthCalculator (Node):
     def __init__(self, fps= 60):
-        super().__init__('realsense')
+        super().__init__('realsense_depth_calc')
     
         # This call waits until a new coherent set of frames is available on a device
 
