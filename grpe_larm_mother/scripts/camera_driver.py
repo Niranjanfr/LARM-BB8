@@ -7,7 +7,9 @@ from rclpy.node import Node
 from std_msgs.msg import Header
 from sensor_msgs.msg import Image
 from std_msgs.msg import String
+from std_msgs.msg import Float32
 import math
+
 
 # Realsense Node:
 class Realsense(Node):
@@ -37,7 +39,7 @@ class Realsense(Node):
         self.depth_publisher = self.create_publisher(Image,"image_raw",10)
 
         self.trouver = self.create_publisher(String, 'Objet_trouve', 10)
-        self.depth_object = self.create_publisher(float, 'distance_object', 10)
+        self.depth_object = self.create_publisher(Float32, 'distance_object', 10)
 
 
         # Start streaming
