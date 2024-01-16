@@ -76,7 +76,8 @@ class DepthCalculator (Node):
         cv2.resizeWindow('RealSense', 960, 720)
         cv2.imshow('RealSense', images)
         cv2.waitKey(1)
-# rclpy.init()
+
+
 # Realsense Node:
 class Realsense(Node):
     def __init__(self, fps= 60):
@@ -105,9 +106,10 @@ class Realsense(Node):
         self.depth_publisher = self.create_publisher(Image,"image_raw",10)
 
         self.trouver = self.create_publisher(String, 'Objet_trouve', 10)
+        self.rsNode_2 = DepthCalculator()
 
 
-        # Start streaming
+        # Start strsNode_2reaming
         self.pipeline.start(self.config)
 
     def read_imgs(self):
@@ -220,7 +222,7 @@ class Realsense(Node):
             c=max(elements, key=cv2.contourArea)
             ((x, y), rayon)=cv2.minEnclosingCircle(c)
             if rayon>30:
-                distance = self.read_imgs(round(x), round(y), frame)
+                distance = self.rsNode_2.read_img_depth(round(x), round(y), frame)
                 cv2.circle(image2, (int(x), int(y)), int(rayon), color_info, 2)
                 cv2.circle(frame, (int(x), int(y)), 5, color_info, 10)
                 cv2.line(frame, (int(x), int(y)), (int(x)+150, int(y)), color_info, 2)
@@ -246,7 +248,7 @@ class Realsense(Node):
 def main (args=None):
     rclpy.init(args=args)
     rsNode= Realsense()
-    rsNode_2 = DepthCalculator()
+
 
     while rsNode.isOk:
         rsNode.read_imgs()
