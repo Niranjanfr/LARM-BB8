@@ -76,7 +76,7 @@ class DepthCalculator (Node):
         cv2.resizeWindow('RealSense', 960, 720)
         cv2.imshow('RealSense', images)
         cv2.waitKey(1)
-rclpy.init()
+# rclpy.init()
 rsNode_2 = DepthCalculator()
 # Realsense Node:
 class Realsense(Node):
