@@ -226,7 +226,7 @@ class Realsense(Node):
         mask=cv2.erode(mask, None, iterations=4)
         # dilatation d'un mask
         mask=cv2.dilate(mask, None, iterations=4)
-        
+
         msg = String()
         msg.data = ' Bouteille trouvée '
         elements=cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)[-2]
@@ -237,7 +237,7 @@ class Realsense(Node):
 
                 color_intrin = self.aligned_color_frame.profile.as_video_stream_profile().intrinsics
 
-                depth = self.depth_frame.get_distance(x, y)  
+                depth = self.depth_frame.get_distance(int(x), int(y))
                 dx ,dy, dz = rs.rs2_deproject_pixel_to_point(color_intrin, [x,y], depth)
                 self.distance = math.sqrt(((dx)**2) + ((dy)**2) + ((dz)**2))
 
