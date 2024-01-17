@@ -7,6 +7,7 @@ from rclpy.node import Node
 from std_msgs.msg import Header
 from sensor_msgs.msg import Image
 from std_msgs.msg import String
+from std_msgs.msg import Float32
 import math
 
 # pipeline = rs.pipeline()
@@ -109,6 +110,9 @@ class Realsense(Node):
         self.depth_publisher = self.create_publisher(Image,"image_raw_depth",10)
 
         self.trouver = self.create_publisher(String, 'Objet_trouve', 10)
+        self.depth_object = self.create_publisher(Float32, 'distance_object',10)
+
+
         # self.rsNode_2 = DepthCalculator()
 
         align_to = rs.stream.depth
@@ -240,6 +244,7 @@ class Realsense(Node):
                 depth = self.depth_frame.get_distance(int(x), int(y))
                 dx ,dy, dz = rs.rs2_deproject_pixel_to_point(color_intrin, [x,y], depth)
                 self.distance = math.sqrt(((dx)**2) + ((dy)**2) + ((dz)**2))
+                self.depth_object.publish(self.distance)
 
                 # distance = self.rsNode_2.read_img_depth(round(x), round(y), self.depth_frame)
                 cv2.circle(image2, (int(x), int(y)), int(rayon), color_info, 2)
