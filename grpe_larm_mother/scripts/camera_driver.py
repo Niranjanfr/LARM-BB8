@@ -243,8 +243,9 @@ class Realsense(Node):
 
                 depth = self.depth_frame.get_distance(int(x), int(y))
                 dx ,dy, dz = rs.rs2_deproject_pixel_to_point(color_intrin, [x,y], depth)
-                self.distance = math.sqrt(((dx)**2) + ((dy)**2) + ((dz)**2))
-                self.depth_object.publish(self.distance)
+                distance = Float32()
+                distance = math.sqrt(((dx)**2) + ((dy)**2) + ((dz)**2))
+                self.depth_object.publish(distance)
 
                 # distance = self.rsNode_2.read_img_depth(round(x), round(y), self.depth_frame)
                 cv2.circle(image2, (int(x), int(y)), int(rayon), color_info, 2)
