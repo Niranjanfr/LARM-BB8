@@ -111,6 +111,11 @@ class Realsense(Node):
         self.trouver = self.create_publisher(String, 'Objet_trouve', 10)
         self.rsNode_2 = DepthCalculator()
 
+        align_to = rs.stream.depth
+        self.align = rs.align(align_to)
+
+
+
 
         # Start strsNode_2reaming
         self.pipeline.start(self.config)
@@ -140,7 +145,11 @@ class Realsense(Node):
         frames = self.pipeline.wait_for_frames()
 
         color_frame = frames.first(rs.stream.color)
-        self.depth_frame = frames.first(rs.stream.depth)
+        depth_stream = frames.first(rs.stream.depth)
+
+        aligned_frames =  self.align.process(frames)
+        self.depth_frame = aligned_frames.get_depth_frame()
+        self.aligned_color_frame = aligned_frames.get_color_frame()
         
         
         # Convert images to numpy arrays
@@ -218,6 +227,12 @@ class Realsense(Node):
         # dilatation d'un mask
         mask=cv2.dilate(mask, None, iterations=4)
 
+        color_intrin = self.aligned_color_frame.profile.as_video_stream_profile().intrinsics
+
+        depth = self.depth_frame.get_distance(x, y)  
+        dx ,dy, dz = rs.rs2_deproject_pixel_to_point(color_intrin, [x,y], depth)
+        self.distance = math.sqrt(((dx)**2) + ((dy)**2) + ((dz)**2))
+
         msg = String()
         msg.data = ' Bouteille trouvée '
         elements=cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)[-2]
@@ -225,7 +240,14 @@ class Realsense(Node):
             c=max(elements, key=cv2.contourArea)
             ((x, y), rayon)=cv2.minEnclosingCircle(c)
             if rayon>30:
-                distance = self.rsNode_2.read_img_depth(round(x), round(y), self.depth_frame)
+
+                color_intrin = self.aligned_color_frame.profile.as_video_stream_profile().intrinsics
+
+                depth = self.depth_frame.get_distance(x, y)  
+                dx ,dy, dz = rs.rs2_deproject_pixel_to_point(color_intrin, [x,y], depth)
+                self.distance = math.sqrt(((dx)**2) + ((dy)**2) + ((dz)**2))
+
+                # distance = self.rsNode_2.read_img_depth(round(x), round(y), self.depth_frame)
                 cv2.circle(image2, (int(x), int(y)), int(rayon), color_info, 2)
                 cv2.circle(frame, (int(x), int(y)), 5, color_info, 10)
                 cv2.line(frame, (int(x), int(y)), (int(x)+150, int(y)), color_info, 2)
