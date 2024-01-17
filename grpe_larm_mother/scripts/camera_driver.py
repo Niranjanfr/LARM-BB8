@@ -19,7 +19,7 @@ class DepthCalculator (Node):
         # This call waits until a new coherent set of frames is available on a device
 
 
-        align_to = rs.stream.color
+        align_to = rs.stream.depth
         self.align = rs.align(align_to)
 
         color_info=(0, 0, 255)
@@ -105,8 +105,8 @@ class Realsense(Node):
         self.config.enable_stream(rs.stream.color, 848, 480, rs.format.bgr8, 60)
         self.config.enable_stream(rs.stream.depth, 848, 480, rs.format.z16, 60)
 
-        self.image_publisher = self.create_publisher(Image,"image_raw",10)
-        self.depth_publisher = self.create_publisher(Image,"image_raw",10)
+        self.image_publisher = self.create_publisher(Image,"image_raw_image",10)
+        self.depth_publisher = self.create_publisher(Image,"image_raw_depth",10)
 
         self.trouver = self.create_publisher(String, 'Objet_trouve', 10)
         self.rsNode_2 = DepthCalculator()
@@ -140,11 +140,11 @@ class Realsense(Node):
         frames = self.pipeline.wait_for_frames()
 
         color_frame = frames.first(rs.stream.color)
-        depth_frame = frames.first(rs.stream.depth)
+        self.depth_frame = frames.first(rs.stream.depth)
         
         
         # Convert images to numpy arrays
-        self.depth_image = np.asanyarray(depth_frame.get_data())
+        self.depth_image = np.asanyarray(self.depth_frame.get_data())
         self.color_image = np.asanyarray(color_frame.get_data())
 
         # Apply colormap on depth image (image must be converted to 8-bit per pixel first)
@@ -225,7 +225,7 @@ class Realsense(Node):
             c=max(elements, key=cv2.contourArea)
             ((x, y), rayon)=cv2.minEnclosingCircle(c)
             if rayon>30:
-                distance = self.rsNode_2.read_img_depth(round(x), round(y), frame)
+                distance = self.rsNode_2.read_img_depth(round(x), round(y), self.depth_frame)
                 cv2.circle(image2, (int(x), int(y)), int(rayon), color_info, 2)
                 cv2.circle(frame, (int(x), int(y)), 5, color_info, 10)
                 cv2.line(frame, (int(x), int(y)), (int(x)+150, int(y)), color_info, 2)
