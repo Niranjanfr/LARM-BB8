@@ -8,6 +8,8 @@ import math
 import rclpy
 from rclpy.node import Node
 from visualization_msgs.msg import Marker, MarkerArray
+from nav_msgs.msg import Odometry
+from std_msgs.msg import String
 
 class MarkerPublisher(Node):
     def __init__(self):
@@ -17,6 +19,14 @@ class MarkerPublisher(Node):
         # Créer un MarkerArray
         self.marker_array = MarkerArray()
 
+        #Créate a subscriber qui récupère la position du robot dans la carte
+
+        self.odom_data = 0
+
+        self.subs_position_robot = self.create_subscription(
+            Odometry, '/odom',
+            self.listener_callback, 10)
+        
         # Ajouter des marqueurs avec des coordonnées spécifiques
         self.add_marker(1, 0.0, 0.0, 0.0)
         self.add_marker(2, 1.0, 1.0, 1.0)
@@ -24,6 +34,15 @@ class MarkerPublisher(Node):
 
         # Publier le MarkerArray
         self.publish_markers()
+
+    def listener_callback(self,msgs):
+        
+        self.get_logger().info('I receive: "%s"' %
+                               str(self.odom_data))
+        self.odom_data = msgs
+        position = msgs.pose.pose.position
+        (posx, posy, posz) = (position.x, position.y, position.z)
+
 
     def add_marker(self, id, x, y, z):
         marker = Marker()
