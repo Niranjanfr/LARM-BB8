@@ -12,8 +12,3 @@ launch:
     pkg: "grpe_larm_mother"
     exec: "camera_driver.py"
     name: "detection_bouteilles"
-
-- node:
-    pkg: "grpe_larm_mother"
-    exec: "depth_calc.py"
-    name: "distance_bouteilles"
