@@ -110,7 +110,7 @@ class Realsense(Node):
         self.depth_publisher = self.create_publisher(Image,"image_raw_depth",10)
 
         self.trouver = self.create_publisher(String, 'Objet_trouve', 10)
-        self.depth_object = self.create_publisher(Float32, 'distance_object',10)
+        self.depth_object = self.create_publisher(float, 'distance_object',10)
 
 
         # self.rsNode_2 = DepthCalculator()
