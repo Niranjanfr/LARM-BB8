@@ -7,7 +7,7 @@ from rclpy.node import Node
 from std_msgs.msg import Header
 from sensor_msgs.msg import Image
 from std_msgs.msg import String
-from std_msgs.msg import Float32
+from std_msgs.msg import Float64
 from geometry_msgs.msg import Point
 import math
 
@@ -111,7 +111,7 @@ class Realsense(Node):
         self.depth_publisher = self.create_publisher(Image,"image_raw_depth",10)
 
         self.trouver = self.create_publisher(String, 'Objet_trouve', 10)
-        self.depth_object = self.create_publisher(Float32, 'distance_object',10)
+        self.depth_object = self.create_publisher(Float64, 'distance_object',10)
         self.coord_xy_obj = self.create_publisher(Point,'coordonnee_objet_ref_robot',10)
 
 
@@ -245,8 +245,7 @@ class Realsense(Node):
 
                 depth = self.depth_frame.get_distance(int(x), int(y))
                 dx ,dy, dz = rs.rs2_deproject_pixel_to_point(color_intrin, [x,y], depth)
-                distance = Float32()
-                distance.data = math.sqrt(((dx)**2) + ((dy)**2) + ((dz)**2))
+                distance = np.float64( math.sqrt(((dx)**2) + ((dy)**2) + ((dz)**2)))
                 self.depth_object.publish(distance)
 
                 # Calcul de l'angle entre l'object et la droite passant par le centre et la camera du robot
@@ -257,8 +256,8 @@ class Realsense(Node):
 
                 #Calcul des coordonnées de l'object par rapport a la camera
                 coord_obj = Point()
-                object_x = distance*Float32(math.sin(angle.x))
-                object_y = distance*Float32(math.cos(angle.x))
+                object_x = distance*np.float64(math.sin(angle.x))
+                object_y = distance*np.float64(math.cos(angle.x))
                 coord_obj.x = object_x
                 coord_obj.y = object_y
                 self.coord_xy_obj.publish(coord_obj)
