@@ -35,15 +35,15 @@ class MarkerPublisher(Node):
         # Publier le MarkerArray
         self.publish_markers()
 
-    def listener_callback(self):
+    def listener_callback(self, msgs):
 
         self.get_logger().info('I receive: "%s"' %
                                str(self.odom_data))
         
-    def position_robot(self, msgs):
-
         self.odom_data = msgs
-        position = msgs.pose.pose.position
+        
+    def position_robot(self):
+        position = self.odom_data.pose.pose.position
         (posx, posy, posz) = (position.x, position.y, position.z)
 
         return posx,posy,posz
