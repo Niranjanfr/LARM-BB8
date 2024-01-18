@@ -112,7 +112,7 @@ class Realsense(Node):
         self.depth_publisher = self.create_publisher(Image,"image_raw_depth",10)
 
         self.trouver = self.create_publisher(String, 'Objet_trouve', 10)
-        self.depth_object = self.create_publisher(Float64, 'distance_object',10)
+        # self.depth_object = self.create_publisher(Float64, 'distance_object',10)
         self.coord_xy_obj = self.create_publisher(Point,'coordonnee_objet_ref_robot',10)
 
 
@@ -247,7 +247,7 @@ class Realsense(Node):
                 depth = self.depth_frame.get_distance(int(x), int(y))
                 dx ,dy, dz = rs.rs2_deproject_pixel_to_point(color_intrin, [x,y], depth)
                 distance = math.sqrt(((dx)**2) + ((dy)**2) + ((dz)**2))
-                self.depth_object.publish(distance)
+                # self.depth_object.publish(distance)
 
                 # Calcul de l'angle entre l'object et la droite passant par le centre et la camera du robot
                 coord_px = Point()
