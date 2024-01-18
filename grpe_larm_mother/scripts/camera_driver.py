@@ -112,7 +112,7 @@ class Realsense(Node):
 
         self.trouver = self.create_publisher(String, 'Objet_trouve', 10)
         self.depth_object = self.create_publisher(Float32, 'distance_object',10)
-        self.coord_xy_obj = self.create_publisher(Point,'coordonné_objet_ref_robot',10)
+        self.coord_xy_obj = self.create_publisher(Point,'coordonnee_objet_ref_robot',10)
 
 
         # self.rsNode_2 = DepthCalculator()
