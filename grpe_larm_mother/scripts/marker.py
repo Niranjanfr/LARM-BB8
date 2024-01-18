@@ -55,7 +55,7 @@ class MarkerPublisher(Node):
         (posx, posy, posz) = (position.x, position.y, position.z)
         (qx, qy, qz, qw) = (orientation.x, orientation.y, orientation.z, orientation.w)
 
-        print(posx, posy, posz)
+        print("robot : ", posx, posy, posz)
         return posx,posy,qz
     
     def get_objt_coord(self, msg):
