@@ -116,20 +116,20 @@ if __name__ == '__main__':
 #     marker.pose.position.z = math.cos(count / 30.0) 
 
     # We add the new marker to the MarkerArray, removing the oldest marker from it when necessary
-    if(count > MARKERS_MAX):
-        markerArray.markers.pop()
+    # if(count > MARKERS_MAX):
+    #     markerArray.markers.pop()
 
-    markerArray.markers.append(marker)
+    # markerArray.markers.append(marker)
 
-    # Renumber the marker IDs to ensure uniqueness
-    id = 0
-    for m in markerArray.markers:
-        m.id = id
-        id += 1
+    # # Renumber the marker IDs to ensure uniqueness
+    # id = 0
+    # for m in markerArray.markers:
+    #     m.id = id
+    #     id += 1
 
-    # Publish the MarkerArray
-    publisher.publish(markerArray)
+    # # Publish the MarkerArray
+    # publisher.publish(markerArray)
 
-    count += 1
+    # count += 1
 
-    rospy.sleep(0.01)
+    # rospy.sleep(0.01)
