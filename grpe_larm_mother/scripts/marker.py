@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 from visualization_msgs.msg import Marker
 from visualization_msgs.msg import MarkerArray
-import math
+import math as math
 import numpy as np
 import rclpy
 from rclpy.node import Node
@@ -122,8 +122,10 @@ class MarkerPublisher(Node):
         marker.color.b = 0.0
 
         marker_identique = False
-        for m in self.marker_array.markers:
-            if m.pose.position.x == marker.pose.position.x  and m.pose.position.y == marker.pose.position.y: 
+        dist = 0
+        for m in self.marker_array.markers: 
+            dist = math.sqrt((marker.pose.position.y - m.pose.position.y)**2 + (marker.pose.position.x - m.pose.position.x)**2)
+            if dist < 0.03: 
                  marker_identique = True
             else: 
                 self.marker_array.markers.append(marker)
