@@ -5,6 +5,7 @@ from visualization_msgs.msg import Marker
 from visualization_msgs.msg import MarkerArray
 import rospy
 import math
+import numpy as np
 import rclpy
 from rclpy.node import Node
 from visualization_msgs.msg import Marker, MarkerArray
@@ -41,6 +42,28 @@ class MarkerPublisher(Node):
                                str(self.odom_data))
         
         self.odom_data = msgs
+
+
+
+    def transform_coordinates(robot_pose, object_coordinates):
+        x_r, y_r, theta_r = robot_pose
+        x_obj, y_obj = object_coordinates
+
+        # Transformation matrix from robot frame to world frame
+        transformation_matrix = np.array([
+            [np.cos(theta_r), -np.sin(theta_r), x_r],
+            [np.sin(theta_r), np.cos(theta_r), y_r],
+            [0, 0, 1]
+        ])
+
+        # Homogeneous coordinates of the object in robot frame
+        object_homogeneous = np.array([x_obj, y_obj, 1])
+
+        # Transform object coordinates to world frame
+        transformed_coordinates = np.dot(transformation_matrix, object_homogeneous)[:2]
+
+        return tuple(transformed_coordinates)
+
         
     def position_robot(self):
         position = self.odom_data.pose.pose.position
