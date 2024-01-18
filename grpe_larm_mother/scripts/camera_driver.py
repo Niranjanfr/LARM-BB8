@@ -257,8 +257,8 @@ class Realsense(Node):
 
                 #Calcul des coordonnées de l'object par rapport a la camera
                 coord_obj = Point()
-                object_x = distance*math.sin(angle.x)
-                object_y = distance*math.cos(angle.x)
+                object_x = distance*Float32(math.sin(angle.x))
+                object_y = distance*Float32(math.cos(angle.x))
                 coord_obj.x = object_x
                 coord_obj.y = object_y
                 self.coord_xy_obj.publish(coord_obj)
