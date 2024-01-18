@@ -261,7 +261,7 @@ class Realsense(Node):
                 cosAngle = math.cos(angle.x)
                 coord_obj.x = distance * sinAngle
                 coord_obj.y = distance * cosAngle
-                print(">>>>>>>>>>coord_obj.x = " + coord_obj.__str__())
+                # print(">>>>>>>>>>coord_obj.x = " + coord_obj.__str__())
                 self.coord_xy_obj.publish(coord_obj)
 
                 cv2.circle(image2, (int(x), int(y)), int(rayon), color_info, 2)
