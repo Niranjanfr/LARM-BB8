@@ -11,6 +11,7 @@ from rclpy.node import Node
 from visualization_msgs.msg import Marker, MarkerArray
 from nav_msgs.msg import Odometry
 from std_msgs.msg import String
+from geometry_msgs.msg import Point
 
 class MarkerPublisher(Node):
     def __init__(self):
@@ -28,10 +29,18 @@ class MarkerPublisher(Node):
             Odometry, '/odom',
             self.listener_callback, 10)
         
-        # Ajouter des marqueurs avec des coordonnées spécifiques
-        self.add_marker(1, 0.0, 0.0, 0.0)
-        self.add_marker(2, 1.0, 1.0, 1.0)
-        self.add_marker(3, -1.0, -1.0, 1.0)
+        #create subscriber pour les coordonées de la bouteille
+
+        self.subs_coord_nuke = self.create_subscription(
+            Point, '/coordonnee_objet_ref_robot',
+            self.get_objt_coord, 10
+        )
+        self.nuke_coord = 0
+        
+        # # Ajouter des marqueurs avec des coordonnées spécifiques
+        # self.add_marker(1, 0.0, 0.0, 0.0)
+        # self.add_marker(2, 1.0, 1.0, 1.0)
+        # self.add_marker(3, -1.0, -1.0, 1.0)
 
         # Publier le MarkerArray
         self.publish_markers()
@@ -43,11 +52,26 @@ class MarkerPublisher(Node):
         
         self.odom_data = msgs
 
+    def position_robot(self):
+        position = self.odom_data.pose.pose.position
+        orientation = self.odom_data.pose.pose.orientation
+        (posx, posy, posz) = (position.x, position.y, position.z)
+        (qx, qy, qz, qw) = (orientation.x, orientation.y, orientation.z, orientation.w)
+
+        return posx,posy,qz
+    
+    def get_objt_coord(self, msg):
+
+        self.nuke_coord = msg
 
 
-    def transform_coordinates(robot_pose, object_coordinates):
-        x_r, y_r, theta_r = robot_pose
-        x_obj, y_obj = object_coordinates
+    def transform_coordinates(self):
+
+        #coordonnées robot
+        x_r, y_r, theta_r = self.position_robot()
+
+        #coordonnées nuke_cola
+        x_obj, y_obj = self.nuke_coord
 
         # Transformation matrix from robot frame to world frame
         transformation_matrix = np.array([
@@ -65,18 +89,21 @@ class MarkerPublisher(Node):
         return tuple(transformed_coordinates)
 
         
-    def position_robot(self):
-        position = self.odom_data.pose.pose.position
-        (posx, posy, posz) = (position.x, position.y, position.z)
-
-        return posx,posy,posz
+    
 
 
-    def add_marker(self, id, x, y, z):
+    def add_marker(self):
         marker = Marker()
         marker.header.frame_id = "base_link"  # Le frame_id dans lequel les coordonnées sont définies
         marker.header.stamp = self.get_clock().now().to_msg()
         marker.ns = 'my_namespace'
+
+        x, y, z = self.transform_coordinates()
+        id = 0
+        for m in self.marker_array.markers:
+            m.id = id
+            id += 1
+
         marker.id = id
         marker.type = Marker.SPHERE
         marker.action = Marker.ADD
@@ -94,7 +121,13 @@ class MarkerPublisher(Node):
         marker.color.r = 1.0
         marker.color.g = 0.0
         marker.color.b = 0.0
-        self.marker_array.markers.append(marker)
+
+        marker_identique = False
+        for m in self.marker_array.markers:
+            if m.pose.position.x == marker.pose.position.x  and m.pose.position.y == marker.pose.position.y: 
+                 marker_identique = True
+            else: 
+                self.marker_array.markers.append(marker)
 
     def publish_markers(self):
         self.publisher.publish(self.marker_array)
