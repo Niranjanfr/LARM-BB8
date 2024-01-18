@@ -246,8 +246,7 @@ class Realsense(Node):
 
                 depth = self.depth_frame.get_distance(int(x), int(y))
                 dx ,dy, dz = rs.rs2_deproject_pixel_to_point(color_intrin, [x,y], depth)
-                distance = Float64()
-                distance.data = math.sqrt(((dx)**2) + ((dy)**2) + ((dz)**2))
+                distance = math.sqrt(((dx)**2) + ((dy)**2) + ((dz)**2))
                 self.depth_object.publish(distance)
 
                 # Calcul de l'angle entre l'object et la droite passant par le centre et la camera du robot
@@ -258,12 +257,12 @@ class Realsense(Node):
 
                 #Calcul des coordonnées de l'object par rapport a la camera
                 coord_obj = Point()
-                sinAngle = Float64()
-                sinAngle.data = math.sin(angle.x)
-                cosAngle =Float64()
-                cosAngle.data = math.cos(angle.x)
-                coord_obj.x = distance * sinAngle
-                coord_obj.y = distance * cosAngle
+                sinAngle = math.sin(angle.x)
+                cosAngle = math.cos(angle.x)
+                coord_obj.x = Float64()
+                coord_obj.x.data = distance * sinAngle
+                coord_obj.y = Float64()
+                coord_obj.y.data = distance * cosAngle
                 self.coord_xy_obj.publish(coord_obj)
 
                 cv2.circle(image2, (int(x), int(y)), int(rayon), color_info, 2)
