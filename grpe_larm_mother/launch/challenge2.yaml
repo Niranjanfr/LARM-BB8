@@ -1,0 +1,26 @@
+launch:
+
+- include:
+     file: "$(find-pkg-share tbot_sim)/launch/minimal_launch.yaml"
+
+- node:
+    pkg: "slam_toolbox"
+    exec: "async_slam_toolbox_node"
+    name: "slam_toolbox"
+    output: "screen"
+
+- node:
+    pkg: "grpe_larm_mother"
+    exec: "reactive_move.py"
+    name: "mov_obstacles"
+
+- node:
+    pkg: "grpe_larm_mother"
+    exec: "camera_driver.py"
+    name: "detection_bouteilles"
+
+- node:
+    pkg: "grpe_larm_mother"
+    exec: "marker.py"
+    name: "marquer_bouteilles"
+
