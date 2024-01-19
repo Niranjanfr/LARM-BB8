@@ -105,7 +105,7 @@ class Realsense(Node):
         images = np.hstack((self.color_image, depth_colormap))
 
         # Show images
-        cv2.namedWindow('RealSense', cv2.WINDOW_AUTOSIZE)
+        # cv2.namedWindow('RealSense', cv2.WINDOW_AUTOSIZE)
         # cv2.imshow('RealSense', images)
         cv2.waitKey(1)
         pass
@@ -138,7 +138,7 @@ class Realsense(Node):
 
         color_info=(0, 0, 255)
 
-        cv2.namedWindow('Camera')
+        # cv2.namedWindow('Camera')
         hsv_px = [47,142,120]
 
         kernel = np.ones((3, 3), np.uint8)
