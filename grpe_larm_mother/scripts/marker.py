@@ -62,9 +62,26 @@ class MarkerPublisher(Node):
         return posx,posy,qz
     
     def get_objt_coord(self, msg):
-
-
         self.nuke_coord = msg
+
+        x,y = self.transform_coordinates()
+
+        
+        # for m in self.marker_array:
+            # Exist deja ?
+        dist = 0
+        m= Marker()
+        
+
+        for m in self.marker_array.markers: 
+            dist = math.sqrt((m.pose.position.y - y)**2 + (m.pose.position.x -x)**2)
+            if dist < 0.10: 
+                continue
+        # Sinon, le creer + publier
+            else :
+                self.add_marker(x, y)
+
+
         print (" Objt coordonnée = " ,self.nuke_coord )
 
 
@@ -97,13 +114,13 @@ class MarkerPublisher(Node):
     
 
 
-    def add_marker(self):
+    def add_marker(self, m):
         marker = Marker()
         marker.header.frame_id = "odom"  # Le frame_id dans lequel les coordonnées sont définies
         marker.header.stamp = self.get_clock().now().to_msg()
         marker.ns = 'my_namespace'
 
-        x, y = self.transform_coordinates()
+        # x, y = self.transform_coordinates()
         id = 0
         for m in self.marker_array.markers:
             m.id = id
@@ -114,7 +131,7 @@ class MarkerPublisher(Node):
         marker.action = Marker.ADD
         marker.pose.position.x = x
         marker.pose.position.y = y
-        # marker.pose.position.z = z
+        # m.pose.position.z = z
         marker.pose.orientation.x = 0.0
         marker.pose.orientation.y = 0.0
         marker.pose.orientation.z = 0.0
@@ -127,12 +144,12 @@ class MarkerPublisher(Node):
         marker.color.g = 0.0
         marker.color.b = 0.0
 
-        dist = 0
-        for m in self.marker_array.markers: 
-            dist = math.sqrt((marker.pose.position.y - m.pose.position.y)**2 + (marker.pose.position.x - m.pose.position.x)**2)
-            if dist > 0.10: 
-                self.marker_array.markers.append(marker)
-        # self.marker_array.markers.append(marker)
+        # dist = 0
+        # for m in self.marker_array.markers: 
+        #     dist = math.sqrt((marker.pose.position.y - m.pose.position.y)**2 + (marker.pose.position.x - m.pose.position.x)**2)
+        #     if dist > 0.10: 
+        #         self.marker_array.markers.append(marker)
+        self.marker_array.markers.append(marker)
         
 
     def publish_markers(self):
@@ -150,6 +167,7 @@ def main(args=None):
 
     while marker_publisher.isOk:
         marker_publisher.publish_markers()
+        marker_publisher.get_objt_coord(marker_publisher.nuke_coord)
         rclpy.spin_once (marker_publisher)
 
     #stop streaming
