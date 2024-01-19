@@ -1,7 +1,10 @@
 launch:
 
-- include:
-     file: "$(find-pkg-share tbot_sim)/launch/minimal_launch.yaml"
+- executable :
+   cmd: gnome-terminal --tab -e 'ros2 launch tbot_node minimal_launch.yaml'
+
+# - include:
+#      file: "$(find-pkg-share tbot_sim)/launch/minimal_launch.yaml"
 
 - node:
     pkg: "slam_toolbox"

@@ -125,10 +125,11 @@ class MarkerPublisher(Node):
         dist = 0
         for m in self.marker_array.markers: 
             dist = math.sqrt((marker.pose.position.y - m.pose.position.y)**2 + (marker.pose.position.x - m.pose.position.x)**2)
-            if dist < 0.03: 
+            if dist < 0.10: 
                  marker_identique = True
             else: 
                 self.marker_array.markers.append(marker)
+        
 
     def publish_markers(self):
         self.publisher.publish(self.marker_array)
