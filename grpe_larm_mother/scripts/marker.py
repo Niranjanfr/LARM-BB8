@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 from visualization_msgs.msg import Marker
 from visualization_msgs.msg import MarkerArray
 import math as math
@@ -13,7 +13,7 @@ from geometry_msgs.msg import Point
 class MarkerPublisher(Node):
     def __init__(self):
         super().__init__('marker_publisher')
-        self.publisher = self.create_publisher(MarkerArray, 'marker_array_topic', 10)
+        self.publisher = self.create_publisher(MarkerArray, '/marker_array_topic', 10)
         
         # Créer un MarkerArray
         self.marker_array = MarkerArray()
@@ -34,10 +34,10 @@ class MarkerPublisher(Node):
         )
         self.nuke_coord =Point()
         
-        # Ajouter des marqueurs avec des coordonnées spécifiques
-        self.add_marker(1, 0.0, 0.0, 0.0)
-        self.add_marker(2, 1.0, 1.0, 1.0)
-        self.add_marker(3, -1.0, -1.0, 1.0)
+        # # Ajouter des marqueurs avec des coordonnées spécifiques
+        # self.add_marker(1, 0.0, 0.0, 0.0)
+        # self.add_marker(2, 1.0, 1.0, 1.0)
+        # self.add_marker(3, -1.0, -1.0, 1.0)
 
         # Publier le MarkerArray
         self.publish_markers()
@@ -94,24 +94,24 @@ class MarkerPublisher(Node):
     
 
 
-    def add_marker(self,id,x,y,z):
+    def add_marker(self):
         marker = Marker()
-        marker.header.frame_id = "base_link"  # Le frame_id dans lequel les coordonnées sont définies
+        marker.header.frame_id = "odom"  # Le frame_id dans lequel les coordonnées sont définies
         marker.header.stamp = self.get_clock().now().to_msg()
         marker.ns = 'my_namespace'
 
-        # x, y = self.transform_coordinates()
-        # id = 0
-        # for m in self.marker_array.markers:
-        #     m.id = id
-        #     id += 1
+        x, y = self.transform_coordinates()
+        id = 0
+        for m in self.marker_array.markers:
+            m.id = id
+            id += 1
 
         marker.id = id
         marker.type = Marker.SPHERE
         marker.action = Marker.ADD
         marker.pose.position.x = x
         marker.pose.position.y = y
-        marker.pose.position.z = z
+        # marker.pose.position.z = z
         marker.pose.orientation.x = 0.0
         marker.pose.orientation.y = 0.0
         marker.pose.orientation.z = 0.0
@@ -124,12 +124,12 @@ class MarkerPublisher(Node):
         marker.color.g = 0.0
         marker.color.b = 0.0
 
-        # dist = 0
-        # for m in self.marker_array.markers: 
-        #     dist = math.sqrt((marker.pose.position.y - m.pose.position.y)**2 + (marker.pose.position.x - m.pose.position.x)**2)
-        #     if dist > 0.10: 
-                # self.marker_array.markers.append(marker)
-        self.marker_array.markers.append(marker)
+        dist = 0
+        for m in self.marker_array.markers: 
+            dist = math.sqrt((marker.pose.position.y - m.pose.position.y)**2 + (marker.pose.position.x - m.pose.position.x)**2)
+            if dist > 0.10: 
+                self.marker_array.markers.append(marker)
+        # self.marker_array.markers.append(marker)
         
 
     def publish_markers(self):
@@ -139,6 +139,11 @@ class MarkerPublisher(Node):
 def main(args=None):
     rclpy.init(args=args)
     marker_publisher = MarkerPublisher()
+    #  # Ajouter des marqueurs avec des coordonnées spécifiques
+    # marker_publisher.add_marker(1, 0.0, 0.0, 0.0)
+    # marker_publisher.add_marker(2, 1.0, 1.0, 1.0)
+    # marker_publisher.add_marker(3, -1.0, -1.0, 1.0)
+    marker_publisher.publish_markers()
     rclpy.spin(marker_publisher)
     marker_publisher.destroy_node()
     rclpy.shutdown()
