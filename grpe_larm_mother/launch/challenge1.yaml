@@ -3,10 +3,10 @@ launch:
 # - include:
 #      file: "$(find-pkg-share grpe_larm_mother)/launch/minimal_launch.yaml"
 
-# - node:
-#     pkg: "grpe_larm_mother"
-#     exec: "reactive_move.py"
-#     name: "mov_obstacles"
+- node:
+    pkg: "grpe_larm_mother"
+    exec: "reactive_move.py"
+    name: "mov_obstacles"
 
 - node:
     pkg: "grpe_larm_mother"
