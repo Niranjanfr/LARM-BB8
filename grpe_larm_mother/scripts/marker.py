@@ -9,12 +9,15 @@ from visualization_msgs.msg import Marker, MarkerArray
 from nav_msgs.msg import Odometry
 from std_msgs.msg import String
 from geometry_msgs.msg import Point
+import signal
 
 class MarkerPublisher(Node):
     def __init__(self):
         super().__init__('marker_publisher')
         self.publisher = self.create_publisher(MarkerArray, 'marker_array_topic', 10)
         
+        self.isOk= True
+
         # Créer un MarkerArray
         self.marker_array = MarkerArray()
 
@@ -136,10 +139,23 @@ class MarkerPublisher(Node):
         self.publisher.publish(self.marker_array)
         self.get_logger().info('MarkerArray published')
 
+    def signalInteruption(self):       
+        print( "\nCtrl-c pressed" )
+        self.isOk= False
+
 def main(args=None):
     rclpy.init(args=args)
     marker_publisher = MarkerPublisher()
-    rclpy.spin(marker_publisher)
+
+    while marker_publisher.isOk:
+        marker_publisher.add_marker()
+        marker_publisher.publish_markers()
+        rclpy.spin_once(marker_publisher)
+        
+    # Stop streaming
+    signal.signal(signal.SIGINT, marker_publisher.signalInteruption)
+    print("Ending...")
+    #rclpy.spin(marker_publisher)
     marker_publisher.destroy_node()
     rclpy.shutdown()
 
