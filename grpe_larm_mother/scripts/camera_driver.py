@@ -169,14 +169,15 @@ class Realsense(Node):
         if len(elements) > 0:
             c=max(elements, key=cv2.contourArea)
             ((x, y), rayon)=cv2.minEnclosingCircle(c)
-            new_list = list(elements)
-            print(new_list)
-            new_list.remove(c)
-            print(new_list)
-            new_elements=new_list
-            # new_elements = tuple(x for x in elements if x != c)
-            c1 = max(new_elements, key=cv2.contourArea)
-            ((x1, y1), rayon1)=cv2.minEnclosingCircle(c1)
+            if len(elements)>1:
+                new_list = list(elements)
+                print(new_list)
+                new_list.remove(c)
+                print(new_list)
+                new_elements=new_list
+                 # new_elements = tuple(x for x in elements if x != c)
+                c1 = max(new_elements, key=cv2.contourArea)
+                ((x1, y1), rayon1)=cv2.minEnclosingCircle(c1)
             if (rayon<60 and rayon>40) and (rayon1 <60 and rayon1 > 40):
 
                 color_intrin = self.aligned_color_frame.profile.as_video_stream_profile().intrinsics
@@ -218,6 +219,12 @@ class Realsense(Node):
                 cv2.circle(frame, (int(x), int(y)), 5, color_info, 10)
                 cv2.line(frame, (int(x), int(y)), (int(x)+150, int(y)), color_info, 2)
                 cv2.putText(frame, "Objet !!!", (int(x)+10, int(y) -10), cv2.FONT_HERSHEY_DUPLEX, 1, color_info, 1, cv2.LINE_AA)
+
+                cv2.circle(image2, (int(x1), int(y1)), int(rayon1), color_info, 2)
+                cv2.circle(frame, (int(x1), int(y1)), 5, color_info, 10)
+                cv2.line(frame, (int(x1), int(y1)), (int(x1)+150, int(y1)), color_info, 2)
+                cv2.putText(frame, "Objet !!!", (int(x1)+10, int(y1) -10), cv2.FONT_HERSHEY_DUPLEX, 1, color_info, 1, cv2.LINE_AA)
+
                 self.trouver.publish(msg)
         cv2.imshow('Camera', frame)
         cv2.imshow('image2', image2) # si nécessaire décommanter les lignes
