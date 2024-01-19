@@ -19,6 +19,8 @@ class MarkerPublisher(Node):
         # Créer un MarkerArray
         self.marker_array = MarkerArray()
 
+        self.isOk = True
+
         #Créate a subscriber qui récupère la position du robot dans la carte
 
         self.odom_data = 0
@@ -144,7 +146,15 @@ class MarkerPublisher(Node):
 def main(args=None):
     rclpy.init(args=args)
     marker_publisher = MarkerPublisher()
-    rclpy.spin(marker_publisher)
+    #marker_publisher.add_marker()
+
+    while marker_publisher.isOk:
+        marker_publisher.publish_markers()
+        rclpy.spin_once (marker_publisher)
+
+    #stop streaming
+    signal.signal(signal.SIGINT, marker_publisher.signalInteruption)
+    #rclpy.spin(marker_publisher)
     marker_publisher.destroy_node()
     rclpy.shutdown()
 
