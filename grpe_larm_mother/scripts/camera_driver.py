@@ -169,8 +169,8 @@ class Realsense(Node):
         if len(elements) > 0:
             c=max(elements, key=cv2.contourArea)
             ((x, y), rayon)=cv2.minEnclosingCircle(c)
-            elements.pop(c)
-            c1 = max (elements, key=cv2.contourArea)
+            new_elements = tuple(x for x in elements if x != c)
+            c1 = max (new_elements, key=cv2.contourArea)
             ((x1, y1), rayon1)=cv2.minEnclosingCircle(c1)
             if (rayon<60 and rayon>40) and (rayon1 <60 and rayon1 > 40):
 
