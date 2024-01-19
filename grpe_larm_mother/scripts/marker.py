@@ -32,7 +32,7 @@ class MarkerPublisher(Node):
             Point, '/coordonnee_objet_ref_robot',
             self.get_objt_coord, 10
         )
-        self.nuke_coord = 0
+        self.nuke_coord =Point()
         
         # # Ajouter des marqueurs avec des coordonnées spécifiques
         # self.add_marker(1, 0.0, 0.0, 0.0)
@@ -60,6 +60,7 @@ class MarkerPublisher(Node):
     
     def get_objt_coord(self, msg):
 
+
         self.nuke_coord = msg
         print (" Objt coordonnée = " ,self.nuke_coord )
 
@@ -70,7 +71,9 @@ class MarkerPublisher(Node):
         x_r, y_r, theta_r = self.position_robot()
 
         #coordonnées nuke_cola
-        x_obj, y_obj = self.nuke_coord
+        x_obj= self.nuke_coord.x
+        y_obj = self.nuke_coord.y
+
 
         # Transformation matrix from robot frame to world frame
         transformation_matrix = np.array([
@@ -97,7 +100,7 @@ class MarkerPublisher(Node):
         marker.header.stamp = self.get_clock().now().to_msg()
         marker.ns = 'my_namespace'
 
-        x, y, z = self.transform_coordinates()
+        x, y = self.transform_coordinates()
         id = 0
         for m in self.marker_array.markers:
             m.id = id
@@ -108,10 +111,10 @@ class MarkerPublisher(Node):
         marker.action = Marker.ADD
         marker.pose.position.x = x
         marker.pose.position.y = y
-        marker.pose.position.z = z
+        #marker.pose.position.z = z
         marker.pose.orientation.x = 0.0
         marker.pose.orientation.y = 0.0
-        marker.pose.orientation.z = 0.0
+        #marker.pose.orientation.z = 0.0
         marker.pose.orientation.w = 1.0
         marker.scale.x = 0.2
         marker.scale.y = 0.2
