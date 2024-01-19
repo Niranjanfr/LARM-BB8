@@ -105,8 +105,8 @@ class Realsense(Node):
         images = np.hstack((self.color_image, depth_colormap))
 
         # Show images
-        # cv2.namedWindow('RealSense', cv2.WINDOW_AUTOSIZE)
-        # cv2.imshow('RealSense', images)
+        cv2.namedWindow('RealSense', cv2.WINDOW_AUTOSIZE)
+        cv2.imshow('RealSense', images)
         cv2.waitKey(1)
         pass
 
@@ -114,7 +114,6 @@ class Realsense(Node):
 
         # Utilisation de colormap sur l'image depth de la Realsense (image convertie en 8-bit par pixel)
         depth_colormap = cv2.applyColorMap(cv2.convertScaleAbs(self.depth_image, alpha=0.03), cv2.COLORMAP_JET)
-        # depth_image = np.asanyarray(self.depth_frame.get_data())
 
         self.bridge=CvBridge()
 
@@ -138,7 +137,7 @@ class Realsense(Node):
 
         color_info=(0, 0, 255)
 
-        # cv2.namedWindow('Camera')
+        cv2.namedWindow('Camera')
         hsv_px = [47,142,120]
 
         kernel = np.ones((3, 3), np.uint8)
@@ -170,40 +169,54 @@ class Realsense(Node):
         if len(elements) > 0:
             c=max(elements, key=cv2.contourArea)
             ((x, y), rayon)=cv2.minEnclosingCircle(c)
-            if rayon>30:
+            elements.pop(c)
+            c1 = max (elements, key=cv2.contourArea)
+            ((x1, y1), rayon1)=cv2.minEnclosingCircle(c1)
+            if (rayon<60 and rayon>40) and (rayon1 <60 and rayon1 > 40):
 
                 color_intrin = self.aligned_color_frame.profile.as_video_stream_profile().intrinsics
 
+                # objet 1
                 depth = self.depth_frame.get_distance(int(x), int(y))
                 dx ,dy, dz = rs.rs2_deproject_pixel_to_point(color_intrin, [x,y], depth)
                 distance = math.sqrt(((dx)**2) + ((dy)**2) + ((dz)**2))
-                # print (dz,dx)
-                # self.depth_object.publish(distance)
 
-                # Calcul de l'angle entre l'object et la droite passant par le centre et la camera du robot
-                # coord_px = Point()
-                # coord_px.x=x
-                # coord_px.y=y
-                # angle = self.px_coo_to_angle(coord_px,'camera')
+                #objet 2
+                depth1 = self.depth_frame.get_distance(int(x1), int(y1))
+                dx1 ,dy1, dz1 = rs.rs2_deproject_pixel_to_point(color_intrin, [x1,y1], depth1)
+                distance1 = math.sqrt(((dx1)**2) + ((dy1)**2) + ((dz1)**2))
 
-                #Calcul des coordonnées de l'object par rapport a la camera
-                coord_obj = Point()
-                # sinAngle = math.sin(angle.x)
-                # cosAngle = math.cos(angle.x)
-                coord_obj.x = dz
-                coord_obj.y = -dx
-                # print(">>>>>>>>>>coord_obj.x = " + coord_obj.__str__())
-                print(coord_obj)
-                self.coord_xy_obj.publish(coord_obj)
+                if distance >1.0:
+
+
+
+                    #Calcul des coordonnées de l'object par rapport a la camera
+                    coord_obj = Point()
+                    coord_obj.x = dz
+                    coord_obj.y = -dx
+
+                    print(coord_obj)
+                    self.coord_xy_obj.publish(coord_obj)
+
+                if distance1 >1.0:
+
+                    #Calcul des coordonnées de l'object par rapport a la camera
+                    coord_obj1 = Point()
+                    coord_obj1.x = dz1
+                    coord_obj1.y = -dx1
+
+                    print(coord_obj1)
+                    self.coord_xy_obj.publish(coord_obj1)
+
 
                 cv2.circle(image2, (int(x), int(y)), int(rayon), color_info, 2)
                 cv2.circle(frame, (int(x), int(y)), 5, color_info, 10)
                 cv2.line(frame, (int(x), int(y)), (int(x)+150, int(y)), color_info, 2)
                 cv2.putText(frame, "Objet !!!", (int(x)+10, int(y) -10), cv2.FONT_HERSHEY_DUPLEX, 1, color_info, 1, cv2.LINE_AA)
                 self.trouver.publish(msg)
-        # cv2.imshow('Camera', frame)
-        # cv2.imshow('image2', image2) # si nécessaire décommanter les lignes
-        # cv2.imshow('Mask', mask)
+        cv2.imshow('Camera', frame)
+        cv2.imshow('image2', image2) # si nécessaire décommanter les lignes
+        cv2.imshow('Mask', mask)
 
 
         cv2.waitKey(10)
