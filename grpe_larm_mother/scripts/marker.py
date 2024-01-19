@@ -23,7 +23,7 @@ class MarkerPublisher(Node):
 
         #Créate a subscriber qui récupère la position du robot dans la carte
 
-        self.odom_data = 0
+        self.odom_data = Odometry()
 
         self.subs_position_robot = self.create_subscription(
             Odometry, '/odom',
@@ -63,25 +63,6 @@ class MarkerPublisher(Node):
     
     def get_objt_coord(self, msg):
         self.nuke_coord = msg
-
-        x,y = self.transform_coordinates()
-
-        
-        # for m in self.marker_array:
-            # Exist deja ?
-        dist = 0
-        m= Marker()
-        
-
-        for m in self.marker_array.markers: 
-            dist = math.sqrt((m.pose.position.y - y)**2 + (m.pose.position.x -x)**2)
-            if dist < 0.10: 
-                continue
-        # Sinon, le creer + publier
-            else :
-                self.add_marker(x, y)
-
-
         print (" Objt coordonnée = " ,self.nuke_coord )
 
 
@@ -114,13 +95,13 @@ class MarkerPublisher(Node):
     
 
 
-    def add_marker(self, m):
+    def add_marker(self):
         marker = Marker()
         marker.header.frame_id = "odom"  # Le frame_id dans lequel les coordonnées sont définies
         marker.header.stamp = self.get_clock().now().to_msg()
         marker.ns = 'my_namespace'
 
-        # x, y = self.transform_coordinates()
+        x, y = self.transform_coordinates()
         id = 0
         for m in self.marker_array.markers:
             m.id = id
@@ -151,6 +132,23 @@ class MarkerPublisher(Node):
         #         self.marker_array.markers.append(marker)
         self.marker_array.markers.append(marker)
         
+    def mark(self):
+        x,y = self.transform_coordinates()
+
+        
+        # for m in self.marker_array:
+            # Exist deja ?
+        dist = 0
+        # m= Marker()
+        
+
+        for i in range(): 
+            dist = math.sqrt((self.marker_array.markers[i].pose.position.y - y)**2 + (self.marker_array.markers[i].pose.position.x -x)**2)
+            if dist < 0.10: 
+                continue
+        # Sinon, le creer + publier
+            else :
+                self.add_marker(x, y)
 
     def publish_markers(self):
         self.publisher.publish(self.marker_array)
@@ -166,8 +164,8 @@ def main(args=None):
     #marker_publisher.add_marker()
 
     while marker_publisher.isOk:
+        marker_publisher.add_marker()
         marker_publisher.publish_markers()
-        marker_publisher.get_objt_coord(marker_publisher.nuke_coord)
         rclpy.spin_once (marker_publisher)
 
     #stop streaming
