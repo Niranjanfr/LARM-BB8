@@ -10,6 +10,35 @@ Ce répertoire contient :
 
 1. grpe_larm_mother        (les fichiers launch et scripts du challenge 1 & 2)
 
+## Arborescence du Référentiel
+
+```grpe_larm_mother
+.
+├── launch/               
+│   ├── challenge1.yaml  
+│   ├── challenge-1.launch.py 
+│   ├── challenge2.yaml 
+│   ├── challenge-2.launch.py
+│   ├── minimal_launch.yaml
+│   ├── rivz.yaml 
+│   ├── simulation.yaml 
+│   └── simulation.yaml  
+│
+├── rviz/              
+│   └── rviz.rivz       
+│
+├── scripts/              
+│   ├── camera_driver.py  
+│   ├── depth_calc.py      
+│   ├── marker.py     
+│   ├── multiplexer
+│   ├── reactive_move.py          
+│   └── simulation      
+│  
+├── .gitignore          
+└── README.md           
+
+
 ## Installation
 
 On utilise ubuntu 20.04 et on suppose les bibliothèques suivantes installées : 
@@ -62,7 +91,9 @@ en rentrant l'addresse subnet sur laquelle la machine pilote se situe.
 
 **Robot :**
  
-Pour lancer le robot avec detection des obstacles, executer la commande suivante:
+La detection d'obstacle se fait à l'aide du LIDAR : on dessine un rectangle en face du robot que l'on divise en 2 partie, une à gauche et une à droite. 
+Pour se sortir des boucles causés par des obstacles placé en "symétrie" et pas détecté en même temps, on utilise de l'aléatoire: une vitesse angulaire aléatoire permet de sortir de ce cas de figure. 
+Pour lancer indépendemment le robot réel ou en simulation avec détection des obstacles, éxecuter la commande suivante:
 ```
 ros2 run grpe_larm_mother reactive_move.py
 ```
