@@ -131,14 +131,14 @@ class MarkerPublisher(Node):
         marker.color.b = 0.0
 
         for m in self.marker_array.markers: 
-            dist = math.sqrt((m.pose.position.y - y)**2 + (m.pose.position.x -x)**2)
+            dist = math.sqrt((m.pose.position.y - marker.pose.position.y)**2 + (m.pose.position.x -marker.pose.position.x)**2)
             if dist < 0.10: 
                 continue
         # Sinon, le creer + publier
             else :
-                self.add_marker(x, y)
+                self.marker_array.markers.append(marker)
 
-        self.marker_array.markers.append(marker)
+        
 
         print(self.marker_array)
 
