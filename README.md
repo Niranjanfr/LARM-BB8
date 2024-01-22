@@ -53,9 +53,9 @@ ros2 run grpe_larm_mother reactive_move.py
 
 **Vision :**
 
-Le traitement pour détecter les bouteilles se fait via un filtre de couleur en HSV et calcul le rapport hauteur/largeur pour s'assurer que l'objet est bien une bouteille.
+Le traitement pour détecter les bouteilles se fait via un filtre de couleur en HSV et élimine les objets trop proche et en dehors d'une plage de taille pour s'assurer que l'objet est bien une bouteille.
 
-Pour visualiser la caméra seulement, exécuter le noeud suivant :
+Pour visualiser la caméra seulement, exécuter le noeud suivant en décommantant les lignes indiqués dans le code:
 ```
 ros2 run grpe_larm_mother camera_driver.py
 ```
@@ -78,3 +78,26 @@ Pour lancer la simulation :
 ```
 ros2 launch grpe_larm_mother simulation.yaml
 ```
+**Challenge 2 :**
+
+Dans ce deuxième challenge, on ajoute au premier challenge, le SLAM ainsi que le positionnement des objets sur la map.
+
+pour lancer le challenge 2 avec : connexion au robot + deplacement automatique + camera + SLAM + marqueur des objets, exécuter la commande suivante:
+```
+ros2 launch grpe_larm_mother challenge2.yaml
+```
+
+pour lancer Rviz, exécuter la commande suivante : 
+```
+ros2 launch grpe_larm_mother rviz.yaml
+```
+ou 
+```
+rviz2
+```
+
+Pour lancer la simulation :
+```
+ros2 launch grpe_larm_mother simulation.yaml
+```
+
