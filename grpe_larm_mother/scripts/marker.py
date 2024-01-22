@@ -17,13 +17,11 @@ class MarkerPublisher(Node):
         self.publisher = self.create_publisher(MarkerArray, 'marker_array_topic', 10)
         
         # Créer un MarkerArray
+        # self.marker_array = MarkerArray()
         self.marker_array = MarkerArray()
-
         self.isOk = True
 
         #Créate a subscriber qui récupère la position du robot dans la carte
-
-        self.odom_data = Odometry()
 
         self.subs_position_robot = self.create_subscription(
             Odometry, '/odom',
@@ -55,7 +53,9 @@ class MarkerPublisher(Node):
 
     def position_robot(self):
         position = self.odom_data.pose.pose.position
+        print(position)
         orientation = self.odom_data.pose.pose.orientation
+        print(orientation)
         (posx, posy, posz) = (position.x, position.y, position.z)
         (qx, qy, qz, qw) = (orientation.x, orientation.y, orientation.z, orientation.w)
 
@@ -70,7 +70,6 @@ class MarkerPublisher(Node):
 
 
     def transform_coordinates(self):
-
         #coordonnées robot
         x_r, y_r, theta_r = self.position_robot()
 
@@ -99,12 +98,14 @@ class MarkerPublisher(Node):
 
 
     def add_marker(self):
-        
+        print("add_marker")
+    
         marker = Marker()
         marker.header.frame_id = "map"  # Le frame_id dans lequel les coordonnées sont définies
         marker.header.stamp = self.get_clock().now().to_msg()
         marker.ns = 'my_namespace'
 
+        # x ,y = (1,1)
         x, y = self.transform_coordinates()
         id = 0
         for m in self.marker_array.markers:
@@ -129,10 +130,21 @@ class MarkerPublisher(Node):
         marker.color.g = 0.0
         marker.color.b = 0.0
 
-        
+        for m in self.marker_array.markers: 
+            dist = math.sqrt((m.pose.position.y - y)**2 + (m.pose.position.x -x)**2)
+            if dist < 0.10: 
+                continue
+        # Sinon, le creer + publier
+            else :
+                self.add_marker(x, y)
+
+        self.marker_array.markers.append(marker)
+
+        print(self.marker_array)
+
         
     def mark(self):
-        if self.detection == True : 
+        if self.detection == True  and self.odom_data != None: 
             self.add_marker()
             self.publish_markers()
 
@@ -166,6 +178,9 @@ def main(args=None):
 
     while marker_publisher.isOk:
         marker_publisher.mark()
+        # marker_publisher.add_marker()
+        # marker_publisher.publish_markers()
+        print(marker_publisher.marker_array)
         rclpy.spin_once (marker_publisher)
 
     #stop streaming
