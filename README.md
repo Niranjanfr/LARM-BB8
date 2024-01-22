@@ -8,7 +8,7 @@ Ce répertoire contient :
 
 1 package :
 
-1. grpe_larm_mother        (les fichiers launch du challenge 1 & 2)
+1. grpe_larm_mother        (les fichiers launch et scripts du challenge 1 & 2)
 
 ## Installation
 
