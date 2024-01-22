@@ -173,7 +173,6 @@ class Realsense(Node):
             new_list = sorted(elements, key=cv2.contourArea)
             c=new_list[0]   
             if len(c) > 10:                 
-                print(len(c))
                 # c=max(elements, key=cv2.contourArea)
                 ((x, y), rayon)=cv2.minEnclosingCircle(c)
                 # ((x, y), (dga,dpa),_)=cv2.fitEllipse(c)
@@ -187,7 +186,7 @@ class Realsense(Node):
                 dx ,dy, dz = rs.rs2_deproject_pixel_to_point(color_intrin, [x,y], depth1)
                 distance = math.sqrt(((dx)**2) + ((dy)**2) + ((dz)**2))
 
-                if distance > 1.0 : 
+                if distance > 0.75 : 
 
                     # if rapport > 2.7 and rapport < 3.3:
                     if rayon > 40 and rayon < 60:
@@ -221,7 +220,7 @@ class Realsense(Node):
                         distance1 = math.sqrt(((dx1)**2) + ((dy1)**2) + ((dz1)**2))
 
 
-                        if distance1 >1.0:
+                        if distance1 >0.75:
 
                             # if rapport1 > 2.7 and rapport1 < 3.3:
                             
