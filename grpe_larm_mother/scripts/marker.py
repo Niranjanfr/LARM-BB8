@@ -37,6 +37,7 @@ class MarkerPublisher(Node):
         )
         self.nuke_coord =Point()
         
+        
         # # Ajouter des marqueurs avec des coordonnées spécifiques
         # self.add_marker(1, 0.0, 0.0, 0.0)
         # self.add_marker(2, 1.0, 1.0, 1.0)
@@ -63,6 +64,7 @@ class MarkerPublisher(Node):
     
     def get_objt_coord(self, msg):
         self.nuke_coord = msg
+        self.publication = True
         print (" Objt coordonnée = " ,self.nuke_coord )
 
 
@@ -125,11 +127,11 @@ class MarkerPublisher(Node):
         marker.color.g = 0.0
         marker.color.b = 0.0
 
-        # dist = 0
-        # for m in self.marker_array.markers: 
-        #     dist = math.sqrt((marker.pose.position.y - m.pose.position.y)**2 + (marker.pose.position.x - m.pose.position.x)**2)
-        #     if dist > 0.10: 
-        #         self.marker_array.markers.append(marker)
+        dist = 0
+        for m in self.marker_array.markers: 
+            dist = math.sqrt((marker.pose.position.y - m.pose.position.y)**2 + (marker.pose.position.x - m.pose.position.x)**2)
+            if dist > 0.10: 
+                self.marker_array.markers.append(marker)
         self.marker_array.markers.append(marker)
         
     def mark(self):
