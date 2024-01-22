@@ -36,6 +36,8 @@ install( PROGRAMS scripts/camera_driver.py DESTINATION lib/${PROJECT_NAME})
 # Python scripts
 install( PROGRAMS scripts/challenge-1.launch.py DESTINATION lib/${PROJECT_NAME})
 # Python scripts
+install( PROGRAMS scripts/challenge-2.launch.py DESTINATION lib/${PROJECT_NAME})
+# Python scripts
 install( PROGRAMS scripts/depth_calc.py DESTINATION lib/${PROJECT_NAME})
 # Python scripts
 install( PROGRAMS scripts/marker.py DESTINATION lib/${PROJECT_NAME})
