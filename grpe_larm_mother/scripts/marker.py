@@ -95,14 +95,7 @@ class MarkerPublisher(Node):
 
         
     
-    # def comp_mark(self, marker):
-    #     for m in self.marker_array.markers: 
-    #         dist = math.sqrt((m.pose.position.y - marker.pose.position.y)**2 + (m.pose.position.x -marker.pose.position.x)**2)
-    #         if dist < 0.10 or len(self.marker_array.markers)!=0:
-    #             return False 
-    #     # Sinon, le creer + publier
-    #         else :
-    #             return True
+
 
     def add_marker(self):
         print("add_marker")
@@ -129,32 +122,24 @@ class MarkerPublisher(Node):
         marker.pose.orientation.y = 0.0
         marker.pose.orientation.z = 0.0
         marker.pose.orientation.w = 1.0
-        marker.scale.x = 0.7
-        marker.scale.y = 0.7
+        marker.scale.x = 0.2
+        marker.scale.y = 0.2
         marker.scale.z = 0.2
         marker.color.a = 1.0
         marker.color.r = 1.0
         marker.color.g = 0.0
         marker.color.b = 0.0
-        
 
-        # if self.comp_mark(marker) == False : 
         self.marker_array.markers.append(marker)
-        # if len (self.marker_array.markers)==0:
-
-
-        #     self.marker_array.markers.append(marker)
-
-        # else : 
             
 
         # for m in self.marker_array.markers: 
         #     dist = math.sqrt((m.pose.position.y - marker.pose.position.y)**2 + (m.pose.position.x -marker.pose.position.x)**2)
-        #     if dist < 0.10 or len(self.marker_array.markers)!=0: 
+        #     if dist < 0.10: 
         #         continue
-        # Sinon, le creer + publier
+        # # Sinon, le creer + publier
         #     else :
-        
+        #         self.marker_array.markers.append(marker)
 
         #  # Check for duplicates based on distance
         # is_duplicate = any(
