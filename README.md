@@ -101,7 +101,7 @@ ros2 launch grpe_larm_mother simulation.yaml
 ```
 **Challenge 2 :**
 
-Dans ce deuxième challenge, on ajoute au premier challenge, le SLAM ainsi que le positionnement des objets sur la map.
+Dans ce deuxième challenge, on ajoute au premier challenge, le SLAM ainsi que le positionnement unicitaire des objets sur la map.
 
 pour lancer le challenge 2 avec : connexion au robot + deplacement automatique + camera + SLAM + marqueur des objets, exécuter la commande suivante:
 ```
