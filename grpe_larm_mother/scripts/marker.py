@@ -95,14 +95,14 @@ class MarkerPublisher(Node):
 
         
     
-    def comp_mark(self, marker):
-        for m in self.marker_array.markers: 
-            dist = math.sqrt((m.pose.position.y - marker.pose.position.y)**2 + (m.pose.position.x -marker.pose.position.x)**2)
-            if dist < 0.10 or len(self.marker_array.markers)!=0:
-                return False 
-        # Sinon, le creer + publier
-            else :
-                return True
+    # def comp_mark(self, marker):
+    #     for m in self.marker_array.markers: 
+    #         dist = math.sqrt((m.pose.position.y - marker.pose.position.y)**2 + (m.pose.position.x -marker.pose.position.x)**2)
+    #         if dist < 0.10 or len(self.marker_array.markers)!=0:
+    #             return False 
+    #     # Sinon, le creer + publier
+    #         else :
+    #             return True
 
     def add_marker(self):
         print("add_marker")
@@ -138,8 +138,8 @@ class MarkerPublisher(Node):
         marker.color.b = 0.0
         
 
-        if self.comp_mark(marker) == False : 
-            self.marker_array.markers.append(marker)
+        # if self.comp_mark(marker) == False : 
+        self.marker_array.markers.append(marker)
         # if len (self.marker_array.markers)==0:
 
 
