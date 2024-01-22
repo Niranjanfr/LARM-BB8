@@ -17,7 +17,6 @@ class MarkerPublisher(Node):
         self.publisher = self.create_publisher(MarkerArray, 'marker_array_topic', 10)
         
         # Créer un MarkerArray
-        # self.marker_array = MarkerArray()
         self.marker_array = MarkerArray()
         self.isOk = True
 
@@ -143,7 +142,6 @@ def main(args=None):
 
     #stop streaming
     signal.signal(signal.SIGINT, marker_publisher.signalInteruption)
-    #rclpy.spin(marker_publisher)
     marker_publisher.destroy_node()
     rclpy.shutdown()
 
