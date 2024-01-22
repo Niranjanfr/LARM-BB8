@@ -17,7 +17,6 @@ class MarkerPublisher(Node):
         self.publisher = self.create_publisher(MarkerArray, 'marker_array_topic', 10)
         
         # Créer un MarkerArray
-        # self.marker_array = MarkerArray()
         self.marker_array = MarkerArray()
         self.isOk = True
 
@@ -35,22 +34,14 @@ class MarkerPublisher(Node):
         )
         self.nuke_coord =Point()
         self.detection = False
-        
-        # # Ajouter des marqueurs avec des coordonnées spécifiques
-        # self.add_marker(1, 0.0, 0.0, 0.0)
-        # self.add_marker(2, 1.0, 1.0, 1.0)
-        # self.add_marker(3, -1.0, -1.0, 1.0)
 
         # Publier le MarkerArray
         self.publish_markers()
 
     def listener_callback(self, msgs):
-
-        # self.get_logger().info('I receive: "%s"' %
-        #                        str(self.odom_data))
-        
         self.odom_data = msgs
 
+    # extrait la position et l'orientation du robot 
     def position_robot(self):
         position = self.odom_data.pose.pose.position
         print(position)
@@ -58,17 +49,14 @@ class MarkerPublisher(Node):
         print(orientation)
         (posx, posy, posz) = (position.x, position.y, position.z)
         (qx, qy, qz, qw) = (orientation.x, orientation.y, orientation.z, orientation.w)
-
-        # print("robot : ", posx, posy, posz)
         return posx,posy,qz
     
     def get_objt_coord(self, msg):
         self.nuke_coord = msg
         if self.nuke_coord == msg : 
             self.detection = True
-        # print (" Objt coordonnée = " ,self.nuke_coord )
 
-
+    # Transforme les coordonées de la bouteille dans le référentiel de la map 
     def transform_coordinates(self):
         #coordonnées robot
         x_r, y_r, theta_r = self.position_robot()
@@ -93,17 +81,7 @@ class MarkerPublisher(Node):
 
         return tuple(transformed_coordinates)
 
-        
-    
-    # def comp_mark(self, marker):
-    #     for m in self.marker_array.markers: 
-    #         dist = math.sqrt((m.pose.position.y - marker.pose.position.y)**2 + (m.pose.position.x -marker.pose.position.x)**2)
-    #         if dist < 0.10 or len(self.marker_array.markers)!=0:
-    #             return False 
-    #     # Sinon, le creer + publier
-    #         else :
-    #             return True
-
+    # méthode qui crée et ajoute un marqueur dans un Markerarray
     def add_marker(self):
         print("add_marker")
     
@@ -112,7 +90,6 @@ class MarkerPublisher(Node):
         marker.header.stamp = self.get_clock().now().to_msg()
         marker.ns = 'my_namespace'
 
-        # x ,y = (1,1)
         x, y = self.transform_coordinates()
         id = 0
         for m in self.marker_array.markers:
@@ -124,78 +101,33 @@ class MarkerPublisher(Node):
         marker.action = Marker.ADD
         marker.pose.position.x = x
         marker.pose.position.y = y
-        # m.pose.position.z = z
         marker.pose.orientation.x = 0.0
         marker.pose.orientation.y = 0.0
         marker.pose.orientation.z = 0.0
         marker.pose.orientation.w = 1.0
-        marker.scale.x = 0.7
-        marker.scale.y = 0.7
+        marker.scale.x = 0.2
+        marker.scale.y = 0.2
         marker.scale.z = 0.2
         marker.color.a = 1.0
         marker.color.r = 1.0
         marker.color.g = 0.0
         marker.color.b = 0.0
-        
 
-        # if self.comp_mark(marker) == False : 
         self.marker_array.markers.append(marker)
-        # if len (self.marker_array.markers)==0:
-
-
-        #     self.marker_array.markers.append(marker)
-
-        # else : 
-            
-
-        # for m in self.marker_array.markers: 
-        #     dist = math.sqrt((m.pose.position.y - marker.pose.position.y)**2 + (m.pose.position.x -marker.pose.position.x)**2)
-        #     if dist < 0.10 or len(self.marker_array.markers)!=0: 
-        #         continue
-        # Sinon, le creer + publier
-        #     else :
-        
-
-        #  # Check for duplicates based on distance
-        # is_duplicate = any(
-        #     math.sqrt((marker.pose.position.y - m.pose.position.y) ** 2 +
-        #             (marker.pose.position.x - m.pose.position.x) ** 2) < 0.10
-        #     for m in self.marker_array.markers
-        # )
-
-        # # Add the marker to the array if not a duplicate
-        # if not is_duplicate:
-        #     self.marker_array.markers.append(marker)
-        
-
-        print(self.marker_array)
 
         
     def mark(self):
-        if self.detection == True  and self.odom_data != None: 
-            self.add_marker()
-            self.publish_markers()
-            self.detection = False
+        if self.detection == True  and self.odom_data != None: # Dans le soucis de synchroniser les informations
+            self.add_marker()                                  # reçues nous avons crée une fonction mark qui appelle l'ajout du marqueur
+            self.publish_markers()                             # et la publication du marker_array que quand le noeud reçoit les infos issues
+            self.detection = False                             # de la position du robot à travers l'odom et détecte la position des objets
 
-        
-        # # for m in self.marker_array:
-        #     # Exist deja ?
-        # dist = 0
-        # # m= Marker()
-        
-
-        # for i in range(): 
-        #     dist = math.sqrt((self.marker_array.markers[i].pose.position.y - y)**2 + (self.marker_array.markers[i].pose.position.x -x)**2)
-        #     if dist < 0.10: 
-        #         continue
-        # # Sinon, le creer + publier
-        #     else :
-        #         self.add_marker(x, y)
-
+    # publication de marker_array
     def publish_markers(self):
         self.publisher.publish(self.marker_array)
         self.get_logger().info('MarkerArray published')
 
+    # arrêt du noeud 
     def signalInteruption(self):       
         print( "\nCtrl-c pressed" )
         self.isOk= False
@@ -203,67 +135,15 @@ class MarkerPublisher(Node):
 def main(args=None):
     rclpy.init(args=args)
     marker_publisher = MarkerPublisher()
-    #marker_publisher.add_marker()
 
     while marker_publisher.isOk:
         marker_publisher.mark()
-        # marker_publisher.add_marker()
-        # marker_publisher.publish_markers()
-        print(marker_publisher.marker_array)
         rclpy.spin_once (marker_publisher)
 
     #stop streaming
     signal.signal(signal.SIGINT, marker_publisher.signalInteruption)
-    #rclpy.spin(marker_publisher)
     marker_publisher.destroy_node()
     rclpy.shutdown()
 
 if __name__ == '__main__':
     main()
-
-# topic = 'visualization_marker_array'
-# publisher = rospy.Publisher(topic, MarkerArray)
-
-# rospy.init_node('register')
-
-# markerArray = MarkerArray()
-
-# count = 0
-# MARKERS_MAX = 100
-
-# while not rospy.is_shutdown():
-
-#     marker = Marker()
-#     marker.header.frame_id = "/base_link"
-#     marker.type = marker.SPHERE
-#     marker.action = marker.ADD
-#     marker.scale.x = 0.2
-#     marker.scale.y = 0.2
-#     marker.scale.z = 0.2
-#     marker.color.a = 1.0
-#     marker.color.r = 1.0
-#     marker.color.g = 1.0
-#     marker.color.b = 0.0
-#     marker.pose.orientation.w = 1.0
-#     marker.pose.position.x = math.cos(count / 50.0) #position de la bouteille 
-#     marker.pose.position.y = math.cos(count / 40.0) 
-#     marker.pose.position.z = math.cos(count / 30.0) 
-
-    # We add the new marker to the MarkerArray, removing the oldest marker from it when necessary
-    # if(count > MARKERS_MAX):
-    #     markerArray.markers.pop()
-
-    # markerArray.markers.append(marker)
-
-    # # Renumber the marker IDs to ensure uniqueness
-    # id = 0
-    # for m in markerArray.markers:
-    #     m.id = id
-    #     id += 1
-
-    # # Publish the MarkerArray
-    # publisher.publish(markerArray)
-
-    # count += 1
-
-    # rospy.sleep(0.01)
