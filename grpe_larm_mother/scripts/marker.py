@@ -36,6 +36,7 @@ class MarkerPublisher(Node):
             self.get_objt_coord, 10
         )
         self.nuke_coord =Point()
+        self.detection = False
         
         # # Ajouter des marqueurs avec des coordonnées spécifiques
         # self.add_marker(1, 0.0, 0.0, 0.0)
@@ -47,8 +48,8 @@ class MarkerPublisher(Node):
 
     def listener_callback(self, msgs):
 
-        self.get_logger().info('I receive: "%s"' %
-                               str(self.odom_data))
+        # self.get_logger().info('I receive: "%s"' %
+        #                        str(self.odom_data))
         
         self.odom_data = msgs
 
@@ -58,12 +59,13 @@ class MarkerPublisher(Node):
         (posx, posy, posz) = (position.x, position.y, position.z)
         (qx, qy, qz, qw) = (orientation.x, orientation.y, orientation.z, orientation.w)
 
-        print("robot : ", posx, posy, posz)
+        # print("robot : ", posx, posy, posz)
         return posx,posy,qz
     
     def get_objt_coord(self, msg):
         self.nuke_coord = msg
-        print (" Objt coordonnée = " ,self.nuke_coord )
+        self.detection = True
+        # print (" Objt coordonnée = " ,self.nuke_coord )
 
 
     def transform_coordinates(self):
@@ -97,7 +99,7 @@ class MarkerPublisher(Node):
 
     def add_marker(self):
         marker = Marker()
-        marker.header.frame_id = "odom"  # Le frame_id dans lequel les coordonnées sont définies
+        marker.header.frame_id = "map"  # Le frame_id dans lequel les coordonnées sont définies
         marker.header.stamp = self.get_clock().now().to_msg()
         marker.ns = 'my_namespace'
 
@@ -125,15 +127,15 @@ class MarkerPublisher(Node):
         marker.color.g = 0.0
         marker.color.b = 0.0
 
-        # dist = 0
-        # for m in self.marker_array.markers: 
-        #     dist = math.sqrt((marker.pose.position.y - m.pose.position.y)**2 + (marker.pose.position.x - m.pose.position.x)**2)
-        #     if dist > 0.10: 
-        #         self.marker_array.markers.append(marker)
+        dist = 0
+        for m in self.marker_array.markers: 
+            dist = math.sqrt((marker.pose.position.y - m.pose.position.y)**2 + (marker.pose.position.x - m.pose.position.x)**2)
+            if dist > 0.10: 
+                self.marker_array.markers.append(marker)
         self.marker_array.markers.append(marker)
         
     def mark(self):
-        x,y = self.transform_coordinates()
+        self.get_objt_coord()
 
         
         # for m in self.marker_array:
