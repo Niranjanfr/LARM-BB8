@@ -31,7 +31,7 @@ Ce répertoire contient :
 │   ├── camera_driver.py  # traitement d'image et d'objets détéctés  
 │   ├── marker.py         # traitement des markers des objets sur la map
 │   ├── multiplexer
-│   ├── reactive_move.py  # déplacement automatisé   
+│   └── reactive_move.py  # déplacement automatisé   
 │  
 ├── .gitignore          
 └── README.md           
