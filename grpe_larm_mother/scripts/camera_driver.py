@@ -171,8 +171,9 @@ class Realsense(Node):
             # ((x, y), rayon)=cv2.minEnclosingCircle(c)
             new_list = list()
             new_list = sorted(elements, key=cv2.contourArea)
-            c=new_list[0]
-            ((x, y), rayon)=cv2.minEnclosingCircle(c)
+            c=new_list[0]                    
+            ((x, y), (dga,dpa))=cv2.fitEllipse(c)
+            rapport = dga/dpa
 
             color_intrin = self.aligned_color_frame.profile.as_video_stream_profile().intrinsics
 
@@ -181,8 +182,8 @@ class Realsense(Node):
             distance = math.sqrt(((dx)**2) + ((dy)**2) + ((dz)**2))
 
             if distance > 1.0 : 
-                
-                if (rayon<60 and rayon>40):
+
+                if rapport > 2.7 and rapport < 3.3:
 
 
                     #Calcul des coordonnées de l'object par rapport a la camera
@@ -193,7 +194,7 @@ class Realsense(Node):
                     print(coord_obj)
                     self.coord_xy_obj.publish(coord_obj)
 
-                    cv2.circle(image2, (int(x), int(y)), int(rayon), color_info, 2)
+                    cv2.ellipse(image2, (int(x), int(y)), (int(dga),int(dpa)), color_info, 2)
                     cv2.circle(frame, (int(x), int(y)), 5, color_info, 10)
                     cv2.line(frame, (int(x), int(y)), (int(x)+150, int(y)), color_info, 2)
                     cv2.putText(frame, "Objet !!!", (int(x)+10, int(y) -10), cv2.FONT_HERSHEY_DUPLEX, 1, color_info, 1, cv2.LINE_AA)
@@ -202,7 +203,8 @@ class Realsense(Node):
                     #objet 2
 
                     c1=new_list[1]
-                    ((x1, y1), rayon1)=cv2.minEnclosingCircle(c1)
+                    ((x1, y1), (dga1,dpa1))=cv2.fitEllipse(c1)
+                    rapport1 = dga1/dpa1
 
                     depth1 = self.depth_frame.get_distance(int(x1), int(y1))
                     dx1 ,dy1, dz1 = rs.rs2_deproject_pixel_to_point(color_intrin, [x1,y1], depth1)
@@ -211,7 +213,7 @@ class Realsense(Node):
 
                     if distance1 >1.0:
 
-                        if (rayon1 < 60 and rayon1 > 40):
+                        if rapport1 > 2.7 and rapport1 < 3.3:
 
                             #Calcul des coordonnées de l'object par rapport a la camera
                             coord_obj1 = Point()
@@ -220,7 +222,7 @@ class Realsense(Node):
 
                             print(coord_obj1)
                             self.coord_xy_obj.publish(coord_obj1)
-                            cv2.circle(image2, (int(x1), int(y1)), int(rayon1), color_info, 2)
+                            cv2.ellipse(image2, (int(x1), int(y1)), (int(dga1),int(dpa1)), color_info, 2)
                             cv2.circle(frame, (int(x1), int(y1)), 5, color_info, 10)
                             cv2.line(frame, (int(x1), int(y1)), (int(x1)+150, int(y1)), color_info, 2)
                             cv2.putText(frame, "Objet !!!", (int(x1)+10, int(y1) -10), cv2.FONT_HERSHEY_DUPLEX, 1, color_info, 1, cv2.LINE_AA)
