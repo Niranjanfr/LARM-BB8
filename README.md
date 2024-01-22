@@ -8,8 +8,7 @@ Ce répertoire contient :
 
 1 package :
 
-1. grpe_larm_mother        (les fichiers launch du challenge 1)
-
+1. grpe_larm_mother        (les fichiers launch du challenge 1 & 2)
 
 ## Installation
 
@@ -31,7 +30,7 @@ git clone https://github.com/Niranjanfr/LARM-BB8.git
 ```
 
 
-**Etape 3 :**
+**Etape 2 :**
 
 Build et Sourcer le workspace :
 ```
@@ -40,7 +39,7 @@ colcon build
 source ./install/setup.bash
 ```
 
-**Etape 4 :**
+**Etape 3 :**
 
 ## Exécution
 
@@ -70,7 +69,12 @@ ros2 run grpe_larm_mother reactive_move.py
 
 **Vision :**
 
-Le traitement pour détecter les bouteilles se fait via un filtre de couleur en HSV et élimine les objets trop proche et en dehors d'une plage de taille pour s'assurer que l'objet est bien une bouteille.
+Le traitement pour détecter les bouteilles se fait via un filtre de couleur en HSV.
+On effectue également une selection selon la taille de l'objet et la distance de l'objet par rapport au robot avec un travail sur la perspective pour éliminer les objets trop grand car trop devant par rapport à une vraie bouteille. La selection par la taille se fait via une restriction du rayon des cercles circonscrits aux objets.
+Nous avons tenter de faire un selection par une ellipse (car plus restrictif) en travaillant sur le rapport demi-grand-axe/demi-petit-axe constant selon la distance de l'objet et "unique" pour l'objet. Par soucis de manque de temps la solution non débuggé est dans le fichier en commenté avec "###" indiqué devant la ligne.
+
+Nous avons également prévu le cas particulier dans lequel le robot ferait face à deux bouteilles en même temps : les deux sont détectés puis ajouté sur la map.
+
 
 Pour visualiser la caméra seulement, exécuter le noeud suivant sur la machine pilote en décommantant les lignes indiqués dans le code:
 ```
@@ -115,6 +119,6 @@ rviz2
 
 Pour lancer la simulation :
 ```
-ros2 launch grpe_larm_mother simulation.yaml
+ros2 launch grpe_larm_mother simulation2.yaml
 ```
 

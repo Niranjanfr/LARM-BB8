@@ -25,10 +25,6 @@ class Realsense(Node):
         self.pipeline = rs.pipeline()
         self.config = rs.config()
 
-        # frames = self.pipeline.wait_for_frames()
-        # frames.poll_frames()
-        # self.depth_frame = frames.get_depth_frame()
-
         # Get device product line for setting a supporting resolution
         pipeline_wrapper = rs.pipeline_wrapper(self.pipeline)
         pipeline_profile = self.config.resolve(pipeline_wrapper)
@@ -42,11 +38,9 @@ class Realsense(Node):
         self.depth_publisher = self.create_publisher(Image,"image_raw_depth",10)
 
         self.trouver = self.create_publisher(String, 'Objet_trouve', 10)
-        # self.depth_object = self.create_publisher(Float64, 'distance_object',10)
         self.coord_xy_obj = self.create_publisher(Point,'coordonnee_objet_ref_robot',10)
 
 
-        # self.rsNode_2 = DepthCalculator()
 
         align_to = rs.stream.depth
         self.align = rs.align(align_to)
@@ -105,8 +99,8 @@ class Realsense(Node):
         images = np.hstack((self.color_image, depth_colormap))
 
         # Show images
-        # cv2.namedWindow('RealSense', cv2.WINDOW_AUTOSIZE)
-        # cv2.imshow('RealSense', images)
+        # cv2.namedWindow('RealSense', cv2.WINDOW_AUTOSIZE)# si nécessaire décommanter les lignes
+        # cv2.imshow('RealSense', images) # si nécessaire décommanter les lignes
         cv2.waitKey(1)
         pass
 
@@ -137,7 +131,7 @@ class Realsense(Node):
 
         color_info=(0, 0, 255)
 
-        # cv2.namedWindow('Camera')
+        # cv2.namedWindow('Camera')# si nécessaire décommanter les lignes
         hsv_px = [47,142,120]
 
         kernel = np.ones((3, 3), np.uint8)
@@ -167,18 +161,13 @@ class Realsense(Node):
         msg.data = ' Bouteille trouvée '
         elements=cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)[-2]
         if len(elements) > 0:
-            # c=max(elements, key=cv2.contourArea)
-            # ((x, y), rayon)=cv2.minEnclosingCircle(c)
             new_list = list()
             new_list = sorted(elements, key=cv2.contourArea)
             c=new_list[0]   
             if len(c) > 10:                 
-                # c=max(elements, key=cv2.contourArea)
                 ((x, y), rayon)=cv2.minEnclosingCircle(c)
-                # ((x, y), (dga,dpa),_)=cv2.fitEllipse(c)
-                # dga=1
-                # dpa=1
-                # rapport = dga/dpa
+                ### ((x, y), (dga,dpa),_)=cv2.fitEllipse(c)
+                ### rapport = dga/dpa
 
                 color_intrin = self.aligned_color_frame.profile.as_video_stream_profile().intrinsics
 
@@ -188,7 +177,7 @@ class Realsense(Node):
 
                 if distance > 0.75 : 
 
-                    # if rapport > 2.7 and rapport < 3.3:
+                    ### if rapport > 2.7 and rapport < 3.3:
                     if rayon > 40 and rayon < 60:
 
 
@@ -197,10 +186,9 @@ class Realsense(Node):
                         coord_obj.x = dz
                         coord_obj.y = -dx
 
-                        # print(coord_obj)
                         self.coord_xy_obj.publish(coord_obj)
 
-                        # cv2.ellipse(image2, (int(x), int(y)), (int(dga),int(dpa)), color_info, 2)
+                        ### cv2.ellipse(image2, (int(x), int(y)), (int(dga),int(dpa)), color_info, 2)
                         cv2.circle(image2, (int(x), int(y)), int(rayon), color_info, 2)
                         cv2.circle(frame, (int(x), int(y)), 5, color_info, 10)
                         cv2.line(frame, (int(x), int(y)), (int(x)+150, int(y)), color_info, 2)
@@ -210,8 +198,8 @@ class Realsense(Node):
                         #objet 2
 
                         c1=new_list[1]
-                        # ((x1, y1), (dga1,dpa1),_)=cv2.fitEllipse(c1)
-                        # rapport1 = dga1/dpa1
+                        ### ((x1, y1), (dga1,dpa1),_)=cv2.fitEllipse(c1)
+                        ### rapport1 = dga1/dpa1
 
                         ((x1, y1),rayon1) =cv2.minEnclosingCircle(c1)
 
@@ -222,7 +210,7 @@ class Realsense(Node):
 
                         if distance1 >0.75:
 
-                            # if rapport1 > 2.7 and rapport1 < 3.3:
+                            ### if rapport1 > 2.7 and rapport1 < 3.3:
                             
                             if rayon1 > 40 and rayon1 < 60:
 
@@ -231,9 +219,8 @@ class Realsense(Node):
                                 coord_obj1.x = dz1
                                 coord_obj1.y = -dx1
 
-                                # print(coord_obj1)
                                 self.coord_xy_obj.publish(coord_obj1)
-                                # cv2.ellipse(image2, (int(x1), int(y1)), (int(dga1),int(dpa1)), color_info, 2)
+                                ### cv2.ellipse(image2, (int(x1), int(y1)), (int(dga1),int(dpa1)), color_info, 2)
 
                                 cv2.circle(image2, (int(x1), int(y1)), int(rayon1), color_info, 2)
                                 cv2.circle(frame, (int(x1), int(y1)), 5, color_info, 10)
@@ -242,10 +229,10 @@ class Realsense(Node):
 
 
 
-                # self.trouver.publish(msg)
-        # cv2.imshow('Camera', frame)
+
+        # cv2.imshow('Camera', frame) # si nécessaire décommanter les lignes
         # cv2.imshow('image2', image2) # si nécessaire décommanter les lignes
-        # cv2.imshow('Mask', mask)
+        # cv2.imshow('Mask', mask) # si nécessaire décommanter les lignes
 
 
         cv2.waitKey(10)
