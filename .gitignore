@@ -2,3 +2,5 @@ pkg-basic/
 build/
 install/
 log/
+__pycache__
+__init__.py
