@@ -190,7 +190,7 @@ class Realsense(Node):
                     coord_obj.x = dz
                     coord_obj.y = -dx
 
-                    print(coord_obj)
+                    # print(coord_obj)
                     self.coord_xy_obj.publish(coord_obj)
 
                     cv2.circle(image2, (int(x), int(y)), int(rayon), color_info, 2)
@@ -218,7 +218,7 @@ class Realsense(Node):
                             coord_obj1.x = dz1
                             coord_obj1.y = -dx1
 
-                            print(coord_obj1)
+                            # print(coord_obj1)
                             self.coord_xy_obj.publish(coord_obj1)
                             cv2.circle(image2, (int(x1), int(y1)), int(rayon1), color_info, 2)
                             cv2.circle(frame, (int(x1), int(y1)), 5, color_info, 10)
