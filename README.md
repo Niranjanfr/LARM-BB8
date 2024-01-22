@@ -44,6 +44,23 @@ source ./install/setup.bash
 
 ## Exécution
 
+**Lancement depuis l'appareil opérateur :**
+
+Se connecter en ssh pour lancer les launch files nécessaire avec les commandes suivantes : 
+
+```
+ip a
+```
+sur la machine pilote, pour recupérer l'addresse IP, puis
+```
+ssh nom_machine@adresse_ip
+```
+sur la machine opérateur pour controler le pilote à distance. Et enfin :
+```
+export ROS_DOMAIN_ID = xx
+```
+en rentrant l'addresse subnet sur laquelle la machine pilote se situe.
+
 **Robot :**
  
 Pour lancer le robot avec detection des obstacles, executer la commande suivante:
@@ -55,7 +72,7 @@ ros2 run grpe_larm_mother reactive_move.py
 
 Le traitement pour détecter les bouteilles se fait via un filtre de couleur en HSV et élimine les objets trop proche et en dehors d'une plage de taille pour s'assurer que l'objet est bien une bouteille.
 
-Pour visualiser la caméra seulement, exécuter le noeud suivant en décommantant les lignes indiqués dans le code:
+Pour visualiser la caméra seulement, exécuter le noeud suivant sur la machine pilote en décommantant les lignes indiqués dans le code:
 ```
 ros2 run grpe_larm_mother camera_driver.py
 ```
